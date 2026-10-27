@@ -1,0 +1,38 @@
+{
+  "site_equal_nmae": 0.045638472650769694,
+  "observed_site_hours": 153311,
+  "observed_sites": 224,
+  "cold_start_sites": 19,
+  "complete_253_hours": 0,
+  "settlement": null,
+  "k": 1,
+  "fold": "outer_2024_06",
+  "training_cutoff": "2024-05-31 17:00:00+09:00",
+  "groups": {
+    "0": 253
+  },
+  "training_rows": [
+    {
+      "cluster": 0,
+      "round": 10,
+      "eligible_rows": 2220446,
+      "daytime_rows": 1106280
+    },
+    {
+      "cluster": 0,
+      "round": 17,
+      "eligible_rows": 2220446,
+      "daytime_rows": 1106280
+    }
+  ],
+  "silhouette": null,
+  "seconds": 57.90168730006553,
+  "artifacts_sha256": {
+    "groups.json": "04d9f930c48af530a9534bc6e823e4dda64f174db5f1e7f8cdb3f6e7cb6067a8",
+    "site_metrics.json": "b3065c73a47e4ddbcf952a3d8a985882507252cbb8fb00340b4df6d25ac21ca2",
+    "site_predictions.parquet": "709eb15815812b43402273b002194ce9fa8fdd5120c4c05ba5b4b930c9e3c823",
+    "models/cluster0_round10.txt": "3e7f43c78a20473e2ba3b4f820d03c7d91172d37c8d66109eee3eacf3bb0faa9",
+    "models/cluster0_round17.txt": "55582455bf490c216ad09e4ec1fae2467a9deaaeb6ce1fc0f01ded42ea8c4ad2"
+  },
+  "status": "complete"
+}

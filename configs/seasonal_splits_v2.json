@@ -1,0 +1,12 @@
+{
+  "version": "seasonal_splits_v2",
+  "evaluation_start_day": "2024-06-01",
+  "evaluation_end_day_exclusive": "2025-06-01",
+  "inner_months": 12,
+  "training_start": "2021-01-19T13:00:00+09:00",
+  "generation_availability_lag_hours": 0,
+  "inner_role_start_days": {"model_selection": 1, "blend_selection": 11, "composition_selection": 21},
+  "outer_policy": "freeze procedure before inspecting outer scores; monthly past-only refit",
+  "diagnostic_policy": "observed site-hours only; report each month with equal month weight",
+  "settlement_policy": "only hours with all 253 actuals; never zero-fill missing generation"
+}

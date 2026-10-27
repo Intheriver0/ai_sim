@@ -1,0 +1,68 @@
+{
+  "site_equal_nmae": 0.04767391335587439,
+  "observed_site_hours": 153311,
+  "observed_sites": 224,
+  "cold_start_sites": 19,
+  "complete_253_hours": 0,
+  "settlement": null,
+  "k": 3,
+  "fold": "outer_2024_06",
+  "training_cutoff": "2024-05-31 17:00:00+09:00",
+  "groups": {
+    "0": 59,
+    "1": 151,
+    "2": 43
+  },
+  "training_rows": [
+    {
+      "cluster": 0,
+      "round": 10,
+      "eligible_rows": 481079,
+      "daytime_rows": 238547
+    },
+    {
+      "cluster": 0,
+      "round": 17,
+      "eligible_rows": 481079,
+      "daytime_rows": 238547
+    },
+    {
+      "cluster": 1,
+      "round": 10,
+      "eligible_rows": 1723880,
+      "daytime_rows": 858750
+    },
+    {
+      "cluster": 1,
+      "round": 17,
+      "eligible_rows": 1723880,
+      "daytime_rows": 858750
+    },
+    {
+      "cluster": 2,
+      "round": 10,
+      "eligible_rows": 15487,
+      "daytime_rows": 8983
+    },
+    {
+      "cluster": 2,
+      "round": 17,
+      "eligible_rows": 15487,
+      "daytime_rows": 8983
+    }
+  ],
+  "silhouette": 0.47281662546316683,
+  "seconds": 66.7965013999492,
+  "artifacts_sha256": {
+    "groups.json": "4cf8b074e6cae56c040544e365f1b6edf435826ef7e929269540727d080732e9",
+    "site_metrics.json": "36b4f29df1175be830a21af4410fede7238ddc30d972ab2fff363fe7f3c97223",
+    "site_predictions.parquet": "41194afd13c364c38ed8bba789ebd541f3e0da7b8733b3bfb6a7d4d3f7acff5e",
+    "models/cluster0_round10.txt": "2b61850358d04e72285db48eba6a3fff2f044c7445f8ebacd1006406f8783ebd",
+    "models/cluster0_round17.txt": "c4ad563a93a903beb8942d7e812b499bac83f36cc2f250d2ed85d5f853754c21",
+    "models/cluster1_round10.txt": "a1b43a3a2f87fe7882f1b176e4b05f08d3417c266499e65ecbe97bf346497e49",
+    "models/cluster1_round17.txt": "b0c01571f1f70d4ab00bc37b83cd310499a3c678c4c8458345a7cbd7100554de",
+    "models/cluster2_round10.txt": "deeced5584c15e301e9b2c5276f2d823d1067790fbe392923d2bd80f984c1bda",
+    "models/cluster2_round17.txt": "90591217149867082a7daa7cc9dfe1c60b9b5929daf7ed4a134e0947e3df0605"
+  },
+  "status": "complete"
+}

@@ -4,6 +4,8 @@
 
 프로젝트 적용 순서와 구체적인 예측 설계는 [발전량 예측 계획](../forecast_plan.md)을 함께 참고한다.
 
+2026-10-27 [문헌 반영 검토](../reference_application_review.md)에 현재 코드·계획의 반영 수준, 원문에서 확인한 설정, 적용이 어려운 입력 조건과 후속 실험 R1~R7을 기록했다. 아이디어 목록과 실제 학습·검증 완료를 구분한다.
+
 2026 대회의 공개 규정·데이터 안내·제출·평가·공지·FAQ 조사와 기존 문서 대조는 [DataEn 2026 OIBC 공개 자료 조사](dataen_2026/README.md)에 정리했다. 출처별 접근 상태는 [source manifest](dataen_2026/source_manifest.json)에 기록했다.
 
 구름 이동·발달과 일사량 예측은 [별도 조사: cloud_dynamics](cloud_dynamics/README.md)에 정리했다. 연구 4편과 국내 AMV 기술자료 1건, 입력 후보와 하루 전 적용 한계를 포함한다. PDF 4개를 보관하고 나머지 1편은 원문 링크로 제공한다.

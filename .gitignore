@@ -10,6 +10,8 @@ composition.csv
 forecast.csv
 runs/
 artifacts/
+results/**/models/
+results/**/*.tmp
 
 # Local runtimes and Python caches.
 .tools/

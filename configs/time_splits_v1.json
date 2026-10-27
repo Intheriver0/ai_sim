@@ -1,0 +1,19 @@
+{
+  "version": "time_splits_v1",
+  "status": "rejected",
+  "reason": "Season and selection stage are confounded; use seasonal_splits_v2 instead.",
+  "timezone": "Asia/Seoul",
+  "target_day_convention": "date(ts - 1 hour)",
+  "training_start": "2021-01-19T13:00:00+09:00",
+  "generation_availability_lag_hours": 0,
+  "early_stop_start_days_before": 7,
+  "early_stop_end_days_before": 1,
+  "minimum_training_rows_per_site": 300,
+  "folds": [
+    {"id": "tune_jan", "purpose": "model_selection", "start_day": "2025-01-15", "end_day_exclusive": "2025-02-01"},
+    {"id": "tune_feb", "purpose": "model_selection", "start_day": "2025-02-01", "end_day_exclusive": "2025-03-01"},
+    {"id": "blend_mar", "purpose": "blend_selection", "start_day": "2025-03-01", "end_day_exclusive": "2025-04-01"},
+    {"id": "composition_apr", "purpose": "composition_selection", "start_day": "2025-04-01", "end_day_exclusive": "2025-05-01"},
+    {"id": "holdout_may", "purpose": "final_holdout", "start_day": "2025-05-01", "end_day_exclusive": "2025-06-01"}
+  ]
+}
