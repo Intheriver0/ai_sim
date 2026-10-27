@@ -1,0 +1,45 @@
+[
+  {
+    "file": "pdf/01_miller_2018_satellite_model_coupling.pdf",
+    "url": "https://repository.library.noaa.gov/view/noaa/49543/noaa_49543_DS1.pdf",
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden",
+    "retrieved_utc": "2026-10-26T06:28:31.447264+00:00"
+  },
+  {
+    "file": "pdf/02_carpentieri_2023_solarsteps_preprint.pdf",
+    "url": "https://arxiv.org/pdf/2305.07293v1",
+    "final_url": "https://arxiv.org/pdf/2305.07293v1",
+    "status": "ok",
+    "bytes": 2271876,
+    "sha256": "9d04cdad9e83a4d515f445a9f5235ff76b42f9293b736f90b15d9d3875dd4302",
+    "retrieved_utc": "2026-10-26T06:28:31.416558+00:00"
+  },
+  {
+    "file": "pdf/03_straub_2024_helionet.pdf",
+    "url": "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/93fbd665-f6ed-4edb-802b-ae2d0bf1e966/content",
+    "final_url": "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/93fbd665-f6ed-4edb-802b-ae2d0bf1e966/content",
+    "status": "ok",
+    "bytes": 4819594,
+    "sha256": "bb9301908794a393709d9949b08adb62daa2128721265f6367e63d03d3631aef",
+    "retrieved_utc": "2026-10-26T06:28:56.420248+00:00"
+  },
+  {
+    "file": "pdf/04_papachristopoulou_2024_nextsense2.pdf",
+    "url": "https://amt.copernicus.org/articles/17/1851/2024/amt-17-1851-2024.pdf",
+    "final_url": "https://amt.copernicus.org/articles/17/1851/2024/amt-17-1851-2024.pdf",
+    "status": "ok",
+    "bytes": 6750565,
+    "sha256": "140bd14cfb142d04be864e68cab0309df4de23221d2130397c46826e3c81f956",
+    "retrieved_utc": "2026-10-26T06:29:10.783502+00:00"
+  },
+  {
+    "file": "pdf/05_nmsc_amv_atbd_v1.pdf",
+    "url": "https://datasvc.nmsc.kma.go.kr/resources/common/pdf/NMSC-SCI-ATBD-AMV_v1.0.pdf",
+    "final_url": "https://datasvc.nmsc.kma.go.kr/resources/common/pdf/NMSC-SCI-ATBD-AMV_v1.0.pdf",
+    "status": "ok",
+    "bytes": 2081422,
+    "sha256": "4b912cfbbd63674437e95284ff57123ed41b8d8a214d8d13fcfaa4854ab987ea",
+    "retrieved_utc": "2026-10-26T06:28:31.577769+00:00"
+  }
+]

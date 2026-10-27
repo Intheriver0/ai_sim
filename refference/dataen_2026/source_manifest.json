@@ -1,0 +1,80 @@
+{
+  "checked_date": "2026-10-26",
+  "timezone": "Asia/Seoul",
+  "scope": "2026 OIBC public information; no competition dataset downloaded",
+  "sources": [
+    {
+      "url": "https://dataen.ai/en/challenge",
+      "kind": "official",
+      "status": "accessible",
+      "used_for": ["schedule", "eligibility", "awards", "rules", "submission limits", "application modal"]
+    },
+    {
+      "url": "https://dataen.ai/en/challenge/2026",
+      "kind": "official",
+      "status": "partially accessible with logged-in browser",
+      "used_for": ["overview", "rules", "data description", "leaderboard and submission availability"]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=49HZ2kggWNo",
+      "kind": "official webinar",
+      "status": "accessible; Korean auto-generated transcript",
+      "used_for": ["scoring formula", "capacity constraint", "evaluation period", "submission files", "Q&A rules"]
+    },
+    {
+      "url": "https://ime.postech.ac.kr/ime/news/seminar.do?articleNo=49630&mode=view",
+      "kind": "official POSTECH notice",
+      "status": "accessible",
+      "used_for": ["eligibility", "schedule", "awards", "contact", "attachment"]
+    },
+    {
+      "url": "https://ime.postech.ac.kr/ime/news/seminar.do?articleNo=49630&attachNo=23049&mode=download",
+      "kind": "official PDF attachment",
+      "status": "accessible, one page",
+      "used_for": ["recruitment summary"]
+    },
+    {
+      "url": "https://dataen.ai/notice/b2859036-d2e6-41a0-b9f1-de7eec8ba24f",
+      "kind": "official notice",
+      "status": "accessible",
+      "used_for": ["competition contact"]
+    },
+    {
+      "url": "https://dataen.ai/notice/677a85eb-1d9c-4c19-9620-ba80bb79564d",
+      "kind": "official notice",
+      "status": "accessible",
+      "used_for": ["eligibility document validation"]
+    },
+    {
+      "url": "https://dataen.ai/notice/7f285e09-efbc-4849-aa83-fdfec2e0a1cc",
+      "kind": "official notice",
+      "status": "accessible",
+      "used_for": ["leave-of-absence eligibility"]
+    },
+    {
+      "url": "https://dataen.ai/en/notice",
+      "kind": "official notice index",
+      "status": "16 notices checked; only 3 from 2026, other 13 from 2024",
+      "used_for": ["notice inventory", "FAQ year separation"]
+    },
+    {
+      "url": "https://www.univ20.com/ContestCalendar/Detail/2156",
+      "kind": "secondary mirror",
+      "status": "accessible",
+      "used_for": ["cross-check dynamic rule text"]
+    },
+    {
+      "url": "https://www.theteams.kr/activities/page/353328/lc",
+      "kind": "secondary mirror",
+      "status": "accessible",
+      "used_for": ["cross-check dynamic rule text"]
+    }
+  ],
+  "access_limits": [
+    "Competition board requires approved participation.",
+    "Dataset download links and files are hidden until approval.",
+    "Leaderboard and submission pages are not yet released.",
+    "No 2026 FAQ exists in the public FAQ list.",
+    "Webinar transcript is auto-generated and formula boundaries must be checked against the released scorer or README."
+  ]
+}

@@ -1,0 +1,16 @@
+# Competition files and generated outputs stay on the local machine.
+OIBC_2026_DATA/
+OIBC_2026_DATA.zip
+data/
+*.parquet
+*.csv
+*.zip
+*.pdf
+composition.csv
+forecast.csv
+
+# Local runtimes and Python caches.
+.tools/
+.venv/
+__pycache__/
+*.pyc

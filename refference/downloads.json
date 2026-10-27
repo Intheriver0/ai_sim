@@ -1,0 +1,72 @@
+[
+  {
+    "file": "pdf/01_gigoni_2018_day_ahead.pdf",
+    "source_url": "https://arxiv.org/pdf/1903.06800",
+    "checked_at_utc": "2026-10-26T06:16:24.170900+00:00",
+    "resolved_url": "https://arxiv.org/pdf/1903.06800",
+    "content_type": "application/pdf",
+    "status": "downloaded",
+    "bytes": 2806756,
+    "sha256": "fc3fa7f732d4f7c20d592ef0ef118ea21018f4ffeb3799dae6924d263dd09ac0"
+  },
+  {
+    "file": "pdf/02_holmgren_2018_pvlib.pdf",
+    "source_url": "https://joss.theoj.org/papers/10.21105/joss.00884.pdf",
+    "checked_at_utc": "2026-10-26T06:16:24.172206+00:00",
+    "resolved_url": "https://joss.theoj.org/papers/10.21105/joss.00884.pdf",
+    "content_type": "application/pdf",
+    "status": "downloaded",
+    "bytes": 132404,
+    "sha256": "76438d18e31aa70220dfb35f3fb3e62c28d7ba1f813a184d48707c74db267f33"
+  },
+  {
+    "file": "pdf/03_sharma_2021_probabilistic.pdf",
+    "source_url": "https://arxiv.org/pdf/2101.08236",
+    "checked_at_utc": "2026-10-26T06:16:24.173011+00:00",
+    "resolved_url": "https://arxiv.org/pdf/2101.08236",
+    "content_type": "application/pdf",
+    "status": "downloaded",
+    "bytes": 287693,
+    "sha256": "d7c3eca681542c4f51f956f0d8f5c9e449bdd6791af377757e367c8fc39513c0"
+  },
+  {
+    "file": "pdf/04_lindberg_2023_trading.pdf",
+    "source_url": "https://uu.diva-portal.org/smash/get/diva2%3A1770882/FULLTEXT01.pdf",
+    "checked_at_utc": "2026-10-26T06:16:24.545715+00:00",
+    "resolved_url": "https://uu.diva-portal.org/smash/get/diva2%3A1770882/FULLTEXT01.pdf",
+    "content_type": "application/pdf",
+    "status": "downloaded",
+    "bytes": 1601819,
+    "sha256": "18380a8bdf7391db48db147edf8dba4b4ffa88a6b8a8e9639910f02157b2db5e"
+  },
+  {
+    "file": "pdf/05_simeunovic_2021_spatiotemporal.pdf",
+    "source_url": "https://arxiv.org/pdf/2107.13875v2",
+    "checked_at_utc": "2026-10-26T06:16:24.810100+00:00",
+    "resolved_url": "https://arxiv.org/pdf/2107.13875v2",
+    "content_type": "application/pdf",
+    "status": "downloaded",
+    "bytes": 5936396,
+    "sha256": "9032b5ceab0025a7c9579db95f443f585fbba9c00fd00125bca87e283b899089"
+  },
+  {
+    "file": "pdf/06_nuno_2018_aggregated_errors.pdf",
+    "source_url": "https://backend.orbit.dtu.dk/ws/files/149828757/revision_new_2_1_.pdf",
+    "checked_at_utc": "2026-10-26T06:16:25.910175+00:00",
+    "resolved_url": "https://backend.orbit.dtu.dk/ws/files/149828757/revision_new_2_1_.pdf",
+    "content_type": "application/pdf",
+    "status": "downloaded",
+    "bytes": 1525498,
+    "sha256": "0e8aee64f48f076b6c4ae51aa6388d6375cf0e212554074a9ead40b43a3b4dba"
+  },
+  {
+    "file": "pdf/08_iea_2020_regional_forecasting.pdf",
+    "source_url": "https://iea-pvps.org/wp-content/uploads/2020/07/IEA_PVPS_T16_regional_forecast.pdf",
+    "checked_at_utc": "2026-10-26T06:19:51.730250+00:00",
+    "resolved_url": "https://iea-pvps.org/wp-content/uploads/2020/07/IEA_PVPS_T16_regional_forecast.pdf",
+    "content_type": "application/pdf",
+    "status": "downloaded",
+    "bytes": 3635945,
+    "sha256": "919ea103aeaecddd9f1ca1aedc63079cdad6e846fcf8ba718799bed72b986214"
+  }
+]
