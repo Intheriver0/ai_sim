@@ -12,7 +12,7 @@ AutoML은 물리적으로 존재하지 않는 변수를 만들어 주지 않는�
 
 ## 학습 장비와 고성능 후보
 
-사용자가 말한 “스파크·GB10”은 **NVIDIA DGX Spark 또는 같은 GB10 기반 장비**로 가정한다. NVIDIA의 DGX Spark 사양은 20코어 Arm CPU, GB10 Blackwell GPU, **CPU·GPU가 공유하는 128GB 통합 메모리**다. 같은 GB10을 쓴 다른 제조사 장비의 실제 메모리·드라이버·OS는 현장에서 확인한다. NVIDIA가 표시하는 최대 FP4 연산량을 이 프로젝트의 트리 학습 속도로 환산하지 않는다. [NVIDIA 제품 사양](https://www.nvidia.com/en-gb/products/workstations/dgx-spark/), [통합 메모리 주의사항](https://docs.nvidia.com/dgx/dgx-spark/known-issues.html).
+사용자가 확인한 학습 환경은 **Linux 기반 Spark·GB10 장비**다. DGX Spark 또는 같은 GB10 기반 장비로 이해한다. NVIDIA의 DGX Spark 사양은 20코어 Arm CPU, GB10 Blackwell GPU, **CPU·GPU가 공유하는 128GB 통합 메모리**다. 실제 장비의 메모리·드라이버·Linux 배포판은 현장에서 확인한다. NVIDIA가 표시하는 최대 FP4 연산량을 이 프로젝트의 트리 학습 속도로 환산하지 않는다. [NVIDIA 제품 사양](https://www.nvidia.com/en-gb/products/workstations/dgx-spark/), [통합 메모리 주의사항](https://docs.nvidia.com/dgx/dgx-spark/known-issues.html).
 
 장비 활용은 단일 모델의 파라미터 수를 무작정 늘리는 방식보다 **서로 다른 오류를 만드는 후보를 충분히 검증하고 결합**하는 데 집중한다.
 
@@ -65,7 +65,7 @@ GPU가 한 개인 장비라면 여러 GPU trial을 동시에 돌려 메모리와
 - 실행마다 Git 커밋 해시, 데이터 파일 해시, Python/라이브러리 버전, 시드, 시간 분할, 탐색 공간, trial 수·시간, 최고 trial과 폴드별 W를 로컬 실행 기록에 저장한다. 같은 커밋과 데이터로 재현 가능한지 확인한다.
 - 장비 한 대에서 실행할 때는 로컬 SQLite 기반 Optuna 저장소로 재시작 가능하게 한다. 여러 프로세스·장비에서 동시에 탐색할 때는 별도 공유 저장소의 동시성 조건을 검토한다. 저장소 DB는 Git에 넣지 않는다.
 - 데이터 경로, 출력 경로, CPU/GPU 사용량, 실험 예산은 실행 설정으로 받는다. 절대경로와 장비별 비밀값을 코드에 고정하지 않는다. 재실행 시 완료된 trial을 다시 시작하지 않게 한다.
-- Windows 개발 환경과 ARM64 Linux 학습 환경의 패키지 잠금·설치 방법을 분리하고, 양쪽에서 같은 데이터 계약·정산 함수가 통과하는지 확인한다. 장비의 `uname -m`, Python·CUDA·드라이버 버전과 GPU 학습 시험 결과를 기록한 뒤 해당 환경용 의존성을 확정한다.
+- Windows 개발 환경과 Linux 학습 환경의 패키지 잠금·설치 방법을 분리하고, 양쪽에서 같은 데이터 계약·정산 함수가 통과하는지 확인한다. 코드의 경로는 `pathlib`와 실행 설정으로 다루며 PowerShell 전용 명령이나 Windows 절대경로에 의존하지 않는다. GB10의 ARM64 여부는 장비에서 `uname -m`으로 확인하고 Python·CUDA·드라이버 버전과 GPU 학습 시험 결과를 기록한 뒤 Linux 의존성을 확정한다.
 
 ## 구현을 시작할 때의 최소 순서
 
