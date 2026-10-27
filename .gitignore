@@ -8,6 +8,8 @@ data/
 *.pdf
 composition.csv
 forecast.csv
+runs/
+artifacts/
 
 # Local runtimes and Python caches.
 .tools/
