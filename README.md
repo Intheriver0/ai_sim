@@ -14,3 +14,5 @@ python scripts/inspect_dataset.py
 ```
 
 점검 스크립트는 원본을 읽고 `data/dataset_audit.json`에 파일별 스키마·행 수·키·집계 통계를 기록합니다. 예측 모델 학습과 대회 제출은 아직 구현되지 않았습니다. `refference/`의 문헌 PDF 원본도 로컬에만 보관합니다.
+
+제출 파일은 운영팀이 공개한 [형식 Validator](https://app.notion.com/p/Validator-3fe10e0a193380ab925fc25abbf6a1ca)로 최종 점검합니다. [DataEn 공지](https://dataen.ai/challenge/2026/board/4984651b-a17a-4d2f-8350-fbf36ffc037b)에 따르면 이 도구는 점수를 계산하지 않으며 `scoring.py`는 배포되지 않습니다.
