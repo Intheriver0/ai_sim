@@ -8,7 +8,7 @@
 
 첫 기준선은 **LightGBM + Optuna**로 시작한다. 제공 baseline이 LightGBM을 사용하므로 비교가 쉽고, Optuna는 연속·정수·범주형 파라미터 제안과 실험 저장·재시작을 지원한다. [Optuna 탐색 공간](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/002_configurations.html), [실험 저장·재시작](https://optuna.readthedocs.io/en/stable/tutorial/20_recipes/001_rdb.html), [LightGBM 조기 종료](https://lightgbm.readthedocs.io/en/stable/pythonapi/lightgbm.early_stopping.html). 기준선이 검증되면 아래 GPU 트리 모델, 집합 보정·직접 예측, 앙상블을 본격적으로 비교한다.
 
-AutoML은 물리적으로 존재하지 않는 변수를 만들어 주지 않는다. **직접 일사량·층별 운량·COT·고도별 바람·기상지점 좌표는 제공되지 않는다.** 코드에 명시한, 제출 시점에 실제 입수 가능한 변수 후보만 자동으로 켜고 끈다. 외부 데이터와 외부 사전학습 가중치는 사용하지 않는다.
+AutoML은 물리적으로 존재하지 않는 변수를 만들어 주지 않는다. **직접 일사량·층별 운량·COT·고도별 바람·기상지점 좌표는 제공되지 않는다.** 코드에 명시한, 제출 시점에 실제 입수 가능한 변수 후보만 자동으로 켜고 끈다. [운영팀 Q&A](https://dataen.ai/challenge/2026/board/cfe4c0fc-7951-4ee9-b293-4730e42029ec)에 따라 공개·상업적 이용 가능한 외부 소스·모델도 별도 후보로 비교할 수 있다.
 
 ## 학습 장비와 고성능 후보
 
@@ -23,7 +23,7 @@ AutoML은 물리적으로 존재하지 않는 변수를 만들어 주지 않는�
 | 표현·특성 | A/B 및 10/17 예보의 차이·수정량, 발전소별 학습구간 고정 패턴, 계산 태양 위치 | 제공 변수만 사용, 폴드 안에서 생성·선택 |
 | 집합 보정 | 발전소별 예측 합산 후 G1/G2 잔차 보정, 집합 직접 예측 | OOF 예측으로만 학습하고 후속 구간에서 W 비교 |
 | 앙상블 | 서로 다른 트리 모델·예보 조합의 OOF 예측을 가중 결합 | 결합 가중치는 내부 폴드에서 학습, 마지막 홀드아웃은 선택에 사용하지 않음 |
-| 선택적 신경망 | 허용된 예보 시계열·지점 ID·발전소 메타로 처음부터 학습하는 모델 | 트리 앙상블보다 후속 W가 개선될 때만 유지. 외부 사전학습 가중치 금지 |
+| 선택적 신경망 | 허용된 예보 시계열·지점 ID·발전소 메타로 학습하는 모델 | 트리 앙상블보다 후속 W가 개선될 때만 유지. 외부 가중치는 공개·상업적 이용 조건 확인 |
 
 [XGBoost GPU 설정](https://xgboost.readthedocs.io/en/stable/gpu/)은 `tree_method="hist", device="cuda"`이며 공식 [설치 문서](https://xgboost.readthedocs.io/en/stable/install.html)는 Linux aarch64 CUDA wheel을 안내한다. [CatBoost GPU 설정](https://catboost.ai/docs/en/references/training-parameters/processing-unit)은 `task_type="GPU"`이고 [공식 배포 목록](https://catboost.ai/docs/en/installation/cli-installation-binaries)에 Linux aarch64 GPU 빌드가 있다. [LightGBM 설치 문서](https://lightgbm.readthedocs.io/en/stable/Installation-Guide.html)는 Linux에서 CUDA 빌드와 `device_type="cuda"`를 설명한다. 이는 공식 지원 안내이지, **사용자 장비에서 설치·속도·정확도가 이미 확인됐다는 뜻은 아니다.** 먼저 버전 고정과 짧은 GPU 학습·예측 검증을 한다.
 
@@ -32,7 +32,7 @@ GPU가 한 개인 장비라면 여러 GPU trial을 동시에 돌려 메모리와
 ## 고정할 데이터 계약
 
 - 기본 정답은 `train/generation.parquet`의 실제 존재하는 `(site_id, ts)`와 `energy(kWh)`다. 누락 행을 발전량 0으로 채우지 않는다. 학습에는 이보다 이른 불완전 기간도 사용할 수 있다.
-- A/B 예보는 `station, round, ts`로 결합한다. `round=10/17`을 보존하고, 전일 17:00 KST 이후의 정보와 학습 실측·평가 실적을 입력에서 제외한다.
+- A/B 예보는 `station, round, ts`로 결합한다. `round=10/17`을 보존하고, 전일 17:00 KST 이후의 정보와 평가 실적·평가 실측·대상일 실제 SMP를 입력에서 제외한다. 학습 실측은 교사·분석 자료로만 쓴다.
 - 평가 출력의 시간축은 `smp.csv`의 8,760개 KST 우측닫힘 시각이다. 하루 D의 24개 값은 D 01:00~D+1 00:00이다. 평가 A 예보 264개 결손 때문에 행을 삭제하지 않는다.
 - A/B 풍속 단위(m/s 대 km/h), A/B 강설 단위(mm 대 cm)를 명시적으로 처리한다. 비정각 B 예보 92행, A 실측 중복 키 6개, 음수 발전량 40행의 처리 방침을 전처리 코드와 기록에 남긴다. 실측을 모델 입력으로 쓸 계획은 없다.
 - 전처리, 결측 대체 통계, 발전소별 출력 패턴, 특성 선택 등 학습되는 변환은 각 폴드의 과거 학습 구간에서만 적합한다.
