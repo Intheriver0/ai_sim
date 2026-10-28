@@ -20,9 +20,15 @@ nvidia-smi
 nvcc --version
 cmake --version
 g++ --version
+dpkg-query -W libnccl2 libnccl-dev
+nvcc --list-gpu-code | grep sm_121
 ```
 
 LightGBM의 CUDA 빌드에는 CUDA Toolkit, CMake, 호환되는 C++ 컴파일러가 필요하다. `nvidia-smi`의 CUDA 표시는 드라이버 지원 버전이며 `nvcc` 설치 확인을 대신하지 않는다. 컴파일러가 없거나 native GPU 아키텍처를 지원하지 못하면 해당 오류부터 해결하고 CPU 빌드로 우회하지 않는다.
+
+4.7.0 소스 재검토에서 추가 확인한 조건: CMake 3.28 이상과 NCCL 개발 파일이 필요하다. 기본 NCCL 검색은 `nccl.h`와 `libnccl_static.a`를 찾으므로 Ubuntu에서는 CUDA 버전에 맞는 `libnccl-dev` 설치 여부를 확인한다. 사용자 지정 경로 설치는 `NCCL_ROOT`로 지정할 수 있다. 패키지가 없다고 최신 NCCL을 무조건 설치하면 CUDA 관련 패키지가 함께 변경될 수 있어 현재 `nvcc`·패키지 버전에 맞춰 설치한다. [4.7.0 빌드 설정](https://github.com/lightgbm-org/LightGBM/blob/v4.7.0/CMakeLists.txt), [NCCL 탐색 설정](https://github.com/lightgbm-org/LightGBM/blob/v4.7.0/cmake/modules/FindNCCL.cmake).
+
+`native`는 현재 GB10에 맞는 GPU 코드를 생성하는 공식 옵션이다. `CMAKE_BUILD_PARALLEL_LEVEL=4`는 컴파일 작업 수만 제한하며 이후 학습 성능을 4스레드로 제한하지 않는다. 4.7.0 Python 패키지는 기본 Release 빌드이며 CUDA 컴파일에 `-O3`를 사용한다. 설치 명령이 적합하다는 것과 전체 파이프라인의 GPU 가속 배율이 검증됐다는 것은 다르다.
 
 ```bash
 python3 -m venv .venv-cuda
