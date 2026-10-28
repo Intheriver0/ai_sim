@@ -1,5 +1,7 @@
 # ai_sim
 
+**현재 모든 학습은 CUDA GPU 필수입니다.** [GB10 CUDA 설치·검사·실행](gpu_training.md)을 먼저 따릅니다. CUDA 초기 학습 검사가 실패하면 CPU로 대체하지 않고 종료합니다. 이전 CPU 결과에서 재개하지 않고 새 GPU 실행 폴더를 사용합니다.
+
 **5·6단계 자동 튜닝·혼합:** [실행·재시작·결과 해석](tuning_blending.md). `scripts/train_tuned.py`가 K=1 기준선과 Optuna 모델을 비교하고 과거 별도 구간에서 혼합 비율을 선택합니다. 먼저 `--smoke`로 실행 경로를 확인한 뒤 GB10에서 본 실험을 실행합니다.
 
 **다른 장비에서 발전소 그룹별 모델 실행:** [설치·데이터 이동·실행·결과 회수 안내](grouped_models.md). `scripts/train_grouped.py`가 K=1/2/3을 비교하고 결과를 `ai_sim/results/`에 저장합니다. Git push는 자동 실행하지 않습니다.

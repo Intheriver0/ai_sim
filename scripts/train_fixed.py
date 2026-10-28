@@ -11,6 +11,7 @@ import numpy as np
 import pandas as pd
 
 from fixed_model import FEATURES, PARAMS, WEATHER, fit, predict
+from gpu_training import check_cuda
 from pipeline_common import check_keys, connect, export, read_view, reject
 from scoring import score
 from seasonal_splits import load_plan, window_views
@@ -63,12 +64,13 @@ def run(data_dir, config, output_dir, fold_ids=None, threads=2):
         windows = [w for w in windows if w['id'] in fold_ids]
     if output_dir == data_dir or data_dir in output_dir.parents:
         raise ValueError('Output must be outside preprocessing inputs')
+    gpu = check_cuda(threads)
     output_dir.mkdir(parents=True, exist_ok=False)
     root = Path(__file__).resolve().parents[1]
     git = subprocess.run(['git', '-c', f'safe.directory={root.as_posix()}', '-C', str(root),
                           'rev-parse', 'HEAD'], capture_output=True, text=True)
     report = {'status': 'running', 'procedure': 'fixed 600 trees; no selection or early stopping; two-round mean; reference composition',
-              'params': PARAMS, 'features': FEATURES, 'threads': threads,
+              'params': PARAMS, 'features': FEATURES, 'threads': threads, 'gpu': gpu,
               'versions': {'python': platform.python_version(), 'lightgbm': lgb.__version__,
                            'numpy': np.__version__, 'pandas': pd.__version__},
               'git_head': git.stdout.strip(),

@@ -20,5 +20,6 @@ results/tuning_smoke*/
 # Local runtimes and Python caches.
 .tools/
 .venv/
+.venv-cuda/
 __pycache__/
 *.pyc

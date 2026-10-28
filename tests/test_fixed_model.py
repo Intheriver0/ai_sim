@@ -1,4 +1,5 @@
 import importlib.util
+import os
 from pathlib import Path
 import sys
 import tempfile
@@ -25,12 +26,17 @@ class FixedModelTests(unittest.TestCase):
         frame.loc[0, 'wa_cloud'] = np.nan
         return frame
 
-    def test_feature_contract_and_saved_predictions(self):
+    def test_feature_contract(self):
         frame = self.frame()
         x = features(frame)
         self.assertEqual(list(x), FEATURES)
         changed = frame.assign(target_kwh=9999, energy=9999, smp=9999)
         pd.testing.assert_frame_equal(x, features(changed))
+
+    @unittest.skipUnless(os.environ.get('RUN_CUDA_TESTS') == '1', 'Set RUN_CUDA_TESTS=1 on the CUDA training host')
+    def test_cuda_saved_predictions(self):
+        frame = self.frame()
+        x = features(frame)
         model, daytime = fit(frame, 1)
         self.assertGreater(daytime, 0)
         self.assertLess(daytime, len(frame))

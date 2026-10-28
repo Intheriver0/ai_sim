@@ -1,5 +1,7 @@
 # 5·6단계: 자동 튜닝과 예측 혼합
 
+**현재 CUDA GPU 필수.** 먼저 [GB10 GPU 설치·실제 학습 검사](gpu_training.md)를 수행한다. 아래 과거 CPU 검증 기록은 CUDA 성공을 뜻하지 않는다.
+
 `scripts/train_tuned.py`가 K=1 공통 LightGBM의 파라미터 탐색, 기준선 유지 여부 선택, 혼합 비율 선택, 외부 월 평가를 순서대로 실행한다. 7단계 G1/G2 배분 최적화와 최종 대회 제출은 포함하지 않는다. 참조 배분을 고정한다.
 
 ## 선택 규칙
@@ -15,12 +17,12 @@
 
 ## Linux/GB10 실행
 
-`ai_sim` 폴더와 기존 전처리 자료 `data/preprocessed_v1/`가 필요하다. Python 3.12 이상을 사용한다. 이번 구현은 CPU LightGBM이며 GPU 설정이 필요하지 않다.
+`ai_sim` 폴더와 기존 전처리 자료 `data/preprocessed_v1/`가 필요하다. Python 3.12 이상과 CUDA 지원 LightGBM이 필요하다. [GPU 안내](gpu_training.md)에 따라 `.venv-cuda`를 먼저 설치한다.
 
 ```bash
-source .venv/bin/activate
-python -m pip install -r requirements-training.txt
-python -m unittest discover -s tests -v
+source .venv-cuda/bin/activate
+python scripts/gpu_training.py
+RUN_CUDA_TESTS=1 python -m unittest discover -s tests -v
 python -u scripts/train_tuned.py --output-dir results/tuning_smoke_local --threads 8 --smoke
 ```
 

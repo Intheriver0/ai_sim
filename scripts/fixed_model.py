@@ -3,12 +3,13 @@ import lightgbm as lgb
 import numpy as np
 import pandas as pd
 from solar_time import solar_clock
+from gpu_training import require_cuda_params
 
 
 PARAMS = dict(n_estimators=600, learning_rate=0.06, num_leaves=127,
               min_child_samples=200, subsample=0.8, subsample_freq=1,
               colsample_bytree=0.8, objective='regression', random_state=42,
-              deterministic=True, force_col_wise=True, verbosity=-1)
+              device_type='cuda', verbosity=-1)
 WEATHER = ['wa_cloud', 'wa_temp', 'wa_humidity', 'wa_rain', 'wa_wind_speed_ms',
            'wa_ground_press', 'wb_cloud', 'wb_temp', 'wb_rel_hum', 'wb_uv_idx',
            'wb_precip_prob', 'wb_total_liq', 'wb_vis', 'wb_wind_speed_ms', 'wb_dew_point']
@@ -36,6 +37,7 @@ def features(frame):
 
 
 def fit(frame, threads):
+    require_cuda_params(PARAMS)
     x = features(frame)
     day = x.elev > 0
     if not day.any():

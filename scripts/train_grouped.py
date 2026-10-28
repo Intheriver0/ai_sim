@@ -12,6 +12,7 @@ import sklearn
 from threadpoolctl import threadpool_limits
 
 from fixed_model import FEATURES, PARAMS, WEATHER, fit, predict
+from gpu_training import check_cuda
 from pipeline_common import connect, export, read_view
 from seasonal_splits import load_plan, window_views
 from site_groups import group_sites, profiles
@@ -139,7 +140,8 @@ def run(data_dir, output, config, ks=(1,2,3), fold_ids=None, threads=4, resume=F
         folds = [w for w in folds if w['id'] in fold_ids]
     filenames = ['report.json','sites.parquet','reference_composition.parquet','train_targets.parquet',
                  'train_prices.parquet','train_round10.parquet','train_round17.parquet']
-    manifest = {'ks': list(ks), 'folds': [w['id'] for w in folds], 'threads': threads,
+    gpu = check_cuda(threads)
+    manifest = {'ks': list(ks), 'folds': [w['id'] for w in folds], 'threads': threads, 'gpu': gpu,
                 'model_params': PARAMS, 'features': FEATURES, 'profile_min_bin_rows': 30,
                 'versions': {'python': platform.python_version(), 'lightgbm': lgb.__version__,
                              'numpy': np.__version__, 'pandas': pd.__version__, 'sklearn': sklearn.__version__},

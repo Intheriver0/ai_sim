@@ -1,5 +1,7 @@
 # 4단계: 고정 LightGBM 기준선
 
+**2026-10-28 갱신:** 현재 실행 코드는 CUDA GPU를 필수로 사용한다. 아래 CPU 성능·설정은 이전 실행 이력이다. 새 실행은 [GPU 설치·검사 안내](gpu_training.md)를 따르고 새 출력 폴더를 사용한다.
+
 ## 구현과 고정 절차
 
 `scripts/fixed_model.py`는 특성 생성·학습·발전소별 예측을 담당하고, `scripts/train_fixed.py`는 기존 seasonal v2 시간 분할과 정산 함수를 연결한다. 대형 모델을 추가할 때도 `(site_id, ts, forecast_kwh)` 출력 계약을 유지한다. 이번 기준선은 CPU 모델이며 GB10 GPU·B급 모델 성능을 측정한 것은 아니다.

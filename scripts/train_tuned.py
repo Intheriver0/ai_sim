@@ -14,6 +14,7 @@ import pandas as pd
 from optuna.trial import TrialState
 
 from fixed_model import FEATURES, PARAMS, WEATHER, features, predict
+from gpu_training import check_cuda, require_cuda_params
 from pipeline_common import connect, export, read_view
 from seasonal_splits import load_plan, window_views
 from time_splits import attach_data, digest, validate_inputs
@@ -52,6 +53,7 @@ def daytime_xy(frame):
 
 
 def fit_round(con, round_id, params, threads, early_stop):
+    require_cuda_params(params)
     def xy(view):
         return daytime_xy(con.execute(f'SELECT {COLUMNS},target_kwh FROM {view} '
                                       f'WHERE round={round_id} ORDER BY ts,site_id').df())
@@ -81,6 +83,7 @@ def checked_result(destination):
 
 
 def run_model(con, window, params, early_stop, output, threads):
+    require_cuda_params(params)
     # Exclude outer-specific names so identical historical blocks can be reused.
     identity = {'window': {k: str(v) for k, v in window.items() if k not in ('id', 'inner')},
                 'params': params, 'early_stop': early_stop}
@@ -92,6 +95,7 @@ def run_model(con, window, params, early_stop, output, threads):
         read_view(con, 'cached_predictions', destination/'predictions.parquet')
         return con.execute('SELECT * FROM cached_predictions').df(), cached
     destination.mkdir(parents=True, exist_ok=True)
+    print(f'{window["id"]}: starting CUDA training (early_stop={early_stop})', flush=True)
     started = time.monotonic()
     rounds, training, artifacts = [], [], []
     for round_id in (10, 17):
@@ -259,7 +263,10 @@ def run(data_dir, output, config, fold_ids=None, threads=4, trials=20, timeout=1
     if smoke:
         windows, trials, max_trees = windows[:1], 1, 12
     fixed_params = dict(PARAMS, n_estimators=12) if smoke else dict(PARAMS)
+    gpu = check_cuda(threads)
+    print('Hashing inputs and freezing the CUDA run configuration...', flush=True)
     manifest = {'folds': [w['id'] for w in windows], 'threads': threads, 'trials': trials,
+        'gpu': gpu,
         'timeout_seconds_per_outer': timeout, 'max_trees': max_trees, 'smoke': smoke,
         'fixed_params': fixed_params, 'features': FEATURES, 'alphas': ALPHAS.tolist(),
         'selection_objective': 'month_equal_site_nmae_proxy',
@@ -282,6 +289,7 @@ def run(data_dir, output, config, fold_ids=None, threads=4, trials=20, timeout=1
                               'rev-parse', 'HEAD'], capture_output=True, text=True)
         save_json(output/'git.json', {'head': git.stdout.strip()})
     with connect() as con:
+        print('Validating input data before training...', flush=True)
         attach_data(con, data_dir)
         validate_inputs(con)
         read_view(con, 'composition', data_dir/'reference_composition.parquet')
