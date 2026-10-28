@@ -49,8 +49,15 @@ class FixedModelTests(unittest.TestCase):
         spec = importlib.util.spec_from_file_location('participant_baseline', path)
         baseline = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(baseline)
-        frame = self.frame()
+        ts = pd.date_range('2024-01-01', '2025-01-01', freq='h', tz='Asia/Seoul')
+        frame = self.frame().iloc[:1].loc[np.zeros(len(ts), dtype=int)].reset_index(drop=True)
+        frame['ts'] = ts
+        frame['lat'] = np.linspace(33., 39., len(ts))
+        frame['lon'] = np.linspace(124., 132., len(ts))
+        original = frame.copy(deep=True)
         x = features(frame)
+        pd.testing.assert_frame_equal(frame, original)
+        pd.testing.assert_frame_equal(x, features(frame.assign(ts=frame.ts.dt.tz_convert('UTC'))))
         for col, expected in zip(('elev', 'azim', 'cosz'), baseline.solar(
                 pd.DatetimeIndex(frame.ts), frame.lat.to_numpy(), frame.lon.to_numpy())):
             np.testing.assert_array_equal(x[col], expected)

@@ -12,6 +12,10 @@ runs/
 artifacts/
 results/**/models/
 results/**/*.tmp
+results/**/*.db
+results/**/*.db-*
+results/**/cache/
+results/tuning_smoke*/
 
 # Local runtimes and Python caches.
 .tools/

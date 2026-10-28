@@ -57,6 +57,23 @@ class SiteGroupTests(unittest.TestCase):
         finally:
             fixture.tearDown()
 
+    def test_longitude_changes_solar_bin_without_changing_timestamp(self):
+        with connect() as c:
+            c.execute('''CREATE TABLE sites AS SELECT * FROM (VALUES
+                ('WEST',37.0,120.0,100.0),('EAST',37.0,135.0,100.0))
+                s(site_id,lat,lon,capacity_kw)''')
+            c.execute('''CREATE TABLE training_targets AS SELECT site_id,
+                TIMESTAMPTZ '2024-06-01 13:00+09' AS ts,50.0 AS target_kwh FROM sites''')
+            original = c.execute('SELECT * FROM training_targets ORDER BY site_id,ts').fetchall()
+            result = profiles(c).set_index('site_id')
+            self.assertEqual(result.loc['WEST','morning_rows'],1)
+            self.assertEqual(result.loc['WEST','noon_rows'],0)
+            self.assertEqual(result.loc['EAST','morning_rows'],0)
+            self.assertEqual(result.loc['EAST','noon_rows'],1)
+            self.assertEqual(result.loc['WEST','morning'],.5)
+            self.assertEqual(result.loc['EAST','noon'],.5)
+            self.assertEqual(c.execute('SELECT * FROM training_targets ORDER BY site_id,ts').fetchall(),original)
+
 
 if __name__ == '__main__':
     unittest.main()

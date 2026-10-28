@@ -2,6 +2,7 @@
 import lightgbm as lgb
 import numpy as np
 import pandas as pd
+from solar_time import solar_clock
 
 
 PARAMS = dict(n_estimators=600, learning_rate=0.06, num_leaves=127,
@@ -18,14 +19,8 @@ def features(frame):
     """Participant baseline solar approximation; KST and right-closed midpoint."""
     ts = pd.DatetimeIndex(frame.ts).tz_convert('Asia/Seoul')
     doy = ts.day_of_year.to_numpy()
-    hour = ts.hour.to_numpy() + ts.minute.to_numpy() / 60
-    g = 2 * np.pi / 365 * (doy - 1 + (hour - 12) / 24)
-    eqtime = 229.18 * (0.000075 + 0.001868*np.cos(g) - 0.032077*np.sin(g)
-                       - 0.014615*np.cos(2*g) - 0.040849*np.sin(2*g))
-    decl = (0.006918 - 0.399912*np.cos(g) + 0.070257*np.sin(g)
-            - 0.006758*np.cos(2*g) + 0.000907*np.sin(2*g)
-            - 0.002697*np.cos(3*g) + 0.00148*np.sin(3*g))
-    ha = np.radians(((hour - 0.5)*60 + eqtime + 4*(frame.lon.to_numpy()-135)) / 4 - 180)
+    minutes, decl = solar_clock(ts)
+    ha = np.radians((minutes + 4*(frame.lon.to_numpy()-135)) / 4 - 180)
     la = np.radians(frame.lat.to_numpy())
     cosz = np.clip(np.sin(la)*np.sin(decl) + np.cos(la)*np.cos(decl)*np.cos(ha), -1, 1)
     x = frame[WEATHER + ['lat', 'lon']].astype('float32').copy()
