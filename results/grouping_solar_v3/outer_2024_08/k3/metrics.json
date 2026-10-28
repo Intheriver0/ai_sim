@@ -1,0 +1,68 @@
+{
+  "site_equal_nmae": 0.042643866968239366,
+  "observed_site_hours": 186281,
+  "observed_sites": 252,
+  "cold_start_sites": 2,
+  "complete_253_hours": 0,
+  "settlement": null,
+  "k": 3,
+  "fold": "outer_2024_08",
+  "training_cutoff": "2024-07-31 17:00:00+09:00",
+  "groups": {
+    "0": 77,
+    "1": 57,
+    "2": 119
+  },
+  "training_rows": [
+    {
+      "cluster": 0,
+      "round": 10,
+      "eligible_rows": 314925,
+      "daytime_rows": 169749
+    },
+    {
+      "cluster": 0,
+      "round": 17,
+      "eligible_rows": 314925,
+      "daytime_rows": 169749
+    },
+    {
+      "cluster": 1,
+      "round": 10,
+      "eligible_rows": 535778,
+      "daytime_rows": 273565
+    },
+    {
+      "cluster": 1,
+      "round": 17,
+      "eligible_rows": 535778,
+      "daytime_rows": 273565
+    },
+    {
+      "cluster": 2,
+      "round": 10,
+      "eligible_rows": 1698886,
+      "daytime_rows": 865153
+    },
+    {
+      "cluster": 2,
+      "round": 17,
+      "eligible_rows": 1698886,
+      "daytime_rows": 865153
+    }
+  ],
+  "silhouette": 0.23851910521981673,
+  "seconds": 35.52877922495827,
+  "artifacts_sha256": {
+    "groups.json": "41af5f614fd65824beabb66718205715c5ef87076169911d158f20c72d58a16e",
+    "site_metrics.json": "b273b9eec85f8cb08432a7560e25c00406b7fe9957749d6dc11ae21cbcabe37e",
+    "site_predictions.parquet": "48b11dca94d987a8d49f3dbda3de9a813447b3594ac3c0b412b884776e4d83f3",
+    "models/cluster1_round17.txt": "619fc3875c3f82103fd347450db4382921bf58db0cd316cd509ce3a8e5b3b471",
+    "models/cluster2_round10.txt": "c997454f0d8ebf2e6069bd37c375e1b76059c0eb5d2281461a72d94eba770047",
+    "models/cluster0_round17.txt": "9b3ffd2ccd4b45823fdff07b176cbd414b4fa7810c40d96d383f6fb7a8c7f08d",
+    "models/cluster1_round10.txt": "e5c1f365db3d3b34200dac9931856961b572f5a6fa69cccb3ac2ab8bf2a9e6fc",
+    "models/cluster0_round10.txt": "1281758d042347cf09ab2c73e9f36262f693496d9d9eeb73e38cd33d1bdc5cd3",
+    "models/cluster2_round17.txt": "1badf8966133df0252536c09d6c3c3f7b0d61e9fd940ca61fd1f8161c5b7387f"
+  },
+  "status": "complete"
+}

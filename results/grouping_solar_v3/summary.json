@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "all_12_months": true,
+  "interpretation": "Exploratory candidate comparison; best K is not an unbiased selected-model score. G1/G2 unchanged.",
+  "exploratory_best_k": 1,
+  "candidates": [
+    {
+      "k": 1,
+      "completed_months": 12,
+      "mean_monthly_nmae": 0.03644356914440336,
+      "complete_253_hours": 3802,
+      "W_available_hours_won": 88768636.64256485,
+      "seconds": 429.2986326850951
+    },
+    {
+      "k": 2,
+      "completed_months": 12,
+      "mean_monthly_nmae": 0.036480645208667055,
+      "complete_253_hours": 3802,
+      "W_available_hours_won": 88218211.38142654,
+      "seconds": 469.7519608789589
+    },
+    {
+      "k": 3,
+      "completed_months": 12,
+      "mean_monthly_nmae": 0.036653903638915956,
+      "complete_253_hours": 3802,
+      "W_available_hours_won": 89438701.88418958,
+      "seconds": 506.31860166369006
+    }
+  ]
+}

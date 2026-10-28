@@ -1,0 +1,87 @@
+{
+  "site_equal_nmae": 0.02990306147952325,
+  "observed_site_hours": 170016,
+  "observed_sites": 253,
+  "cold_start_sites": 0,
+  "complete_253_hours": 672,
+  "settlement": {
+    "basis": "provided README formula; local validation only",
+    "groups": {
+      "G1": {
+        "capacity_kw": 20465.65499999998,
+        "revenue_won": 287889706.6094104,
+        "W_won": 6633831.371332412,
+        "S_won": 281255875.238078
+      },
+      "G2": {
+        "capacity_kw": 22189.71499999999,
+        "revenue_won": 310117863.65149087,
+        "W_won": 8511005.709997736,
+        "S_won": 301606857.94149315
+      }
+    },
+    "revenue_won": 598007570.2609012,
+    "W_won": 15144837.081330147,
+    "S_won": 582862733.1795712
+  },
+  "k": 3,
+  "fold": "outer_2025_02",
+  "training_cutoff": "2025-01-31 17:00:00+09:00",
+  "groups": {
+    "0": 28,
+    "1": 163,
+    "2": 62
+  },
+  "training_rows": [
+    {
+      "cluster": 0,
+      "round": 10,
+      "eligible_rows": 233693,
+      "daytime_rows": 113219
+    },
+    {
+      "cluster": 0,
+      "round": 17,
+      "eligible_rows": 233693,
+      "daytime_rows": 113219
+    },
+    {
+      "cluster": 1,
+      "round": 10,
+      "eligible_rows": 2570633,
+      "daytime_rows": 1277034
+    },
+    {
+      "cluster": 1,
+      "round": 17,
+      "eligible_rows": 2570633,
+      "daytime_rows": 1277034
+    },
+    {
+      "cluster": 2,
+      "round": 10,
+      "eligible_rows": 857789,
+      "daytime_rows": 423653
+    },
+    {
+      "cluster": 2,
+      "round": 17,
+      "eligible_rows": 857789,
+      "daytime_rows": 423653
+    }
+  ],
+  "silhouette": 0.38437655749107186,
+  "seconds": 47.20496900705621,
+  "artifacts_sha256": {
+    "groups.json": "d41af7305a467e5ddc849dde8055bff6388147fc2dfdb3fac9fcf5bbf1641f05",
+    "site_metrics.json": "16be7deff149c237987defbad6d3710b829e24d99082eac81f4e4a2811c9b479",
+    "site_predictions.parquet": "04bf832f35177d19e86b2082ea3801da26d4be676ab1f32446700a61a96c8f61",
+    "models/cluster1_round17.txt": "31588274177ee27abf988b8b7561f018639c4bc832871ff9aa33f2ba055ec8d5",
+    "models/cluster2_round10.txt": "4a144d9ca73edc5b56e00606de55f7499da007a9493c6430c33b7f60f17491dd",
+    "models/cluster0_round17.txt": "0a70257426020b5fd6b4a8d26e9f7b3ac70d50a5c646d698d32b44905f440eea",
+    "models/cluster1_round10.txt": "a99308e8ea45cdb1bc83d1f308d25d73d1e50236111368ed516ce6f47b255c35",
+    "models/cluster0_round10.txt": "fc9c9a48bb3bc758d081ee2189b405f4190fa32e2d99553f96d45073ff3dd90c",
+    "models/cluster2_round17.txt": "7452ff834f1829cf0f5af34b23d75bbde278aa6539cf68d0b6e7f7a3d19103f2"
+  },
+  "status": "complete"
+}

@@ -1,0 +1,83 @@
+{
+  "ks": [
+    1,
+    2,
+    3
+  ],
+  "folds": [
+    "outer_2024_06"
+  ],
+  "threads": 4,
+  "model_params": {
+    "n_estimators": 600,
+    "learning_rate": 0.06,
+    "num_leaves": 127,
+    "min_child_samples": 200,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "objective": "regression",
+    "random_state": 42,
+    "deterministic": true,
+    "force_col_wise": true,
+    "verbosity": -1
+  },
+  "features": [
+    "wa_cloud",
+    "wa_temp",
+    "wa_humidity",
+    "wa_rain",
+    "wa_wind_speed_ms",
+    "wa_ground_press",
+    "wb_cloud",
+    "wb_temp",
+    "wb_rel_hum",
+    "wb_uv_idx",
+    "wb_precip_prob",
+    "wb_total_liq",
+    "wb_vis",
+    "wb_wind_speed_ms",
+    "wb_dew_point",
+    "elev",
+    "azim",
+    "cosz",
+    "doy_sin",
+    "doy_cos",
+    "hour",
+    "cap",
+    "lat",
+    "lon"
+  ],
+  "profile_min_bin_rows": 30,
+  "versions": {
+    "python": "3.12.3",
+    "lightgbm": "4.7.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "sklearn": "1.9.1"
+  },
+  "config_sha256": "456055dc3e708e368df438112e2173c8935e119aefee868cc540d6cfec08d2c7",
+  "input_sha256": {
+    "report.json": "c7d995e023ca3d467d70af5f59d8354f8bf3ff909d122c09f99443693054da10",
+    "sites.parquet": "5c1b39a44351a80fc7192ec87423ed8e8b5ac11c7d09daf1230f0965642171b4",
+    "reference_composition.parquet": "49d6037ad7a97bb83162313588bd38ca2e3e742f549f5ffea99b881d540018c2",
+    "train_targets.parquet": "cbfceab0d658d3b58cf7e5e86d41ba2943a293c99c40c6fc884d100d5d2927e9",
+    "train_prices.parquet": "82f1e476151258c11534a96ccb15ed17218696f892fa0efe1bd57fe992457a51",
+    "train_round10.parquet": "da24868d961325f8279d5e86c257e83d885c5846d9d0dd8ddc86ea64364da44b",
+    "train_round17.parquet": "65b60931b65eaf5dd104d2b5f61ffdddd1f978a9f0f2e77d484faf6216764231"
+  },
+  "source_sha256": {
+    "clean_observed.py": "f6e26a31c09da2cee0e79c793295f983738f90a338a0cca8071e159fcb3751dc",
+    "preprocess.py": "b2290f457caa059968a33ed0170f83a48b5575075b4252d3de320f1a2422c976",
+    "train_grouped.py": "4ceda9bc7ecd57777a220806f99fa366cfa1c4641fb0769fb50331b007e438af",
+    "inspect_dataset.py": "bf6434a273cd136e6482a58fa532f2d544c060cdcd7b2198d90719a42158793c",
+    "time_splits.py": "ffe1269d7fd0a8f67a5aa731501c64ef8319b8b6208a824ec33cd3a4f4f05a81",
+    "site_groups.py": "6fe241ed8aff5096e32ad07e0416f5f18d213bbd5a1f9819e09dac89fe16f4fc",
+    "seasonal_splits.py": "0494a7bef38140672494a169d489f6933e68ca4980f4ceddcc3c96a2cac30419",
+    "pipeline_common.py": "c1bedce57f2a4af2f345efd77f22b5943626673fe708b995704dfec24bd90ba4",
+    "train_fixed.py": "6698be150cf472e5579e1ae1656108ff6a32c07fd7f7329d162f3051391ef42a",
+    "scoring.py": "3c021f5fc7911f6d5a09c3fa4feee1e18ba4ba8f4206a7ac5210a8fe11e16f5a",
+    "summarize_data_usage.py": "a62abe4a014422eeb3a28d19c0f7ba751d431ca7721c11d906122a26f54db167",
+    "fixed_model.py": "2f58b4a67fb686df059e040d0b286b6f3cb05b5665901f19926f9d58a2090c8a"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "site_equal_nmae": 0.04287425518397824,
+  "observed_site_hours": 186281,
+  "observed_sites": 252,
+  "cold_start_sites": 2,
+  "complete_253_hours": 0,
+  "settlement": null,
+  "k": 2,
+  "fold": "outer_2024_08",
+  "training_cutoff": "2024-07-31 17:00:00+09:00",
+  "groups": {
+    "0": 180,
+    "1": 73
+  },
+  "training_rows": [
+    {
+      "cluster": 0,
+      "round": 10,
+      "eligible_rows": 1847809,
+      "daytime_rows": 950748
+    },
+    {
+      "cluster": 0,
+      "round": 17,
+      "eligible_rows": 1847809,
+      "daytime_rows": 950748
+    },
+    {
+      "cluster": 1,
+      "round": 10,
+      "eligible_rows": 701780,
+      "daytime_rows": 357719
+    },
+    {
+      "cluster": 1,
+      "round": 17,
+      "eligible_rows": 701780,
+      "daytime_rows": 357719
+    }
+  ],
+  "silhouette": 0.3629481425968856,
+  "seconds": 33.7960931470152,
+  "artifacts_sha256": {
+    "groups.json": "f760878b12256bdce1a741604a18d42a5e518645ee4381cb858a18e1831a5e4b",
+    "site_metrics.json": "8f8aee257b52b93632f26c66d79d448b10cee8f7af870aa88425e13809125280",
+    "site_predictions.parquet": "76c1ef7b66d4f452e96a2cebb5871e380e1ee9b83a08bc30feb2577ebb4b3fdc",
+    "models/cluster1_round17.txt": "977f5eeabe8a07157c08bfb98ff7520b5a765cad9686d30813dc66f48c3fd568",
+    "models/cluster0_round17.txt": "86ea0c1f8213a1d4390eef5e25e5e6bb47c5fc3846f623a3a9b1ca1fed228917",
+    "models/cluster1_round10.txt": "c69e100275b30f8d8714c5c1886cd9da935fcd558b19abd7514490c0f621110c",
+    "models/cluster0_round10.txt": "869f6e2b8a394d299b697645e2fa6e8e128de01db07b1dad68d9e83dcdb89270"
+  },
+  "status": "complete"
+}

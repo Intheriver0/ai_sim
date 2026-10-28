@@ -1,0 +1,57 @@
+{
+  "site_equal_nmae": 0.024935080512153783,
+  "observed_site_hours": 188232,
+  "observed_sites": 253,
+  "cold_start_sites": 0,
+  "complete_253_hours": 744,
+  "settlement": {
+    "basis": "provided README formula; local validation only",
+    "groups": {
+      "G1": {
+        "capacity_kw": 20465.65499999998,
+        "revenue_won": 217311668.1807148,
+        "W_won": 6462119.376730191,
+        "S_won": 210849548.80398458
+      },
+      "G2": {
+        "capacity_kw": 22189.71499999999,
+        "revenue_won": 250209339.3916601,
+        "W_won": 7106809.074756704,
+        "S_won": 243102530.31690338
+      }
+    },
+    "revenue_won": 467521007.5723749,
+    "W_won": 13568928.451486895,
+    "S_won": 453952079.120888
+  },
+  "k": 1,
+  "fold": "outer_2025_01",
+  "training_cutoff": "2024-12-31 17:00:00+09:00",
+  "groups": {
+    "0": 253
+  },
+  "training_rows": [
+    {
+      "cluster": 0,
+      "round": 10,
+      "eligible_rows": 3473883,
+      "daytime_rows": 1739342
+    },
+    {
+      "cluster": 0,
+      "round": 17,
+      "eligible_rows": 3473883,
+      "daytime_rows": 1739342
+    }
+  ],
+  "silhouette": null,
+  "seconds": 38.30502849910408,
+  "artifacts_sha256": {
+    "groups.json": "e3b473971be018b05923cdbd9c35978fa444b5a6980bfa17b540815e6b44042f",
+    "site_metrics.json": "c0afe2854fcaff1cccaefadcdb6c2f684a921e77a7540d82bc56e85c4ad9a645",
+    "site_predictions.parquet": "0513f92a59e8edff4b855fd1debfa4a4e6d071a116792bab5251a6f4a52d6a86",
+    "models/cluster0_round17.txt": "3426d790f5f88a020f00859357b16699006f68b64e31198b4c1ff9f260216e00",
+    "models/cluster0_round10.txt": "8e2016c449cee1b42de4cfa016565f459966630b93a989b280a28ad1090a9016"
+  },
+  "status": "complete"
+}

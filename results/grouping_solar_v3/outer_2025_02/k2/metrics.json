@@ -1,0 +1,72 @@
+{
+  "site_equal_nmae": 0.029966110160028543,
+  "observed_site_hours": 170016,
+  "observed_sites": 253,
+  "cold_start_sites": 0,
+  "complete_253_hours": 672,
+  "settlement": {
+    "basis": "provided README formula; local validation only",
+    "groups": {
+      "G1": {
+        "capacity_kw": 20465.65499999998,
+        "revenue_won": 287889706.6094105,
+        "W_won": 6832799.662496572,
+        "S_won": 281056906.94691396
+      },
+      "G2": {
+        "capacity_kw": 22189.71499999999,
+        "revenue_won": 310117863.6514908,
+        "W_won": 9415320.34718962,
+        "S_won": 300702543.3043012
+      }
+    },
+    "revenue_won": 598007570.2609013,
+    "W_won": 16248120.009686192,
+    "S_won": 581759450.2512152
+  },
+  "k": 2,
+  "fold": "outer_2025_02",
+  "training_cutoff": "2025-01-31 17:00:00+09:00",
+  "groups": {
+    "0": 83,
+    "1": 170
+  },
+  "training_rows": [
+    {
+      "cluster": 0,
+      "round": 10,
+      "eligible_rows": 1063734,
+      "daytime_rows": 523527
+    },
+    {
+      "cluster": 0,
+      "round": 17,
+      "eligible_rows": 1063734,
+      "daytime_rows": 523527
+    },
+    {
+      "cluster": 1,
+      "round": 10,
+      "eligible_rows": 2598381,
+      "daytime_rows": 1290379
+    },
+    {
+      "cluster": 1,
+      "round": 17,
+      "eligible_rows": 2598381,
+      "daytime_rows": 1290379
+    }
+  ],
+  "silhouette": 0.3689083808857216,
+  "seconds": 42.78340872912668,
+  "artifacts_sha256": {
+    "groups.json": "22f6665e3f188392dbf42d9bac4e53b532bce110aa0171537080fff3c577ecbd",
+    "site_metrics.json": "aed2c19a4df269f7a7e8d7671d1c13612b332d238cafff3951d338117a027947",
+    "site_predictions.parquet": "a7ebcf2d864e92ca343348bad85a0ea049ead139c359f0bb88ba681c6c0b255b",
+    "models/cluster1_round17.txt": "95a3993c8023133ab38198a44f3baf1f3d3bd744610e11f378a133a87decd489",
+    "models/cluster0_round17.txt": "a237399db37b85fd3c62a689a17160a4dc9f7abb36e7e3ca50c14db71647c2d5",
+    "models/cluster1_round10.txt": "00b12048b542dd204697652c4f385224a6f3c0390f7f11be3274fa3e326b64c5",
+    "models/cluster0_round10.txt": "34785c1bdeb6863293e42848044b8b74813f2453410446bfeec9fffaf6744ae3"
+  },
+  "status": "complete"
+}
