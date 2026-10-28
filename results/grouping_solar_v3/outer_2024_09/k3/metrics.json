@@ -1,0 +1,68 @@
+{
+  "site_equal_nmae": 0.044198873844959796,
+  "observed_site_hours": 181440,
+  "observed_sites": 252,
+  "cold_start_sites": 0,
+  "complete_253_hours": 0,
+  "settlement": null,
+  "k": 3,
+  "fold": "outer_2024_09",
+  "training_cutoff": "2024-08-31 17:00:00+09:00",
+  "groups": {
+    "0": 53,
+    "1": 88,
+    "2": 112
+  },
+  "training_rows": [
+    {
+      "cluster": 0,
+      "round": 10,
+      "eligible_rows": 583345,
+      "daytime_rows": 299504
+    },
+    {
+      "cluster": 0,
+      "round": 17,
+      "eligible_rows": 583345,
+      "daytime_rows": 299504
+    },
+    {
+      "cluster": 1,
+      "round": 10,
+      "eligible_rows": 320554,
+      "daytime_rows": 175505
+    },
+    {
+      "cluster": 1,
+      "round": 17,
+      "eligible_rows": 320554,
+      "daytime_rows": 175505
+    },
+    {
+      "cluster": 2,
+      "round": 10,
+      "eligible_rows": 1831957,
+      "daytime_rows": 934725
+    },
+    {
+      "cluster": 2,
+      "round": 17,
+      "eligible_rows": 1831957,
+      "daytime_rows": 934725
+    }
+  ],
+  "silhouette": 0.27204324663108936,
+  "seconds": 38.04378141090274,
+  "artifacts_sha256": {
+    "groups.json": "9028267c29d64e4726e6935f3ba547d08019b3f4dbe28f5e2f241248079c5fc6",
+    "site_metrics.json": "3fffaaf64492ed15f06a3ed584feae58f98e11a68ba5a4312e8029d602096b61",
+    "site_predictions.parquet": "c3b737bc9b0a3d66f81468ff7eee716d2b7ae1665bdcfb9a6aad0f5355f22b99",
+    "models/cluster1_round17.txt": "74c7590c60585bbf0aab26be76456d37c771252781395d6e79e0ee43af980926",
+    "models/cluster2_round10.txt": "b41535fd6c5cc034ba976d708c60d68816fc50d6e345153eb4a70a3ce451ecd5",
+    "models/cluster0_round17.txt": "55df836207f738e6d03b34951dbe23d5fba0cd96dca6ca83d966f3631d87e23e",
+    "models/cluster1_round10.txt": "ebec909ad992e673ade9ca36bdac604242cb3cfd3534b458131d7ecc822b5fe7",
+    "models/cluster0_round10.txt": "9dade515528a7a82cba44503f71bc94506ea1831dc5f7775da0c51781e852113",
+    "models/cluster2_round17.txt": "7a23effc13029666e8e78e30c6da72a7b272156d1fab951ad6b27abc90fd2712"
+  },
+  "status": "complete"
+}

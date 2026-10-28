@@ -1,0 +1,1766 @@
+[
+  {
+    "site_id": "PV001",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.7372897805,
+    "nmae": 0.0273838513
+  },
+  {
+    "site_id": "PV002",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 2.5788652297,
+    "nmae": 0.0279097969
+  },
+  {
+    "site_id": "PV003",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.1274266181,
+    "nmae": 0.031440903
+  },
+  {
+    "site_id": "PV004",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 25.4183702328,
+    "nmae": 0.018319018
+  },
+  {
+    "site_id": "PV005",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.2387120938,
+    "nmae": 0.0363427288
+  },
+  {
+    "site_id": "PV006",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.8803370984,
+    "nmae": 0.0288148969
+  },
+  {
+    "site_id": "PV007",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 8.5332419975,
+    "nmae": 0.0328986121
+  },
+  {
+    "site_id": "PV008",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.5580874553,
+    "nmae": 0.0290959375
+  },
+  {
+    "site_id": "PV009",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 12.8703091432,
+    "nmae": 0.0269163233
+  },
+  {
+    "site_id": "PV010",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.0205374926,
+    "nmae": 0.0303388659
+  },
+  {
+    "site_id": "PV012",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.5677925736,
+    "nmae": 0.025688201
+  },
+  {
+    "site_id": "PV013",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.6308317484,
+    "nmae": 0.0311465193
+  },
+  {
+    "site_id": "PV014",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.7092371729,
+    "nmae": 0.0280706333
+  },
+  {
+    "site_id": "PV015",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.0192434625,
+    "nmae": 0.0302045164
+  },
+  {
+    "site_id": "PV016",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 13.1123816122,
+    "nmae": 0.0238502339
+  },
+  {
+    "site_id": "PV017",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.7040940788,
+    "nmae": 0.029488485
+  },
+  {
+    "site_id": "PV018",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 7.2782557648,
+    "nmae": 0.0265920927
+  },
+  {
+    "site_id": "PV019",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 2.7994415179,
+    "nmae": 0.0280056174
+  },
+  {
+    "site_id": "PV020",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 2.7365150462,
+    "nmae": 0.0275234101
+  },
+  {
+    "site_id": "PV021",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 17.9814048017,
+    "nmae": 0.0303688647
+  },
+  {
+    "site_id": "PV022",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 6.9464637739,
+    "nmae": 0.0232829354
+  },
+  {
+    "site_id": "PV023",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8351003386,
+    "nmae": 0.0301446075
+  },
+  {
+    "site_id": "PV024",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.556649517,
+    "nmae": 0.0257143527
+  },
+  {
+    "site_id": "PV025",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.2211168402,
+    "nmae": 0.0269128419
+  },
+  {
+    "site_id": "PV026",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.4336860818,
+    "nmae": 0.0345354396
+  },
+  {
+    "site_id": "PV027",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.2424144729,
+    "nmae": 0.0225538292
+  },
+  {
+    "site_id": "PV028",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.6582438768,
+    "nmae": 0.0269053024
+  },
+  {
+    "site_id": "PV029",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.7438736774,
+    "nmae": 0.0274497167
+  },
+  {
+    "site_id": "PV030",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 5.7545240109,
+    "nmae": 0.0268651915
+  },
+  {
+    "site_id": "PV031",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 3.3145869578,
+    "nmae": 0.0331591332
+  },
+  {
+    "site_id": "PV032",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 0.4326778691,
+    "nmae": 0.0300470742
+  },
+  {
+    "site_id": "PV033",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8476098808,
+    "nmae": 0.0286407833
+  },
+  {
+    "site_id": "PV034",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.6563472143,
+    "nmae": 0.0266300473
+  },
+  {
+    "site_id": "PV035",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8767935289,
+    "nmae": 0.0287794471
+  },
+  {
+    "site_id": "PV036",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 3.7271206401,
+    "nmae": 0.0372861208
+  },
+  {
+    "site_id": "PV037",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.5473422232,
+    "nmae": 0.0256207415
+  },
+  {
+    "site_id": "PV038",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.5216225043,
+    "nmae": 0.0304446279
+  },
+  {
+    "site_id": "PV039",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.4334717661,
+    "nmae": 0.0313591722
+  },
+  {
+    "site_id": "PV040",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.692022618,
+    "nmae": 0.0278922719
+  },
+  {
+    "site_id": "PV041",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8229575953,
+    "nmae": 0.0329476844
+  },
+  {
+    "site_id": "PV042",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.3820968587,
+    "nmae": 0.0271402171
+  },
+  {
+    "site_id": "PV043",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.493838542,
+    "nmae": 0.0325809933
+  },
+  {
+    "site_id": "PV044",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 1.4975871073,
+    "nmae": 0.030272632
+  },
+  {
+    "site_id": "PV045",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.1144475542,
+    "nmae": 0.0220163219
+  },
+  {
+    "site_id": "PV046",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 21.939776782,
+    "nmae": 0.0277283464
+  },
+  {
+    "site_id": "PV047",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.7229551691,
+    "nmae": 0.0273498912
+  },
+  {
+    "site_id": "PV048",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.0457142127,
+    "nmae": 0.03057946
+  },
+  {
+    "site_id": "PV049",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.1313605306,
+    "nmae": 0.0313261358
+  },
+  {
+    "site_id": "PV050",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8485784572,
+    "nmae": 0.0284971834
+  },
+  {
+    "site_id": "PV051",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 0.5654233162,
+    "nmae": 0.0314124065
+  },
+  {
+    "site_id": "PV052",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.9856021083,
+    "nmae": 0.0298679683
+  },
+  {
+    "site_id": "PV053",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 3.3489546312,
+    "nmae": 0.034369403
+  },
+  {
+    "site_id": "PV054",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 7.6384787464,
+    "nmae": 0.0275692662
+  },
+  {
+    "site_id": "PV055",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.0553017237,
+    "nmae": 0.0351767241
+  },
+  {
+    "site_id": "PV056",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.111015891,
+    "nmae": 0.0312759213
+  },
+  {
+    "site_id": "PV057",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 2.5330514575,
+    "nmae": 0.0254654816
+  },
+  {
+    "site_id": "PV058",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8444026157,
+    "nmae": 0.028569733
+  },
+  {
+    "site_id": "PV059",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 3.0365589825,
+    "nmae": 0.0305412017
+  },
+  {
+    "site_id": "PV060",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.4074363837,
+    "nmae": 0.0281740844
+  },
+  {
+    "site_id": "PV061",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.3883397827,
+    "nmae": 0.0240215216
+  },
+  {
+    "site_id": "PV062",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.609273068,
+    "nmae": 0.0368333296
+  },
+  {
+    "site_id": "PV063",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 4.2178920476,
+    "nmae": 0.026851872
+  },
+  {
+    "site_id": "PV064",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.5348272931,
+    "nmae": 0.0254948684
+  },
+  {
+    "site_id": "PV065",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8521388839,
+    "nmae": 0.0287571979
+  },
+  {
+    "site_id": "PV066",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.5843863466,
+    "nmae": 0.0277861127
+  },
+  {
+    "site_id": "PV067",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.1897073662,
+    "nmae": 0.0306703182
+  },
+  {
+    "site_id": "PV068",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.722203992,
+    "nmae": 0.0295410091
+  },
+  {
+    "site_id": "PV069",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 5.7721003543,
+    "nmae": 0.0323984079
+  },
+  {
+    "site_id": "PV070",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.0250717718,
+    "nmae": 0.0302628228
+  },
+  {
+    "site_id": "PV071",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.7709936566,
+    "nmae": 0.0278701902
+  },
+  {
+    "site_id": "PV072",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 2.5328308298,
+    "nmae": 0.0256359396
+  },
+  {
+    "site_id": "PV073",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 1.017251557,
+    "nmae": 0.0404876242
+  },
+  {
+    "site_id": "PV074",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 5.251068003,
+    "nmae": 0.0261000447
+  },
+  {
+    "site_id": "PV075",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.688434959,
+    "nmae": 0.0275454402
+  },
+  {
+    "site_id": "PV076",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.5242861235,
+    "nmae": 0.0253544207
+  },
+  {
+    "site_id": "PV077",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 2.7298368341,
+    "nmae": 0.0273421157
+  },
+  {
+    "site_id": "PV078",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.6267863815,
+    "nmae": 0.0264197775
+  },
+  {
+    "site_id": "PV079",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.1882861647,
+    "nmae": 0.0220094158
+  },
+  {
+    "site_id": "PV080",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 1.2879291633,
+    "nmae": 0.0261349262
+  },
+  {
+    "site_id": "PV081",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.580168005,
+    "nmae": 0.027281713
+  },
+  {
+    "site_id": "PV082",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 14.2915385664,
+    "nmae": 0.026920469
+  },
+  {
+    "site_id": "PV083",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 5.1642801447,
+    "nmae": 0.0375447484
+  },
+  {
+    "site_id": "PV084",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 1.0246307318,
+    "nmae": 0.033283441
+  },
+  {
+    "site_id": "PV085",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.6761434511,
+    "nmae": 0.0368498742
+  },
+  {
+    "site_id": "PV086",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.5403903686,
+    "nmae": 0.0255508209
+  },
+  {
+    "site_id": "PV087",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.3861358711,
+    "nmae": 0.023999355
+  },
+  {
+    "site_id": "PV088",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.8797972559,
+    "nmae": 0.0333711567
+  },
+  {
+    "site_id": "PV089",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 1.9759125888,
+    "nmae": 0.0276738458
+  },
+  {
+    "site_id": "PV090",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.1277221917,
+    "nmae": 0.0314154499
+  },
+  {
+    "site_id": "PV091",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.4110564616,
+    "nmae": 0.0341242143
+  },
+  {
+    "site_id": "PV092",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.616990524,
+    "nmae": 0.0263212524
+  },
+  {
+    "site_id": "PV093",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.2149844239,
+    "nmae": 0.0298228872
+  },
+  {
+    "site_id": "PV094",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 16.4014159474,
+    "nmae": 0.0329478022
+  },
+  {
+    "site_id": "PV095",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.0767162158,
+    "nmae": 0.0370842181
+  },
+  {
+    "site_id": "PV096",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 3.5576309164,
+    "nmae": 0.0355905454
+  },
+  {
+    "site_id": "PV097",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 3.6944268912,
+    "nmae": 0.0369590525
+  },
+  {
+    "site_id": "PV098",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 5.1567995068,
+    "nmae": 0.0239539182
+  },
+  {
+    "site_id": "PV099",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 3.0441005327,
+    "nmae": 0.0306170534
+  },
+  {
+    "site_id": "PV100",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 2.7024351473,
+    "nmae": 0.0270676597
+  },
+  {
+    "site_id": "PV101",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.0664766177,
+    "nmae": 0.030677037
+  },
+  {
+    "site_id": "PV102",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8200832035,
+    "nmae": 0.0283254641
+  },
+  {
+    "site_id": "PV103",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8888176498,
+    "nmae": 0.0290552442
+  },
+  {
+    "site_id": "PV104",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.5744481697,
+    "nmae": 0.0269434659
+  },
+  {
+    "site_id": "PV105",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.9981610385,
+    "nmae": 0.0301550016
+  },
+  {
+    "site_id": "PV106",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 12.6165153768,
+    "nmae": 0.0260779565
+  },
+  {
+    "site_id": "PV107",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.6822379841,
+    "nmae": 0.0269652959
+  },
+  {
+    "site_id": "PV108",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 18.2901952564,
+    "nmae": 0.0215193958
+  },
+  {
+    "site_id": "PV109",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.2194292895,
+    "nmae": 0.0287156073
+  },
+  {
+    "site_id": "PV110",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.3925153407,
+    "nmae": 0.0240635186
+  },
+  {
+    "site_id": "PV111",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8030799884,
+    "nmae": 0.0290806099
+  },
+  {
+    "site_id": "PV112",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 0.9850843466,
+    "nmae": 0.0328361449
+  },
+  {
+    "site_id": "PV113",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.1445641587,
+    "nmae": 0.0272845313
+  },
+  {
+    "site_id": "PV114",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.7965192772,
+    "nmae": 0.0281269226
+  },
+  {
+    "site_id": "PV115",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.2730542182,
+    "nmae": 0.0266290325
+  },
+  {
+    "site_id": "PV116",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.3459434649,
+    "nmae": 0.0277988324
+  },
+  {
+    "site_id": "PV117",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 2.4611353543,
+    "nmae": 0.0249102769
+  },
+  {
+    "site_id": "PV118",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.5185682273,
+    "nmae": 0.0319496787
+  },
+  {
+    "site_id": "PV119",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 5.5003408519,
+    "nmae": 0.0342753753
+  },
+  {
+    "site_id": "PV120",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.7517478395,
+    "nmae": 0.0280076116
+  },
+  {
+    "site_id": "PV121",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.2007482221,
+    "nmae": 0.0267340649
+  },
+  {
+    "site_id": "PV122",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.384010247,
+    "nmae": 0.0278245827
+  },
+  {
+    "site_id": "PV123",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 9.0331777793,
+    "nmae": 0.0275246516
+  },
+  {
+    "site_id": "PV124",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 14.8703427636,
+    "nmae": 0.0300593143
+  },
+  {
+    "site_id": "PV125",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8022402504,
+    "nmae": 0.028254086
+  },
+  {
+    "site_id": "PV126",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.0510750927,
+    "nmae": 0.0305229601
+  },
+  {
+    "site_id": "PV127",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.1482279131,
+    "nmae": 0.0320430322
+  },
+  {
+    "site_id": "PV128",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.6926623895,
+    "nmae": 0.0300068244
+  },
+  {
+    "site_id": "PV129",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.2975125861,
+    "nmae": 0.025960636
+  },
+  {
+    "site_id": "PV130",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.4133033483,
+    "nmae": 0.0249062181
+  },
+  {
+    "site_id": "PV131",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8210435474,
+    "nmae": 0.0282217242
+  },
+  {
+    "site_id": "PV132",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 8.3713106491,
+    "nmae": 0.0293113118
+  },
+  {
+    "site_id": "PV133",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.1720982189,
+    "nmae": 0.0317442195
+  },
+  {
+    "site_id": "PV134",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 8.6059708329,
+    "nmae": 0.0307081921
+  },
+  {
+    "site_id": "PV135",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.43843702,
+    "nmae": 0.0288948574
+  },
+  {
+    "site_id": "PV136",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 1.9677831201,
+    "nmae": 0.0198365234
+  },
+  {
+    "site_id": "PV137",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.0308608782,
+    "nmae": 0.0323901256
+  },
+  {
+    "site_id": "PV138",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 4.3169115198,
+    "nmae": 0.0270720652
+  },
+  {
+    "site_id": "PV139",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.9568564356,
+    "nmae": 0.0295803965
+  },
+  {
+    "site_id": "PV140",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.3816292519,
+    "nmae": 0.0303693691
+  },
+  {
+    "site_id": "PV141",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.9348017,
+    "nmae": 0.029517744
+  },
+  {
+    "site_id": "PV142",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.5039498937,
+    "nmae": 0.0253436224
+  },
+  {
+    "site_id": "PV143",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 22.7006828272,
+    "nmae": 0.0228055885
+  },
+  {
+    "site_id": "PV144",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.220169546,
+    "nmae": 0.0242297233
+  },
+  {
+    "site_id": "PV145",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 2.6475181006,
+    "nmae": 0.0266282937
+  },
+  {
+    "site_id": "PV146",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 3.3053244667,
+    "nmae": 0.0336419793
+  },
+  {
+    "site_id": "PV147",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.7088076158,
+    "nmae": 0.0273120348
+  },
+  {
+    "site_id": "PV148",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 17.7118720297,
+    "nmae": 0.0235799878
+  },
+  {
+    "site_id": "PV149",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.3928482571,
+    "nmae": 0.0276358781
+  },
+  {
+    "site_id": "PV150",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.126481997,
+    "nmae": 0.0314456324
+  },
+  {
+    "site_id": "PV151",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.1621427338,
+    "nmae": 0.031634081
+  },
+  {
+    "site_id": "PV152",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 3.3511476245,
+    "nmae": 0.0339184982
+  },
+  {
+    "site_id": "PV153",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.0976227285,
+    "nmae": 0.0279293315
+  },
+  {
+    "site_id": "PV154",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8573074348,
+    "nmae": 0.0306841434
+  },
+  {
+    "site_id": "PV155",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 33.7810532265,
+    "nmae": 0.0338514643
+  },
+  {
+    "site_id": "PV156",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.7600019616,
+    "nmae": 0.028091623
+  },
+  {
+    "site_id": "PV157",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.6769295792,
+    "nmae": 0.0269241094
+  },
+  {
+    "site_id": "PV158",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.3414812587,
+    "nmae": 0.0335624875
+  },
+  {
+    "site_id": "PV159",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 12.5529331991,
+    "nmae": 0.0293938397
+  },
+  {
+    "site_id": "PV160",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.1930186495,
+    "nmae": 0.0331260364
+  },
+  {
+    "site_id": "PV161",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.661095123,
+    "nmae": 0.0267648491
+  },
+  {
+    "site_id": "PV162",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.0067896798,
+    "nmae": 0.0302281058
+  },
+  {
+    "site_id": "PV163",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.8017080076,
+    "nmae": 0.0280282914
+  },
+  {
+    "site_id": "PV164",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8260353855,
+    "nmae": 0.028385249
+  },
+  {
+    "site_id": "PV165",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.5716765699,
+    "nmae": 0.0260291151
+  },
+  {
+    "site_id": "PV166",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.838502229,
+    "nmae": 0.0287297796
+  },
+  {
+    "site_id": "PV167",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 1.2622841785,
+    "nmae": 0.0302271116
+  },
+  {
+    "site_id": "PV168",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.0595786273,
+    "nmae": 0.032138431
+  },
+  {
+    "site_id": "PV169",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 9.8826773966,
+    "nmae": 0.0254626149
+  },
+  {
+    "site_id": "PV170",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.1037659317,
+    "nmae": 0.0310500793
+  },
+  {
+    "site_id": "PV171",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.6909809466,
+    "nmae": 0.0270654357
+  },
+  {
+    "site_id": "PV172",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.794705855,
+    "nmae": 0.0323236856
+  },
+  {
+    "site_id": "PV173",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 6.9540582646,
+    "nmae": 0.0227830104
+  },
+  {
+    "site_id": "PV174",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.765213888,
+    "nmae": 0.0276632042
+  },
+  {
+    "site_id": "PV175",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 21.1780937477,
+    "nmae": 0.0230826426
+  },
+  {
+    "site_id": "PV176",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.0687799528,
+    "nmae": 0.0307000796
+  },
+  {
+    "site_id": "PV177",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.4507800846,
+    "nmae": 0.034324651
+  },
+  {
+    "site_id": "PV178",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.5556692177,
+    "nmae": 0.0316675668
+  },
+  {
+    "site_id": "PV179",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.9017019662,
+    "nmae": 0.0291848324
+  },
+  {
+    "site_id": "PV180",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.561872564,
+    "nmae": 0.030989535
+  },
+  {
+    "site_id": "PV181",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.679546584,
+    "nmae": 0.0279119436
+  },
+  {
+    "site_id": "PV182",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 10.8862470033,
+    "nmae": 0.0273809299
+  },
+  {
+    "site_id": "PV183",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 8.931990073,
+    "nmae": 0.029937959
+  },
+  {
+    "site_id": "PV184",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.3107602863,
+    "nmae": 0.02324124
+  },
+  {
+    "site_id": "PV185",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.6580106823,
+    "nmae": 0.027605657
+  },
+  {
+    "site_id": "PV186",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.0141084895,
+    "nmae": 0.030773239
+  },
+  {
+    "site_id": "PV187",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.8392513392,
+    "nmae": 0.0351002164
+  },
+  {
+    "site_id": "PV188",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 41.1672742165,
+    "nmae": 0.0414850497
+  },
+  {
+    "site_id": "PV189",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 30.2871194489,
+    "nmae": 0.030427084
+  },
+  {
+    "site_id": "PV190",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 8.9794624303,
+    "nmae": 0.0298023977
+  },
+  {
+    "site_id": "PV191",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.9752544311,
+    "nmae": 0.0297644501
+  },
+  {
+    "site_id": "PV192",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.6111669051,
+    "nmae": 0.0364028922
+  },
+  {
+    "site_id": "PV193",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.8089636042,
+    "nmae": 0.0314056181
+  },
+  {
+    "site_id": "PV194",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 17.1846340589,
+    "nmae": 0.034792343
+  },
+  {
+    "site_id": "PV195",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.1557337131,
+    "nmae": 0.0278914958
+  },
+  {
+    "site_id": "PV196",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.5455704053,
+    "nmae": 0.029895131
+  },
+  {
+    "site_id": "PV197",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.9497566134,
+    "nmae": 0.0252265055
+  },
+  {
+    "site_id": "PV198",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.6605862779,
+    "nmae": 0.0267597312
+  },
+  {
+    "site_id": "PV199",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.4402647693,
+    "nmae": 0.0255391394
+  },
+  {
+    "site_id": "PV200",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 6.8179995589,
+    "nmae": 0.0262857566
+  },
+  {
+    "site_id": "PV201",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 0.7608888474,
+    "nmae": 0.0283332284
+  },
+  {
+    "site_id": "PV202",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 0.5731263078,
+    "nmae": 0.0298503285
+  },
+  {
+    "site_id": "PV203",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.1782506263,
+    "nmae": 0.0317952244
+  },
+  {
+    "site_id": "PV204",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.107564119,
+    "nmae": 0.0317098379
+  },
+  {
+    "site_id": "PV205",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 18.1630963768,
+    "nmae": 0.0261578512
+  },
+  {
+    "site_id": "PV206",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 0.7913448601,
+    "nmae": 0.0329727025
+  },
+  {
+    "site_id": "PV207",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8257925612,
+    "nmae": 0.0284915564
+  },
+  {
+    "site_id": "PV208",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.8272127668,
+    "nmae": 0.0284356326
+  },
+  {
+    "site_id": "PV209",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.6704460094,
+    "nmae": 0.0350934036
+  },
+  {
+    "site_id": "PV210",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 1.1417870672,
+    "nmae": 0.0264302562
+  },
+  {
+    "site_id": "PV211",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 3.1396218848,
+    "nmae": 0.0316494142
+  },
+  {
+    "site_id": "PV212",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.5223837483,
+    "nmae": 0.0293966989
+  },
+  {
+    "site_id": "PV213",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.5679456888,
+    "nmae": 0.0258279677
+  },
+  {
+    "site_id": "PV214",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.4400984524,
+    "nmae": 0.0245421016
+  },
+  {
+    "site_id": "PV215",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 26.9559748503,
+    "nmae": 0.0279655305
+  },
+  {
+    "site_id": "PV216",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 1.243035704,
+    "nmae": 0.0294593128
+  },
+  {
+    "site_id": "PV217",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.2455070207,
+    "nmae": 0.0225849336
+  },
+  {
+    "site_id": "PV218",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 11.5444854587,
+    "nmae": 0.0433091441
+  },
+  {
+    "site_id": "PV219",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.9993073399,
+    "nmae": 0.0311127815
+  },
+  {
+    "site_id": "PV220",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 1.9947461813,
+    "nmae": 0.0267070047
+  },
+  {
+    "site_id": "PV221",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.2590222087,
+    "nmae": 0.0279755072
+  },
+  {
+    "site_id": "PV222",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 8.5183693871,
+    "nmae": 0.0265411104
+  },
+  {
+    "site_id": "PV223",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.887983985,
+    "nmae": 0.0316483779
+  },
+  {
+    "site_id": "PV224",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.4467043978,
+    "nmae": 0.0270159551
+  },
+  {
+    "site_id": "PV225",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 2.7210693777,
+    "nmae": 0.0274356662
+  },
+  {
+    "site_id": "PV226",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 3.1535758597,
+    "nmae": 0.0316624082
+  },
+  {
+    "site_id": "PV227",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 1.9701998557,
+    "nmae": 0.0198159402
+  },
+  {
+    "site_id": "PV228",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.9319141996,
+    "nmae": 0.0300640243
+  },
+  {
+    "site_id": "PV229",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 1.7554088367,
+    "nmae": 0.0257693605
+  },
+  {
+    "site_id": "PV230",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.8508275281,
+    "nmae": 0.0361489752
+  },
+  {
+    "site_id": "PV231",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.1216832322,
+    "nmae": 0.0315726671
+  },
+  {
+    "site_id": "PV232",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 11.9619264618,
+    "nmae": 0.0240852239
+  },
+  {
+    "site_id": "PV233",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8578249079,
+    "nmae": 0.0289253533
+  },
+  {
+    "site_id": "PV234",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.6964069844,
+    "nmae": 0.0332889751
+  },
+  {
+    "site_id": "PV235",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 13.4660147373,
+    "nmae": 0.0244141937
+  },
+  {
+    "site_id": "PV236",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 2.7424708005,
+    "nmae": 0.027583312
+  },
+  {
+    "site_id": "PV237",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 2.6424881781,
+    "nmae": 0.0264672293
+  },
+  {
+    "site_id": "PV238",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.9125652188,
+    "nmae": 0.0262715003
+  },
+  {
+    "site_id": "PV239",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.4897649024,
+    "nmae": 0.0267429098
+  },
+  {
+    "site_id": "PV240",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 28.803677202,
+    "nmae": 0.0289367864
+  },
+  {
+    "site_id": "PV241",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 34.4769275931,
+    "nmae": 0.034511439
+  },
+  {
+    "site_id": "PV242",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 3.3735325972,
+    "nmae": 0.0295302223
+  },
+  {
+    "site_id": "PV243",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8835702867,
+    "nmae": 0.0290199797
+  },
+  {
+    "site_id": "PV244",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.7941514834,
+    "nmae": 0.0282237524
+  },
+  {
+    "site_id": "PV245",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.7585665009,
+    "nmae": 0.0275967037
+  },
+  {
+    "site_id": "PV246",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.1052654122,
+    "nmae": 0.031454735
+  },
+  {
+    "site_id": "PV247",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 2.7708781625,
+    "nmae": 0.0280056414
+  },
+  {
+    "site_id": "PV248",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.6102816582,
+    "nmae": 0.0295197247
+  },
+  {
+    "site_id": "PV249",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.8803507704,
+    "nmae": 0.0288150337
+  },
+  {
+    "site_id": "PV250",
+    "cluster": 2,
+    "hours": 720,
+    "mae_kwh": 2.6648948448,
+    "nmae": 0.0268030661
+  },
+  {
+    "site_id": "PV251",
+    "cluster": 0,
+    "hours": 720,
+    "mae_kwh": 3.2816107877,
+    "nmae": 0.0328686978
+  },
+  {
+    "site_id": "PV252",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 2.5347004823,
+    "nmae": 0.0355000068
+  },
+  {
+    "site_id": "PV253",
+    "cluster": 1,
+    "hours": 720,
+    "mae_kwh": 1.6689433783,
+    "nmae": 0.0283327965
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "site_equal_nmae": 0.02908265287653402,
+  "observed_site_hours": 181440,
+  "observed_sites": 252,
+  "cold_start_sites": 0,
+  "complete_253_hours": 0,
+  "settlement": null,
+  "k": 3,
+  "fold": "outer_2024_11",
+  "training_cutoff": "2024-10-31 17:00:00+09:00",
+  "groups": {
+    "0": 50,
+    "1": 148,
+    "2": 55
+  },
+  "training_rows": [
+    {
+      "cluster": 0,
+      "round": 10,
+      "eligible_rows": 615951,
+      "daytime_rows": 313480
+    },
+    {
+      "cluster": 0,
+      "round": 17,
+      "eligible_rows": 615951,
+      "daytime_rows": 313480
+    },
+    {
+      "cluster": 1,
+      "round": 10,
+      "eligible_rows": 1848621,
+      "daytime_rows": 950034
+    },
+    {
+      "cluster": 1,
+      "round": 17,
+      "eligible_rows": 1848621,
+      "daytime_rows": 950034
+    },
+    {
+      "cluster": 2,
+      "round": 10,
+      "eligible_rows": 640212,
+      "daytime_rows": 327843
+    },
+    {
+      "cluster": 2,
+      "round": 17,
+      "eligible_rows": 640212,
+      "daytime_rows": 327843
+    }
+  ],
+  "silhouette": 0.298057359222874,
+  "seconds": 46.56285301502794,
+  "artifacts_sha256": {
+    "groups.json": "4014b4f228215f9ed072720ed14341a4d1b3bbadf2e3d06cbdbcd12f7c24b591",
+    "site_metrics.json": "d34b50de8c4e34cf18f53b89f36c2a99ac8360482adcb8be7485d243cbdd4e30",
+    "site_predictions.parquet": "3a9631450efcb6e1f20d1d410591e47a566e73c6ac09a61aaf0d0fe95d89d573",
+    "models/cluster1_round17.txt": "91fa4cc565330f6a8a4a07b30404e5843c709874e6813c2173e780f8c0a2d2b5",
+    "models/cluster2_round10.txt": "85ff89eedfbbbc5fc907209959c7d1176b61dcbfda7f9de38ef6798503345e28",
+    "models/cluster0_round17.txt": "a5116b41c011333cd0b663d8923d8b4148d0d847901230a02a69a22b50741df6",
+    "models/cluster1_round10.txt": "e94050731b529b22b357735166f2ed6c2326be7d638de64f83d99c31d820abbe",
+    "models/cluster0_round10.txt": "70c96dcb25e1de70e4aa1d5257da81018a3bbcaff294e52b0a26bd83e4470971",
+    "models/cluster2_round17.txt": "d872e0648a08d4f636096191de3450b57f8d37c79ccbae99031aa1c16e9d424f"
+  },
+  "status": "complete"
+}

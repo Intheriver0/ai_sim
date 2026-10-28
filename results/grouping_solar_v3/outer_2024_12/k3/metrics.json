@@ -1,0 +1,87 @@
+{
+  "site_equal_nmae": 0.024878738515066223,
+  "observed_site_hours": 187666,
+  "observed_sites": 253,
+  "cold_start_sites": 1,
+  "complete_253_hours": 178,
+  "settlement": {
+    "basis": "provided README formula; local validation only",
+    "groups": {
+      "G1": {
+        "capacity_kw": 20465.65499999998,
+        "revenue_won": 51308602.76416689,
+        "W_won": 1166172.9619940873,
+        "S_won": 50142429.8021728
+      },
+      "G2": {
+        "capacity_kw": 22189.71499999999,
+        "revenue_won": 58484566.93418179,
+        "W_won": 1471708.7449618499,
+        "S_won": 57012858.18921994
+      }
+    },
+    "revenue_won": 109793169.69834867,
+    "W_won": 2637881.706955937,
+    "S_won": 107155287.99139273
+  },
+  "k": 3,
+  "fold": "outer_2024_12",
+  "training_cutoff": "2024-11-30 17:00:00+09:00",
+  "groups": {
+    "0": 56,
+    "1": 56,
+    "2": 141
+  },
+  "training_rows": [
+    {
+      "cluster": 0,
+      "round": 10,
+      "eligible_rows": 678327,
+      "daytime_rows": 342294
+    },
+    {
+      "cluster": 0,
+      "round": 17,
+      "eligible_rows": 678327,
+      "daytime_rows": 342294
+    },
+    {
+      "cluster": 1,
+      "round": 10,
+      "eligible_rows": 673782,
+      "daytime_rows": 341354
+    },
+    {
+      "cluster": 1,
+      "round": 17,
+      "eligible_rows": 673782,
+      "daytime_rows": 341354
+    },
+    {
+      "cluster": 2,
+      "round": 10,
+      "eligible_rows": 1934115,
+      "daytime_rows": 983275
+    },
+    {
+      "cluster": 2,
+      "round": 17,
+      "eligible_rows": 1934115,
+      "daytime_rows": 983275
+    }
+  ],
+  "silhouette": 0.2961615414929388,
+  "seconds": 44.101952140918,
+  "artifacts_sha256": {
+    "groups.json": "e4a7d3e72cfee539dd558bac4fd607cac710613c9a08e94c8cf98cdce47a0554",
+    "site_metrics.json": "0a5ef27d8ffe495ef4d8c09c0c6a1b51048295ce7b03663a59f7e4890f3552fe",
+    "site_predictions.parquet": "16f8d2efbf68846061e1f830c5932722ec829ff4f6e5e11e1248255e3182695c",
+    "models/cluster1_round17.txt": "de7ae14bdf1e385eaa8f8607a355bc0b310124161a1b16f290aed694eff282a0",
+    "models/cluster2_round10.txt": "f9c7516f4281f8369ff17d4d7493eb44cf26082b6f1e8a0a4f88a1ed7e46eb08",
+    "models/cluster0_round17.txt": "bd014d55882f1636f91605c29a353c9b4b7c0ead50cc2e0582a54c583dccde49",
+    "models/cluster1_round10.txt": "1544b68b85f7cd9c1f9cd047e9c6abb715d6bf9d8fdab6b8f74b917b3dfd3dcb",
+    "models/cluster0_round10.txt": "dffdf932f396158658fc29870eb0e3325fc78489b5ddc7cba42a3238350d71c3",
+    "models/cluster2_round17.txt": "1d47dfdcfcb69199da49ff1d7886c6483897aaac2b2083855046ddd9430d7df2"
+  },
+  "status": "complete"
+}

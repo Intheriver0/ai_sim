@@ -1,0 +1,68 @@
+{
+  "site_equal_nmae": 0.047673913355874356,
+  "observed_site_hours": 153311,
+  "observed_sites": 224,
+  "cold_start_sites": 19,
+  "complete_253_hours": 0,
+  "settlement": null,
+  "k": 3,
+  "fold": "outer_2024_06",
+  "training_cutoff": "2024-05-31 17:00:00+09:00",
+  "groups": {
+    "0": 59,
+    "1": 151,
+    "2": 43
+  },
+  "training_rows": [
+    {
+      "cluster": 0,
+      "round": 10,
+      "eligible_rows": 481079,
+      "daytime_rows": 238547
+    },
+    {
+      "cluster": 0,
+      "round": 17,
+      "eligible_rows": 481079,
+      "daytime_rows": 238547
+    },
+    {
+      "cluster": 1,
+      "round": 10,
+      "eligible_rows": 1723880,
+      "daytime_rows": 858750
+    },
+    {
+      "cluster": 1,
+      "round": 17,
+      "eligible_rows": 1723880,
+      "daytime_rows": 858750
+    },
+    {
+      "cluster": 2,
+      "round": 10,
+      "eligible_rows": 15487,
+      "daytime_rows": 8983
+    },
+    {
+      "cluster": 2,
+      "round": 17,
+      "eligible_rows": 15487,
+      "daytime_rows": 8983
+    }
+  ],
+  "silhouette": 0.47281662546316683,
+  "seconds": 35.613255977164954,
+  "artifacts_sha256": {
+    "groups.json": "c8f650c2d9e55ba8c5cef9559ca38788e18f6cc8481854446374f86cfb8978fd",
+    "site_metrics.json": "043d77bc140036521a9f17a4e38fa1479c05d903adbbc345ee3bc9c6517b856c",
+    "site_predictions.parquet": "41194afd13c364c38ed8bba789ebd541f3e0da7b8733b3bfb6a7d4d3f7acff5e",
+    "models/cluster1_round17.txt": "5b6fb5b2c13936008adec6d56cb3ecb34e0eef90e846e2cb4fc3bcb2b7838ca5",
+    "models/cluster2_round10.txt": "a46db8ceb6272a55a6e336b2ce728fa470b472f3612fd4979b27025d91b2e012",
+    "models/cluster0_round17.txt": "c672146599f4bac172d8c48f251d639b2d11882f58a76821bafac439fee2e2e6",
+    "models/cluster1_round10.txt": "c1d74b647bd2a0c57badbb633ba2ca20d2dc05f2c1268aacbef4d4c100103ba7",
+    "models/cluster0_round10.txt": "41bba7b8cc6010d7e41cb7121e40cffeaaaf294c7bb9b1a4de6832b372e4913a",
+    "models/cluster2_round17.txt": "8e81cb69c1b7d97a3dd8f1fd29e1da823f0615565da2e5575325a7e6294bd509"
+  },
+  "status": "complete"
+}

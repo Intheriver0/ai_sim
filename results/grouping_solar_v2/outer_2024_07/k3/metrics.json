@@ -1,0 +1,68 @@
+{
+  "site_equal_nmae": 0.0520140820586126,
+  "observed_site_hours": 176147,
+  "observed_sites": 250,
+  "cold_start_sites": 26,
+  "complete_253_hours": 0,
+  "settlement": null,
+  "k": 3,
+  "fold": "outer_2024_07",
+  "training_cutoff": "2024-06-30 17:00:00+09:00",
+  "groups": {
+    "0": 136,
+    "1": 64,
+    "2": 53
+  },
+  "training_rows": [
+    {
+      "cluster": 0,
+      "round": 10,
+      "eligible_rows": 1796376,
+      "daytime_rows": 906015
+    },
+    {
+      "cluster": 0,
+      "round": 17,
+      "eligible_rows": 1796376,
+      "daytime_rows": 906015
+    },
+    {
+      "cluster": 1,
+      "round": 10,
+      "eligible_rows": 67296,
+      "daytime_rows": 39218
+    },
+    {
+      "cluster": 1,
+      "round": 17,
+      "eligible_rows": 67296,
+      "daytime_rows": 39218
+    },
+    {
+      "cluster": 2,
+      "round": 10,
+      "eligible_rows": 509952,
+      "daytime_rows": 256593
+    },
+    {
+      "cluster": 2,
+      "round": 17,
+      "eligible_rows": 509952,
+      "daytime_rows": 256593
+    }
+  ],
+  "silhouette": 0.367916787524985,
+  "seconds": 33.15067364508286,
+  "artifacts_sha256": {
+    "groups.json": "42cd9e9734ba2fda99de0d2e0629d220050e63bc92061189cf9fe00e4f867448",
+    "site_metrics.json": "de19bcbec8e694b1fc654e6bbfd3622ded5318c636f0018b83ea575e83ec86bc",
+    "site_predictions.parquet": "0fa06a53c2308902ec10e262900fe46378abbb77d6a86c67dd325e3cc911a067",
+    "models/cluster1_round17.txt": "4e49fd4fe180fe8f8c0f500ed01a8a50ddf9971814e220cfcf1eda0082d11ffc",
+    "models/cluster2_round10.txt": "ccd8d918251f72485bf6baaef564b5ca5a61ef4e3da5f3ff1f4c2697ec9c655b",
+    "models/cluster0_round17.txt": "b49017506684b35dec61a0bc065f687598a92f7a2172237ed4d81d64b033f83b",
+    "models/cluster1_round10.txt": "5d84c53e7e3e719c32df301e81ab40f96d0d736e9f615569b0f0172c4e1eb778",
+    "models/cluster0_round10.txt": "c0c47d696f14edc4745d5232942ac7238887e3cb7a7e8e0df3781f6636e0e083",
+    "models/cluster2_round17.txt": "d0c41621b6ac2719b8d9f4ae150fa3b9731a7c786053aaead919b21cf8587862"
+  },
+  "status": "complete"
+}

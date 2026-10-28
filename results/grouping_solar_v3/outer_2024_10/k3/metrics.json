@@ -1,0 +1,68 @@
+{
+  "site_equal_nmae": 0.03562358211956806,
+  "observed_site_hours": 187488,
+  "observed_sites": 252,
+  "cold_start_sites": 0,
+  "complete_253_hours": 0,
+  "settlement": null,
+  "k": 3,
+  "fold": "outer_2024_10",
+  "training_cutoff": "2024-09-30 17:00:00+09:00",
+  "groups": {
+    "0": 105,
+    "1": 45,
+    "2": 103
+  },
+  "training_rows": [
+    {
+      "cluster": 0,
+      "round": 10,
+      "eligible_rows": 1713744,
+      "daytime_rows": 875746
+    },
+    {
+      "cluster": 0,
+      "round": 17,
+      "eligible_rows": 1713744,
+      "daytime_rows": 875746
+    },
+    {
+      "cluster": 1,
+      "round": 10,
+      "eligible_rows": 587195,
+      "daytime_rows": 300715
+    },
+    {
+      "cluster": 1,
+      "round": 17,
+      "eligible_rows": 587195,
+      "daytime_rows": 300715
+    },
+    {
+      "cluster": 2,
+      "round": 10,
+      "eligible_rows": 616357,
+      "daytime_rows": 327839
+    },
+    {
+      "cluster": 2,
+      "round": 17,
+      "eligible_rows": 616357,
+      "daytime_rows": 327839
+    }
+  ],
+  "silhouette": 0.23664346086188304,
+  "seconds": 39.78383216285147,
+  "artifacts_sha256": {
+    "groups.json": "d8358c7c865a2fdd59bbf1adb07a3773acd6c9d0e804bda60a98016751c91978",
+    "site_metrics.json": "d5d653a86bd58bb43d70ddd5385a103727b2c0ee5603410b00f6a3015f2c67bb",
+    "site_predictions.parquet": "374853f4b79fcaf5af6ad6a884c18f64dba7a649b491c478d2abca799913fdd2",
+    "models/cluster1_round17.txt": "87dad0f4b229292cbff534de8bf19d3cccc353dfb83852db357e10265bffadb2",
+    "models/cluster2_round10.txt": "e72dfc99d210544e125caa01c734a24ac81c95aa8cb582ea0073e1f41c9137b2",
+    "models/cluster0_round17.txt": "523f4a4353abe83cc7dee4ee5966ed0b5578ab56c34d6c55b070937bf2002d6f",
+    "models/cluster1_round10.txt": "45b5fbc5c4985d28952e32ed2027d486fe85caf5a62e3df0ad13b252bbd25e9f",
+    "models/cluster0_round10.txt": "bb41e3c19bfb4a59313d613a6b0ec84915c0099444bf13886d2f0bc809fc25da",
+    "models/cluster2_round17.txt": "e14a887598ba11ddbbc6cbd708c09df0653052823dd5ebb65259825e4edb934c"
+  },
+  "status": "complete"
+}
