@@ -1,0 +1,41 @@
+{
+  "objective": "month_equal_site_nmae_proxy",
+  "fixed_score": 0.03767360664335622,
+  "selected_score": 0.03714441809053873,
+  "params": {
+    "n_estimators": 1200,
+    "learning_rate": 0.03275588525030741,
+    "num_leaves": 123,
+    "min_child_samples": 403,
+    "subsample": 0.8420415050738167,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.7063355824014079,
+    "objective": "regression",
+    "random_state": 42,
+    "device_type": "cuda",
+    "verbosity": -1,
+    "metric": "l1",
+    "reg_alpha": 5.2147824240584e-06,
+    "reg_lambda": 6.06502097140343e-08
+  },
+  "early_stop": true,
+  "selected": "tuned",
+  "completed_trials": 40,
+  "best_trial": 14,
+  "trial_seconds_used": 7187.610999387922,
+  "budget_note": "soft timeout checked between trials; baseline excluded",
+  "model_windows": [
+    "outer_2024_12_2023_12_model_selection",
+    "outer_2024_12_2024_01_model_selection",
+    "outer_2024_12_2024_02_model_selection",
+    "outer_2024_12_2024_03_model_selection",
+    "outer_2024_12_2024_04_model_selection",
+    "outer_2024_12_2024_05_model_selection",
+    "outer_2024_12_2024_06_model_selection",
+    "outer_2024_12_2024_07_model_selection",
+    "outer_2024_12_2024_08_model_selection",
+    "outer_2024_12_2024_09_model_selection",
+    "outer_2024_12_2024_10_model_selection",
+    "outer_2024_12_2024_11_model_selection"
+  ]
+}
