@@ -1,25 +1,25 @@
 {
-  "status": "partial",
+  "status": "complete",
   "smoke": false,
-  "all_12_months": false,
+  "all_12_months": true,
   "candidates": {
     "fixed": {
-      "month_equal_nmae": 0.03914029672204244,
+      "month_equal_nmae": 0.0364030589745056,
       "worst_month_nmae": 0.050919636808654245,
-      "complete_253_hours": 178,
-      "W_available_hours_won": 2568374.5169485006
+      "complete_253_hours": 3802,
+      "W_available_hours_won": 89028704.20311084
     },
     "selected": {
-      "month_equal_nmae": 0.0390267258597237,
+      "month_equal_nmae": 0.0364398442957321,
       "worst_month_nmae": 0.04995556509060441,
-      "complete_253_hours": 178,
-      "W_available_hours_won": 2259863.259248848
+      "complete_253_hours": 3802,
+      "W_available_hours_won": 85297127.95135863
     },
     "blend": {
-      "month_equal_nmae": 0.03880430205877505,
+      "month_equal_nmae": 0.03622320492914862,
       "worst_month_nmae": 0.05005845124206697,
-      "complete_253_hours": 178,
-      "W_available_hours_won": 2304131.0955004226
+      "complete_253_hours": 3802,
+      "W_available_hours_won": 86501384.52869585
     }
   },
   "folds": [
@@ -951,6 +951,916 @@
             "revenue_won": 109793169.69834867,
             "W_won": 2304131.0955004226,
             "S_won": 107489038.60284825
+          }
+        }
+      }
+    },
+    {
+      "fold": "outer_2025_01",
+      "selected": "tuned",
+      "alpha_fixed": 0.30000000000000004,
+      "training_cutoff": "2024-12-31 17:00:00+09:00",
+      "metrics": {
+        "fixed": {
+          "site_equal_nmae": 0.024917447790072416,
+          "observed_site_hours": 188232,
+          "observed_sites": 253,
+          "cold_start_sites": 0,
+          "complete_253_hours": 744,
+          "settlement": {
+            "basis": "provided README formula; local validation only",
+            "groups": {
+              "G1": {
+                "capacity_kw": 20465.65499999998,
+                "revenue_won": 217311668.18071485,
+                "W_won": 6571192.387970867,
+                "S_won": 210740475.79274398
+              },
+              "G2": {
+                "capacity_kw": 22189.71499999999,
+                "revenue_won": 250209339.3916601,
+                "W_won": 7103466.140638158,
+                "S_won": 243105873.25102192
+              }
+            },
+            "revenue_won": 467521007.57237494,
+            "W_won": 13674658.528609024,
+            "S_won": 453846349.0437659
+          },
+          "identity": {
+            "window": {
+              "purpose": "outer_evaluation",
+              "start": "2025-01-01 00:00:00+09:00",
+              "end": "2025-02-01 00:00:00+09:00",
+              "training_start": "2021-01-19 13:00:00+09:00",
+              "training_cutoff": "2024-12-31 17:00:00+09:00",
+              "fit_cutoff": "2024-12-24 17:00:00+09:00",
+              "early_stop_start": "2024-12-25 00:00:00+09:00",
+              "early_stop_end": "2024-12-31 00:00:00+09:00"
+            },
+            "params": {
+              "n_estimators": 600,
+              "learning_rate": 0.06,
+              "num_leaves": 127,
+              "min_child_samples": 200,
+              "subsample": 0.8,
+              "subsample_freq": 1,
+              "colsample_bytree": 0.8,
+              "objective": "regression",
+              "random_state": 42,
+              "device_type": "cuda",
+              "verbosity": -1
+            },
+            "early_stop": false
+          },
+          "training": [
+            {
+              "round": 10,
+              "daytime_rows": 1739342,
+              "iterations": 600
+            },
+            {
+              "round": 17,
+              "daytime_rows": 1739342,
+              "iterations": 600
+            }
+          ],
+          "cache_key": "94ccb8fdecec92078911f618eb59b47c99826015369e079288190d3a13bc927c",
+          "seconds": 29.63830941915512,
+          "artifacts_sha256": {
+            "models/round10.txt": "559cc25637af3e781813b694a9783a3bea60dc32f1ded95b6f4aa96aea053f2d",
+            "models/round17.txt": "cfeb49dc3633c285782b7ad71a314185225f2dc99bac42e3b1a7294e91bfa276",
+            "predictions.parquet": "cdb7af4617be806d3aa072bc4f6aabb66407b3f6101314e9f35d3dd7f3c6889c"
+          }
+        },
+        "selected": {
+          "site_equal_nmae": 0.025231309055766423,
+          "observed_site_hours": 188232,
+          "observed_sites": 253,
+          "cold_start_sites": 0,
+          "complete_253_hours": 744,
+          "settlement": {
+            "basis": "provided README formula; local validation only",
+            "groups": {
+              "G1": {
+                "capacity_kw": 20465.65499999998,
+                "revenue_won": 217311668.18071482,
+                "W_won": 6165623.263840439,
+                "S_won": 211146044.91687438
+              },
+              "G2": {
+                "capacity_kw": 22189.71499999999,
+                "revenue_won": 250209339.3916602,
+                "W_won": 6702308.975107236,
+                "S_won": 243507030.416553
+              }
+            },
+            "revenue_won": 467521007.57237506,
+            "W_won": 12867932.238947675,
+            "S_won": 454653075.33342737
+          },
+          "identity": {
+            "window": {
+              "purpose": "outer_evaluation",
+              "start": "2025-01-01 00:00:00+09:00",
+              "end": "2025-02-01 00:00:00+09:00",
+              "training_start": "2021-01-19 13:00:00+09:00",
+              "training_cutoff": "2024-12-31 17:00:00+09:00",
+              "fit_cutoff": "2024-12-24 17:00:00+09:00",
+              "early_stop_start": "2024-12-25 00:00:00+09:00",
+              "early_stop_end": "2024-12-31 00:00:00+09:00"
+            },
+            "params": {
+              "n_estimators": 1200,
+              "learning_rate": 0.03275588525030741,
+              "num_leaves": 123,
+              "min_child_samples": 403,
+              "subsample": 0.8420415050738167,
+              "subsample_freq": 1,
+              "colsample_bytree": 0.7063355824014079,
+              "objective": "regression",
+              "random_state": 42,
+              "device_type": "cuda",
+              "verbosity": -1,
+              "metric": "l1",
+              "reg_alpha": 5.2147824240584e-06,
+              "reg_lambda": 6.06502097140343e-08
+            },
+            "early_stop": true
+          },
+          "training": [
+            {
+              "round": 10,
+              "daytime_rows": 1739342,
+              "iterations": 341
+            },
+            {
+              "round": 17,
+              "daytime_rows": 1739342,
+              "iterations": 318
+            }
+          ],
+          "cache_key": "479e00a8a161edc9d9e3d19f6e760067d0d3fbdb8ad7c229925a22e3e59a50e7",
+          "seconds": 38.103880111826584,
+          "artifacts_sha256": {
+            "models/round10.txt": "879b3f507220cd39f2d1d1d000d28d7834f762c2f7a6b93778a081e21ec58e92",
+            "models/round17.txt": "cf85f2dad0f8762a6f16c46535102a4a5820a0c2b7aa33cb47d98e470efe3dea",
+            "predictions.parquet": "cdd00632ababe54ca8237933d93b0fef3ae8cbbd11b1d99d192ac736ea4a5ce6"
+          }
+        },
+        "blend": {
+          "site_equal_nmae": 0.025024968917262188,
+          "observed_site_hours": 188232,
+          "observed_sites": 253,
+          "cold_start_sites": 0,
+          "complete_253_hours": 744,
+          "settlement": {
+            "basis": "provided README formula; local validation only",
+            "groups": {
+              "G1": {
+                "capacity_kw": 20465.65499999998,
+                "revenue_won": 217311668.18071485,
+                "W_won": 6256052.308265798,
+                "S_won": 211055615.87244904
+              },
+              "G2": {
+                "capacity_kw": 22189.71499999999,
+                "revenue_won": 250209339.39166012,
+                "W_won": 6799812.152129646,
+                "S_won": 243409527.23953047
+              }
+            },
+            "revenue_won": 467521007.57237494,
+            "W_won": 13055864.460395444,
+            "S_won": 454465143.1119795
+          }
+        }
+      }
+    },
+    {
+      "fold": "outer_2025_02",
+      "selected": "tuned",
+      "alpha_fixed": 0.35000000000000003,
+      "training_cutoff": "2025-01-31 17:00:00+09:00",
+      "metrics": {
+        "fixed": {
+          "site_equal_nmae": 0.02978211038127844,
+          "observed_site_hours": 170016,
+          "observed_sites": 253,
+          "cold_start_sites": 0,
+          "complete_253_hours": 672,
+          "settlement": {
+            "basis": "provided README formula; local validation only",
+            "groups": {
+              "G1": {
+                "capacity_kw": 20465.65499999998,
+                "revenue_won": 287889706.60941076,
+                "W_won": 6803097.842328392,
+                "S_won": 281086608.7670824
+              },
+              "G2": {
+                "capacity_kw": 22189.71499999999,
+                "revenue_won": 310117863.65149087,
+                "W_won": 9325777.235520734,
+                "S_won": 300792086.41597015
+              }
+            },
+            "revenue_won": 598007570.2609017,
+            "W_won": 16128875.077849125,
+            "S_won": 581878695.1830525
+          },
+          "identity": {
+            "window": {
+              "purpose": "outer_evaluation",
+              "start": "2025-02-01 00:00:00+09:00",
+              "end": "2025-03-01 00:00:00+09:00",
+              "training_start": "2021-01-19 13:00:00+09:00",
+              "training_cutoff": "2025-01-31 17:00:00+09:00",
+              "fit_cutoff": "2025-01-24 17:00:00+09:00",
+              "early_stop_start": "2025-01-25 00:00:00+09:00",
+              "early_stop_end": "2025-01-31 00:00:00+09:00"
+            },
+            "params": {
+              "n_estimators": 600,
+              "learning_rate": 0.06,
+              "num_leaves": 127,
+              "min_child_samples": 200,
+              "subsample": 0.8,
+              "subsample_freq": 1,
+              "colsample_bytree": 0.8,
+              "objective": "regression",
+              "random_state": 42,
+              "device_type": "cuda",
+              "verbosity": -1
+            },
+            "early_stop": false
+          },
+          "training": [
+            {
+              "round": 10,
+              "daytime_rows": 1813906,
+              "iterations": 600
+            },
+            {
+              "round": 17,
+              "daytime_rows": 1813906,
+              "iterations": 600
+            }
+          ],
+          "cache_key": "5b6136d50db79c2ca5df1f45ed6275d422eb8deb30ea4b59e860dd7ebd5654bd",
+          "seconds": 30.025006658863276,
+          "artifacts_sha256": {
+            "models/round10.txt": "c602fc962198c2e55c7589fbf8421c21c1811fef3e2e8869fe6f7105f0b1be7e",
+            "models/round17.txt": "a309a0a43d97560a869a82e72e09b7568a09ce03efcb5dc093ad88965013a76a",
+            "predictions.parquet": "af8bb17194ec6a212d3545f59131253b6715332f3eb3123eff8ee23c4843a1c7"
+          }
+        },
+        "selected": {
+          "site_equal_nmae": 0.031512007159732965,
+          "observed_site_hours": 170016,
+          "observed_sites": 253,
+          "cold_start_sites": 0,
+          "complete_253_hours": 672,
+          "settlement": {
+            "basis": "provided README formula; local validation only",
+            "groups": {
+              "G1": {
+                "capacity_kw": 20465.65499999998,
+                "revenue_won": 287889706.6094105,
+                "W_won": 6612483.343834838,
+                "S_won": 281277223.2655757
+              },
+              "G2": {
+                "capacity_kw": 22189.71499999999,
+                "revenue_won": 310117863.6514908,
+                "W_won": 8777554.343601374,
+                "S_won": 301340309.30788946
+              }
+            },
+            "revenue_won": 598007570.2609013,
+            "W_won": 15390037.687436212,
+            "S_won": 582617532.5734651
+          },
+          "identity": {
+            "window": {
+              "purpose": "outer_evaluation",
+              "start": "2025-02-01 00:00:00+09:00",
+              "end": "2025-03-01 00:00:00+09:00",
+              "training_start": "2021-01-19 13:00:00+09:00",
+              "training_cutoff": "2025-01-31 17:00:00+09:00",
+              "fit_cutoff": "2025-01-24 17:00:00+09:00",
+              "early_stop_start": "2025-01-25 00:00:00+09:00",
+              "early_stop_end": "2025-01-31 00:00:00+09:00"
+            },
+            "params": {
+              "n_estimators": 1200,
+              "learning_rate": 0.03275588525030741,
+              "num_leaves": 123,
+              "min_child_samples": 403,
+              "subsample": 0.8420415050738167,
+              "subsample_freq": 1,
+              "colsample_bytree": 0.7063355824014079,
+              "objective": "regression",
+              "random_state": 42,
+              "device_type": "cuda",
+              "verbosity": -1,
+              "metric": "l1",
+              "reg_alpha": 5.2147824240584e-06,
+              "reg_lambda": 6.06502097140343e-08
+            },
+            "early_stop": true
+          },
+          "training": [
+            {
+              "round": 10,
+              "daytime_rows": 1813906,
+              "iterations": 249
+            },
+            {
+              "round": 17,
+              "daytime_rows": 1813906,
+              "iterations": 203
+            }
+          ],
+          "cache_key": "cf70cd35cce952943dee3e1fee1f13c9ff52d33c320449c220ae07bba09e6dfe",
+          "seconds": 29.88698392896913,
+          "artifacts_sha256": {
+            "models/round10.txt": "1c7c26c979753643e27606c4d25988874e703f05314d3c88b78fbc791a318b76",
+            "models/round17.txt": "44aacdf1edd31a834da46bbb8dc80cfc8ca876ead6f1ac9061d1aba2038597a7",
+            "predictions.parquet": "73d28d979e8dab8c2d2424bcbc1bc0c3b4e043f15b106d46f54f792ae0563546"
+          }
+        },
+        "blend": {
+          "site_equal_nmae": 0.030707295790413192,
+          "observed_site_hours": 170016,
+          "observed_sites": 253,
+          "cold_start_sites": 0,
+          "complete_253_hours": 672,
+          "settlement": {
+            "basis": "provided README formula; local validation only",
+            "groups": {
+              "G1": {
+                "capacity_kw": 20465.65499999998,
+                "revenue_won": 287889706.6094105,
+                "W_won": 6663608.27154562,
+                "S_won": 281226098.3378649
+              },
+              "G2": {
+                "capacity_kw": 22189.71499999999,
+                "revenue_won": 310117863.6514907,
+                "W_won": 8950900.21517329,
+                "S_won": 301166963.4363174
+              }
+            },
+            "revenue_won": 598007570.2609012,
+            "W_won": 15614508.486718908,
+            "S_won": 582393061.7741823
+          }
+        }
+      }
+    },
+    {
+      "fold": "outer_2025_03",
+      "selected": "tuned",
+      "alpha_fixed": 0.5,
+      "training_cutoff": "2025-02-28 17:00:00+09:00",
+      "metrics": {
+        "fixed": {
+          "site_equal_nmae": 0.03191622269382207,
+          "observed_site_hours": 188232,
+          "observed_sites": 253,
+          "cold_start_sites": 0,
+          "complete_253_hours": 744,
+          "settlement": {
+            "basis": "provided README formula; local validation only",
+            "groups": {
+              "G1": {
+                "capacity_kw": 20465.65499999998,
+                "revenue_won": 291121184.9519838,
+                "W_won": 6701297.95587937,
+                "S_won": 284419886.9961044
+              },
+              "G2": {
+                "capacity_kw": 22189.71499999999,
+                "revenue_won": 318392659.22875977,
+                "W_won": 7374224.384214331,
+                "S_won": 311018434.8445454
+              }
+            },
+            "revenue_won": 609513844.1807436,
+            "W_won": 14075522.340093702,
+            "S_won": 595438321.8406498
+          },
+          "identity": {
+            "window": {
+              "purpose": "outer_evaluation",
+              "start": "2025-03-01 00:00:00+09:00",
+              "end": "2025-04-01 00:00:00+09:00",
+              "training_start": "2021-01-19 13:00:00+09:00",
+              "training_cutoff": "2025-02-28 17:00:00+09:00",
+              "fit_cutoff": "2025-02-21 17:00:00+09:00",
+              "early_stop_start": "2025-02-22 00:00:00+09:00",
+              "early_stop_end": "2025-02-28 00:00:00+09:00"
+            },
+            "params": {
+              "n_estimators": 600,
+              "learning_rate": 0.06,
+              "num_leaves": 127,
+              "min_child_samples": 200,
+              "subsample": 0.8,
+              "subsample_freq": 1,
+              "colsample_bytree": 0.8,
+              "objective": "regression",
+              "random_state": 42,
+              "device_type": "cuda",
+              "verbosity": -1
+            },
+            "early_stop": false
+          },
+          "training": [
+            {
+              "round": 10,
+              "daytime_rows": 1890845,
+              "iterations": 600
+            },
+            {
+              "round": 17,
+              "daytime_rows": 1890845,
+              "iterations": 600
+            }
+          ],
+          "cache_key": "b1f8b7c12b21a7bf6dd7b07def709e03ffd0c93f5d14b1419e70aeeeef052e09",
+          "seconds": 30.48728299792856,
+          "artifacts_sha256": {
+            "models/round10.txt": "e0b083109eef00a95f6171a357cc0b131ae3572aa7bf4b958a38ed2e1b82ce95",
+            "models/round17.txt": "09834d02f1494b2db758d132c998be0829943ef6d6198473bb7c443234ca3e23",
+            "predictions.parquet": "4522591fef05c70e70fef42d695018d64a6c643db1ab7dcc68cc11842e8c98be"
+          }
+        },
+        "selected": {
+          "site_equal_nmae": 0.03220135287105481,
+          "observed_site_hours": 188232,
+          "observed_sites": 253,
+          "cold_start_sites": 0,
+          "complete_253_hours": 744,
+          "settlement": {
+            "basis": "provided README formula; local validation only",
+            "groups": {
+              "G1": {
+                "capacity_kw": 20465.65499999998,
+                "revenue_won": 291121184.95198363,
+                "W_won": 6727050.755523641,
+                "S_won": 284394134.19646
+              },
+              "G2": {
+                "capacity_kw": 22189.71499999999,
+                "revenue_won": 318392659.22875977,
+                "W_won": 7467909.356654023,
+                "S_won": 310924749.8721057
+              }
+            },
+            "revenue_won": 609513844.1807435,
+            "W_won": 14194960.112177663,
+            "S_won": 595318884.0685657
+          },
+          "identity": {
+            "window": {
+              "purpose": "outer_evaluation",
+              "start": "2025-03-01 00:00:00+09:00",
+              "end": "2025-04-01 00:00:00+09:00",
+              "training_start": "2021-01-19 13:00:00+09:00",
+              "training_cutoff": "2025-02-28 17:00:00+09:00",
+              "fit_cutoff": "2025-02-21 17:00:00+09:00",
+              "early_stop_start": "2025-02-22 00:00:00+09:00",
+              "early_stop_end": "2025-02-28 00:00:00+09:00"
+            },
+            "params": {
+              "n_estimators": 1200,
+              "learning_rate": 0.027462733057678046,
+              "num_leaves": 121,
+              "min_child_samples": 645,
+              "subsample": 0.688408316688973,
+              "subsample_freq": 1,
+              "colsample_bytree": 0.7760692543952893,
+              "objective": "regression",
+              "random_state": 42,
+              "device_type": "cuda",
+              "verbosity": -1,
+              "metric": "l1",
+              "reg_alpha": 0.0007027303946151489,
+              "reg_lambda": 2.91547324425089e-08
+            },
+            "early_stop": true
+          },
+          "training": [
+            {
+              "round": 10,
+              "daytime_rows": 1890845,
+              "iterations": 459
+            },
+            {
+              "round": 17,
+              "daytime_rows": 1890845,
+              "iterations": 709
+            }
+          ],
+          "cache_key": "f0f1fcfebc9f1c8c070ec537e6140ffe0a372de1b3f4baf02b9e2b21196f9792",
+          "seconds": 60.8277336768806,
+          "artifacts_sha256": {
+            "models/round10.txt": "53e99f1d10890e5c83d10d986b2277302af3697d9d4a77824c8b61c31b7ee5a3",
+            "models/round17.txt": "c2dc084ec644806c8545fa30c3aed0e643bc4a6b2316418285b90360c295a333",
+            "predictions.parquet": "e9b730e06f7ad31280f5f5d7531fd779c809bc71b4f2a4d347d7f3f360a523f2"
+          }
+        },
+        "blend": {
+          "site_equal_nmae": 0.03192471169251537,
+          "observed_site_hours": 188232,
+          "observed_sites": 253,
+          "cold_start_sites": 0,
+          "complete_253_hours": 744,
+          "settlement": {
+            "basis": "provided README formula; local validation only",
+            "groups": {
+              "G1": {
+                "capacity_kw": 20465.65499999998,
+                "revenue_won": 291121184.95198405,
+                "W_won": 6692545.772111809,
+                "S_won": 284428639.1798722
+              },
+              "G2": {
+                "capacity_kw": 22189.71499999999,
+                "revenue_won": 318392659.22876,
+                "W_won": 7327220.165028252,
+                "S_won": 311065439.06373173
+              }
+            },
+            "revenue_won": 609513844.180744,
+            "W_won": 14019765.93714006,
+            "S_won": 595494078.243604
+          }
+        }
+      }
+    },
+    {
+      "fold": "outer_2025_04",
+      "selected": "tuned",
+      "alpha_fixed": 0.55,
+      "training_cutoff": "2025-03-31 17:00:00+09:00",
+      "metrics": {
+        "fixed": {
+          "site_equal_nmae": 0.0355342474140589,
+          "observed_site_hours": 182160,
+          "observed_sites": 253,
+          "cold_start_sites": 0,
+          "complete_253_hours": 720,
+          "settlement": {
+            "basis": "provided README formula; local validation only",
+            "groups": {
+              "G1": {
+                "capacity_kw": 20465.65499999998,
+                "revenue_won": 390068910.7848102,
+                "W_won": 8563230.576774843,
+                "S_won": 381505680.20803535
+              },
+              "G2": {
+                "capacity_kw": 22189.71499999999,
+                "revenue_won": 442347691.93805873,
+                "W_won": 10239013.509511635,
+                "S_won": 432108678.4285471
+              }
+            },
+            "revenue_won": 832416602.7228689,
+            "W_won": 18802244.086286478,
+            "S_won": 813614358.6365824
+          },
+          "identity": {
+            "window": {
+              "purpose": "outer_evaluation",
+              "start": "2025-04-01 00:00:00+09:00",
+              "end": "2025-05-01 00:00:00+09:00",
+              "training_start": "2021-01-19 13:00:00+09:00",
+              "training_cutoff": "2025-03-31 17:00:00+09:00",
+              "fit_cutoff": "2025-03-24 17:00:00+09:00",
+              "early_stop_start": "2025-03-25 00:00:00+09:00",
+              "early_stop_end": "2025-03-31 00:00:00+09:00"
+            },
+            "params": {
+              "n_estimators": 600,
+              "learning_rate": 0.06,
+              "num_leaves": 127,
+              "min_child_samples": 200,
+              "subsample": 0.8,
+              "subsample_freq": 1,
+              "colsample_bytree": 0.8,
+              "objective": "regression",
+              "random_state": 42,
+              "device_type": "cuda",
+              "verbosity": -1
+            },
+            "early_stop": false
+          },
+          "training": [
+            {
+              "round": 10,
+              "daytime_rows": 1982643,
+              "iterations": 600
+            },
+            {
+              "round": 17,
+              "daytime_rows": 1982643,
+              "iterations": 600
+            }
+          ],
+          "cache_key": "b83f2fc50a4c26a131aca90b867d14ed68d04c95c9481c3f39db1b83cf841702",
+          "seconds": 31.146320733008906,
+          "artifacts_sha256": {
+            "models/round10.txt": "879706d8b111dc47b5eb9c4147a8d3bef8c62ccd4c478774ec2554126fe84ac5",
+            "models/round17.txt": "8c5d1a80dc3ab065d1dd02f4228a51293ac87586c734dfe42fb249d6ce2453c4",
+            "predictions.parquet": "1daba011d2b78e3d9f93dcc89d2feb4a5d21e6e0d4018a45d4987865dee56388"
+          }
+        },
+        "selected": {
+          "site_equal_nmae": 0.03518608831241029,
+          "observed_site_hours": 182160,
+          "observed_sites": 253,
+          "cold_start_sites": 0,
+          "complete_253_hours": 720,
+          "settlement": {
+            "basis": "provided README formula; local validation only",
+            "groups": {
+              "G1": {
+                "capacity_kw": 20465.65499999998,
+                "revenue_won": 390068910.7848102,
+                "W_won": 8047358.993618596,
+                "S_won": 382021551.7911916
+              },
+              "G2": {
+                "capacity_kw": 22189.71499999999,
+                "revenue_won": 442347691.93805873,
+                "W_won": 9571937.254535666,
+                "S_won": 432775754.68352306
+              }
+            },
+            "revenue_won": 832416602.7228689,
+            "W_won": 17619296.24815426,
+            "S_won": 814797306.4747146
+          },
+          "identity": {
+            "window": {
+              "purpose": "outer_evaluation",
+              "start": "2025-04-01 00:00:00+09:00",
+              "end": "2025-05-01 00:00:00+09:00",
+              "training_start": "2021-01-19 13:00:00+09:00",
+              "training_cutoff": "2025-03-31 17:00:00+09:00",
+              "fit_cutoff": "2025-03-24 17:00:00+09:00",
+              "early_stop_start": "2025-03-25 00:00:00+09:00",
+              "early_stop_end": "2025-03-31 00:00:00+09:00"
+            },
+            "params": {
+              "n_estimators": 1200,
+              "learning_rate": 0.025008746804834166,
+              "num_leaves": 118,
+              "min_child_samples": 446,
+              "subsample": 0.6795716538906413,
+              "subsample_freq": 1,
+              "colsample_bytree": 0.6980939765559429,
+              "objective": "regression",
+              "random_state": 42,
+              "device_type": "cuda",
+              "verbosity": -1,
+              "metric": "l1",
+              "reg_alpha": 0.00021711331354315976,
+              "reg_lambda": 9.795668060796643e-07
+            },
+            "early_stop": true
+          },
+          "training": [
+            {
+              "round": 10,
+              "daytime_rows": 1982643,
+              "iterations": 524
+            },
+            {
+              "round": 17,
+              "daytime_rows": 1982643,
+              "iterations": 707
+            }
+          ],
+          "cache_key": "fb33613ca99ac8bcd6a1d5dda89a5ba3b901b8786a8d249f604064f0529bbd30",
+          "seconds": 63.893334538908675,
+          "artifacts_sha256": {
+            "models/round10.txt": "13d8dee391234eb1a4b867753efe8080ef14d3983f2fe17071aabaa5990802c6",
+            "models/round17.txt": "d9fc4b1e1c70ec691856d6138f9898b21f2ac530bb7f66c2382b5ed05ad5eb61",
+            "predictions.parquet": "fe0a9f5df4390c62f3fe28c3d7f222c833f57d4e7d746959d420e649e79be2ff"
+          }
+        },
+        "blend": {
+          "site_equal_nmae": 0.035219494240645216,
+          "observed_site_hours": 182160,
+          "observed_sites": 253,
+          "cold_start_sites": 0,
+          "complete_253_hours": 720,
+          "settlement": {
+            "basis": "provided README formula; local validation only",
+            "groups": {
+              "G1": {
+                "capacity_kw": 20465.65499999998,
+                "revenue_won": 390068910.78481007,
+                "W_won": 8290046.161375296,
+                "S_won": 381778864.6234348
+              },
+              "G2": {
+                "capacity_kw": 22189.71499999999,
+                "revenue_won": 442347691.93805873,
+                "W_won": 9906946.908872172,
+                "S_won": 432440745.02918655
+              }
+            },
+            "revenue_won": 832416602.7228688,
+            "W_won": 18196993.070247468,
+            "S_won": 814219609.6526213
+          }
+        }
+      }
+    },
+    {
+      "fold": "outer_2025_05",
+      "selected": "tuned",
+      "alpha_fixed": 0.5,
+      "training_cutoff": "2025-04-30 17:00:00+09:00",
+      "metrics": {
+        "fixed": {
+          "site_equal_nmae": 0.0407046023605384,
+          "observed_site_hours": 188232,
+          "observed_sites": 253,
+          "cold_start_sites": 0,
+          "complete_253_hours": 744,
+          "settlement": {
+            "basis": "provided README formula; local validation only",
+            "groups": {
+              "G1": {
+                "capacity_kw": 20465.65499999998,
+                "revenue_won": 358998693.5369947,
+                "W_won": 10781899.655967865,
+                "S_won": 348216793.8810268
+              },
+              "G2": {
+                "capacity_kw": 22189.71499999999,
+                "revenue_won": 407164491.27685803,
+                "W_won": 12997129.997356145,
+                "S_won": 394167361.2795019
+              }
+            },
+            "revenue_won": 766163184.8138528,
+            "W_won": 23779029.653324008,
+            "S_won": 742384155.1605287
+          },
+          "identity": {
+            "window": {
+              "purpose": "outer_evaluation",
+              "start": "2025-05-01 00:00:00+09:00",
+              "end": "2025-06-01 00:00:00+09:00",
+              "training_start": "2021-01-19 13:00:00+09:00",
+              "training_cutoff": "2025-04-30 17:00:00+09:00",
+              "fit_cutoff": "2025-04-23 17:00:00+09:00",
+              "early_stop_start": "2025-04-24 00:00:00+09:00",
+              "early_stop_end": "2025-04-30 00:00:00+09:00"
+            },
+            "params": {
+              "n_estimators": 600,
+              "learning_rate": 0.06,
+              "num_leaves": 127,
+              "min_child_samples": 200,
+              "subsample": 0.8,
+              "subsample_freq": 1,
+              "colsample_bytree": 0.8,
+              "objective": "regression",
+              "random_state": 42,
+              "device_type": "cuda",
+              "verbosity": -1
+            },
+            "early_stop": false
+          },
+          "training": [
+            {
+              "round": 10,
+              "daytime_rows": 2081313,
+              "iterations": 600
+            },
+            {
+              "round": 17,
+              "daytime_rows": 2081313,
+              "iterations": 600
+            }
+          ],
+          "cache_key": "991bb60100899a3b7061e6c2c67c45c516ab221162271e0877fa8951a471360f",
+          "seconds": 32.42246650601737,
+          "artifacts_sha256": {
+            "models/round10.txt": "4e1c2b85605e746db561faec94dbba078b7b64f9828a21526e2d92da5180fee0",
+            "models/round17.txt": "8e1959978d461e0eff19b516b3e39d2878108889eee75d2ab36b8ea9492294f7",
+            "predictions.parquet": "2a0d0c0518727ce30e38e681aeccf47821645cd6abfd8ead79f65c644287eede"
+          }
+        },
+        "selected": {
+          "site_equal_nmae": 0.03996029313175493,
+          "observed_site_hours": 188232,
+          "observed_sites": 253,
+          "cold_start_sites": 0,
+          "complete_253_hours": 744,
+          "settlement": {
+            "basis": "provided README formula; local validation only",
+            "groups": {
+              "G1": {
+                "capacity_kw": 20465.65499999998,
+                "revenue_won": 358998693.53699464,
+                "W_won": 10372424.779094197,
+                "S_won": 348626268.7579004
+              },
+              "G2": {
+                "capacity_kw": 22189.71499999999,
+                "revenue_won": 407164491.27685827,
+                "W_won": 12592613.626299784,
+                "S_won": 394571877.6505585
+              }
+            },
+            "revenue_won": 766163184.8138529,
+            "W_won": 22965038.40539398,
+            "S_won": 743198146.408459
+          },
+          "identity": {
+            "window": {
+              "purpose": "outer_evaluation",
+              "start": "2025-05-01 00:00:00+09:00",
+              "end": "2025-06-01 00:00:00+09:00",
+              "training_start": "2021-01-19 13:00:00+09:00",
+              "training_cutoff": "2025-04-30 17:00:00+09:00",
+              "fit_cutoff": "2025-04-23 17:00:00+09:00",
+              "early_stop_start": "2025-04-24 00:00:00+09:00",
+              "early_stop_end": "2025-04-30 00:00:00+09:00"
+            },
+            "params": {
+              "n_estimators": 1200,
+              "learning_rate": 0.027462733057678046,
+              "num_leaves": 121,
+              "min_child_samples": 645,
+              "subsample": 0.688408316688973,
+              "subsample_freq": 1,
+              "colsample_bytree": 0.7760692543952893,
+              "objective": "regression",
+              "random_state": 42,
+              "device_type": "cuda",
+              "verbosity": -1,
+              "metric": "l1",
+              "reg_alpha": 0.0007027303946151489,
+              "reg_lambda": 2.91547324425089e-08
+            },
+            "early_stop": true
+          },
+          "training": [
+            {
+              "round": 10,
+              "daytime_rows": 2081313,
+              "iterations": 534
+            },
+            {
+              "round": 17,
+              "daytime_rows": 2081313,
+              "iterations": 412
+            }
+          ],
+          "cache_key": "1642543e650f75d4293286b8d06505ae55371242ddf4877e5be6df2045b72e4b",
+          "seconds": 54.215791103895754,
+          "artifacts_sha256": {
+            "models/round10.txt": "961b9e4418b86b24f08e9382803f84b345c6b43dbc678aa8c4fe04380daff1a0",
+            "models/round17.txt": "f4b33bfe651f7f3ed0b2b943698f0caf08a785fbe243b54754eccc49f472fe25",
+            "predictions.parquet": "7b1f11abcceb1f9830a87d3d11f3b861d4110d00faf10d9bb4afab37a5785582"
+          }
+        },
+        "blend": {
+          "site_equal_nmae": 0.04017187409752211,
+          "observed_site_hours": 188232,
+          "observed_sites": 253,
+          "cold_start_sites": 0,
+          "complete_253_hours": 744,
+          "settlement": {
+            "basis": "provided README formula; local validation only",
+            "groups": {
+              "G1": {
+                "capacity_kw": 20465.65499999998,
+                "revenue_won": 358998693.5369947,
+                "W_won": 10548135.314928401,
+                "S_won": 348450558.2220663
+              },
+              "G2": {
+                "capacity_kw": 22189.71499999999,
+                "revenue_won": 407164491.276858,
+                "W_won": 12761986.163765147,
+                "S_won": 394402505.11309284
+              }
+            },
+            "revenue_won": 766163184.8138527,
+            "W_won": 23310121.47869355,
+            "S_won": 742853063.3351591
           }
         }
       }

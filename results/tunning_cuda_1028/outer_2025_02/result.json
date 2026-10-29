@@ -1,0 +1,182 @@
+{
+  "fold": "outer_2025_02",
+  "selected": "tuned",
+  "alpha_fixed": 0.35000000000000003,
+  "training_cutoff": "2025-01-31 17:00:00+09:00",
+  "metrics": {
+    "fixed": {
+      "site_equal_nmae": 0.02978211038127844,
+      "observed_site_hours": 170016,
+      "observed_sites": 253,
+      "cold_start_sites": 0,
+      "complete_253_hours": 672,
+      "settlement": {
+        "basis": "provided README formula; local validation only",
+        "groups": {
+          "G1": {
+            "capacity_kw": 20465.65499999998,
+            "revenue_won": 287889706.60941076,
+            "W_won": 6803097.842328392,
+            "S_won": 281086608.7670824
+          },
+          "G2": {
+            "capacity_kw": 22189.71499999999,
+            "revenue_won": 310117863.65149087,
+            "W_won": 9325777.235520734,
+            "S_won": 300792086.41597015
+          }
+        },
+        "revenue_won": 598007570.2609017,
+        "W_won": 16128875.077849125,
+        "S_won": 581878695.1830525
+      },
+      "identity": {
+        "window": {
+          "purpose": "outer_evaluation",
+          "start": "2025-02-01 00:00:00+09:00",
+          "end": "2025-03-01 00:00:00+09:00",
+          "training_start": "2021-01-19 13:00:00+09:00",
+          "training_cutoff": "2025-01-31 17:00:00+09:00",
+          "fit_cutoff": "2025-01-24 17:00:00+09:00",
+          "early_stop_start": "2025-01-25 00:00:00+09:00",
+          "early_stop_end": "2025-01-31 00:00:00+09:00"
+        },
+        "params": {
+          "n_estimators": 600,
+          "learning_rate": 0.06,
+          "num_leaves": 127,
+          "min_child_samples": 200,
+          "subsample": 0.8,
+          "subsample_freq": 1,
+          "colsample_bytree": 0.8,
+          "objective": "regression",
+          "random_state": 42,
+          "device_type": "cuda",
+          "verbosity": -1
+        },
+        "early_stop": false
+      },
+      "training": [
+        {
+          "round": 10,
+          "daytime_rows": 1813906,
+          "iterations": 600
+        },
+        {
+          "round": 17,
+          "daytime_rows": 1813906,
+          "iterations": 600
+        }
+      ],
+      "cache_key": "5b6136d50db79c2ca5df1f45ed6275d422eb8deb30ea4b59e860dd7ebd5654bd",
+      "seconds": 30.025006658863276,
+      "artifacts_sha256": {
+        "models/round10.txt": "c602fc962198c2e55c7589fbf8421c21c1811fef3e2e8869fe6f7105f0b1be7e",
+        "models/round17.txt": "a309a0a43d97560a869a82e72e09b7568a09ce03efcb5dc093ad88965013a76a",
+        "predictions.parquet": "af8bb17194ec6a212d3545f59131253b6715332f3eb3123eff8ee23c4843a1c7"
+      }
+    },
+    "selected": {
+      "site_equal_nmae": 0.031512007159732965,
+      "observed_site_hours": 170016,
+      "observed_sites": 253,
+      "cold_start_sites": 0,
+      "complete_253_hours": 672,
+      "settlement": {
+        "basis": "provided README formula; local validation only",
+        "groups": {
+          "G1": {
+            "capacity_kw": 20465.65499999998,
+            "revenue_won": 287889706.6094105,
+            "W_won": 6612483.343834838,
+            "S_won": 281277223.2655757
+          },
+          "G2": {
+            "capacity_kw": 22189.71499999999,
+            "revenue_won": 310117863.6514908,
+            "W_won": 8777554.343601374,
+            "S_won": 301340309.30788946
+          }
+        },
+        "revenue_won": 598007570.2609013,
+        "W_won": 15390037.687436212,
+        "S_won": 582617532.5734651
+      },
+      "identity": {
+        "window": {
+          "purpose": "outer_evaluation",
+          "start": "2025-02-01 00:00:00+09:00",
+          "end": "2025-03-01 00:00:00+09:00",
+          "training_start": "2021-01-19 13:00:00+09:00",
+          "training_cutoff": "2025-01-31 17:00:00+09:00",
+          "fit_cutoff": "2025-01-24 17:00:00+09:00",
+          "early_stop_start": "2025-01-25 00:00:00+09:00",
+          "early_stop_end": "2025-01-31 00:00:00+09:00"
+        },
+        "params": {
+          "n_estimators": 1200,
+          "learning_rate": 0.03275588525030741,
+          "num_leaves": 123,
+          "min_child_samples": 403,
+          "subsample": 0.8420415050738167,
+          "subsample_freq": 1,
+          "colsample_bytree": 0.7063355824014079,
+          "objective": "regression",
+          "random_state": 42,
+          "device_type": "cuda",
+          "verbosity": -1,
+          "metric": "l1",
+          "reg_alpha": 5.2147824240584e-06,
+          "reg_lambda": 6.06502097140343e-08
+        },
+        "early_stop": true
+      },
+      "training": [
+        {
+          "round": 10,
+          "daytime_rows": 1813906,
+          "iterations": 249
+        },
+        {
+          "round": 17,
+          "daytime_rows": 1813906,
+          "iterations": 203
+        }
+      ],
+      "cache_key": "cf70cd35cce952943dee3e1fee1f13c9ff52d33c320449c220ae07bba09e6dfe",
+      "seconds": 29.88698392896913,
+      "artifacts_sha256": {
+        "models/round10.txt": "1c7c26c979753643e27606c4d25988874e703f05314d3c88b78fbc791a318b76",
+        "models/round17.txt": "44aacdf1edd31a834da46bbb8dc80cfc8ca876ead6f1ac9061d1aba2038597a7",
+        "predictions.parquet": "73d28d979e8dab8c2d2424bcbc1bc0c3b4e043f15b106d46f54f792ae0563546"
+      }
+    },
+    "blend": {
+      "site_equal_nmae": 0.030707295790413192,
+      "observed_site_hours": 170016,
+      "observed_sites": 253,
+      "cold_start_sites": 0,
+      "complete_253_hours": 672,
+      "settlement": {
+        "basis": "provided README formula; local validation only",
+        "groups": {
+          "G1": {
+            "capacity_kw": 20465.65499999998,
+            "revenue_won": 287889706.6094105,
+            "W_won": 6663608.27154562,
+            "S_won": 281226098.3378649
+          },
+          "G2": {
+            "capacity_kw": 22189.71499999999,
+            "revenue_won": 310117863.6514907,
+            "W_won": 8950900.21517329,
+            "S_won": 301166963.4363174
+          }
+        },
+        "revenue_won": 598007570.2609012,
+        "W_won": 15614508.486718908,
+        "S_won": 582393061.7741823
+      }
+    }
+  }
+}

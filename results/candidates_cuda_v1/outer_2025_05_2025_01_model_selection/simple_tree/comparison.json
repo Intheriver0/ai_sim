@@ -1,0 +1,95 @@
+{
+  "site_equal_nmae": 0.025590876000947855,
+  "observed_site_hours": 60720,
+  "observed_sites": 253,
+  "cold_start_sites": 0,
+  "complete_253_hours": 240,
+  "settlement": {
+    "basis": "provided README formula; local validation only",
+    "groups": {
+      "G1": {
+        "capacity_kw": 20465.65499999998,
+        "revenue_won": 66258119.35980968,
+        "W_won": 2027535.1671641308,
+        "S_won": 64230584.19264555
+      },
+      "G2": {
+        "capacity_kw": 22189.71499999999,
+        "revenue_won": 75592486.47983117,
+        "W_won": 2197030.7466082387,
+        "S_won": 73395455.73322293
+      }
+    },
+    "revenue_won": 141850605.83964086,
+    "W_won": 4224565.91377237,
+    "S_won": 137626039.92586848
+  },
+  "candidate": {
+    "name": "simple_tree",
+    "params": {
+      "num_leaves": 31,
+      "min_child_samples": 500
+    },
+    "reason": "Lower tree complexity"
+  },
+  "params": {
+    "n_estimators": 600,
+    "learning_rate": 0.06,
+    "num_leaves": 31,
+    "min_child_samples": 500,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "objective": "regression",
+    "random_state": 42,
+    "device_type": "cuda",
+    "verbosity": -1
+  },
+  "features": [
+    "wa_cloud",
+    "wa_temp",
+    "wa_humidity",
+    "wa_rain",
+    "wa_wind_speed_ms",
+    "wa_ground_press",
+    "wb_cloud",
+    "wb_temp",
+    "wb_rel_hum",
+    "wb_uv_idx",
+    "wb_precip_prob",
+    "wb_total_liq",
+    "wb_vis",
+    "wb_wind_speed_ms",
+    "wb_dew_point",
+    "elev",
+    "azim",
+    "cosz",
+    "doy_sin",
+    "doy_cos",
+    "hour",
+    "cap",
+    "lat",
+    "lon"
+  ],
+  "training_condition": "TRUE",
+  "training_cutoff": "2024-12-31 17:00:00+09:00",
+  "training_rows": [
+    {
+      "round": 10,
+      "daytime_rows": 1739342
+    },
+    {
+      "round": 17,
+      "daytime_rows": 1739342
+    }
+  ],
+  "seconds": 15.925281439907849,
+  "artifacts_sha256": {
+    "models/round10.txt": "0bc1b399b74dc10958ec1a89d37f0ddc12d2f1d6734e6b091907cd0462ff4654",
+    "models/round17.txt": "dce99a8b2a4e963065444fc7314c13ecb54a933d95cd980cd873616466b3f8e7",
+    "predictions.parquet": "320de4c987f94cbaf7bfda4bf827e5cd629c033add314c23873769c9bd3d40ec"
+  },
+  "window": "outer_2025_05_2025_01_model_selection",
+  "residual_correlation_with_baseline": 0.9661946541140322,
+  "mean_prediction_difference_kwh": 1.084126674475839
+}

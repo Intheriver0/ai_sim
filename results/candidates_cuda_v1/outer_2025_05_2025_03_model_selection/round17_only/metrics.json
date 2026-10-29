@@ -1,0 +1,87 @@
+{
+  "site_equal_nmae": 0.03425059724058351,
+  "observed_site_hours": 60720,
+  "observed_sites": 253,
+  "cold_start_sites": 0,
+  "complete_253_hours": 240,
+  "settlement": {
+    "basis": "provided README formula; local validation only",
+    "groups": {
+      "G1": {
+        "capacity_kw": 20465.65499999998,
+        "revenue_won": 58546309.0048621,
+        "W_won": 2299054.1764802677,
+        "S_won": 56247254.82838183
+      },
+      "G2": {
+        "capacity_kw": 22189.71499999999,
+        "revenue_won": 60762335.777017325,
+        "W_won": 2587905.59049342,
+        "S_won": 58174430.18652391
+      }
+    },
+    "revenue_won": 119308644.78187943,
+    "W_won": 4886959.766973687,
+    "S_won": 114421685.01490574
+  },
+  "candidate": {
+    "name": "round17_only",
+    "params": {},
+    "rounds": [
+      17
+    ],
+    "reason": "Latest forecast round only"
+  },
+  "params": {
+    "n_estimators": 600,
+    "learning_rate": 0.06,
+    "num_leaves": 127,
+    "min_child_samples": 200,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "objective": "regression",
+    "random_state": 42,
+    "device_type": "cuda",
+    "verbosity": -1
+  },
+  "features": [
+    "wa_cloud",
+    "wa_temp",
+    "wa_humidity",
+    "wa_rain",
+    "wa_wind_speed_ms",
+    "wa_ground_press",
+    "wb_cloud",
+    "wb_temp",
+    "wb_rel_hum",
+    "wb_uv_idx",
+    "wb_precip_prob",
+    "wb_total_liq",
+    "wb_vis",
+    "wb_wind_speed_ms",
+    "wb_dew_point",
+    "elev",
+    "azim",
+    "cosz",
+    "doy_sin",
+    "doy_cos",
+    "hour",
+    "cap",
+    "lat",
+    "lon"
+  ],
+  "training_condition": "TRUE",
+  "training_cutoff": "2025-02-28 17:00:00+09:00",
+  "training_rows": [
+    {
+      "round": 17,
+      "daytime_rows": 1890845
+    }
+  ],
+  "seconds": 15.738301159115508,
+  "artifacts_sha256": {
+    "models/round17.txt": "08c11fb74f4b391a99a0ace4a6eacfc42355dab9332e5bc35d7b67397bbeddb0",
+    "predictions.parquet": "54f34edb75a968215f9b568effddaa0e5c9fc09004d84dded75da16611a00b9c"
+  }
+}

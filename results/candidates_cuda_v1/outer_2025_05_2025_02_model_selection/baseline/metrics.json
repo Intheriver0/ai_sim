@@ -1,0 +1,89 @@
+{
+  "site_equal_nmae": 0.03617632448580159,
+  "observed_site_hours": 60720,
+  "observed_sites": 253,
+  "cold_start_sites": 0,
+  "complete_253_hours": 240,
+  "settlement": {
+    "basis": "provided README formula; local validation only",
+    "groups": {
+      "G1": {
+        "capacity_kw": 20465.65499999998,
+        "revenue_won": 96248009.41654015,
+        "W_won": 2987358.126860656,
+        "S_won": 93260651.2896795
+      },
+      "G2": {
+        "capacity_kw": 22189.71499999999,
+        "revenue_won": 103863343.85982719,
+        "W_won": 3998354.0859194305,
+        "S_won": 99864989.77390777
+      }
+    },
+    "revenue_won": 200111353.27636734,
+    "W_won": 6985712.212780086,
+    "S_won": 193125641.06358725
+  },
+  "candidate": {
+    "name": "baseline",
+    "params": {},
+    "reason": "Fixed CUDA reference"
+  },
+  "params": {
+    "n_estimators": 600,
+    "learning_rate": 0.06,
+    "num_leaves": 127,
+    "min_child_samples": 200,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "objective": "regression",
+    "random_state": 42,
+    "device_type": "cuda",
+    "verbosity": -1
+  },
+  "features": [
+    "wa_cloud",
+    "wa_temp",
+    "wa_humidity",
+    "wa_rain",
+    "wa_wind_speed_ms",
+    "wa_ground_press",
+    "wb_cloud",
+    "wb_temp",
+    "wb_rel_hum",
+    "wb_uv_idx",
+    "wb_precip_prob",
+    "wb_total_liq",
+    "wb_vis",
+    "wb_wind_speed_ms",
+    "wb_dew_point",
+    "elev",
+    "azim",
+    "cosz",
+    "doy_sin",
+    "doy_cos",
+    "hour",
+    "cap",
+    "lat",
+    "lon"
+  ],
+  "training_condition": "TRUE",
+  "training_cutoff": "2025-01-31 17:00:00+09:00",
+  "training_rows": [
+    {
+      "round": 10,
+      "daytime_rows": 1813906
+    },
+    {
+      "round": 17,
+      "daytime_rows": 1813906
+    }
+  ],
+  "seconds": 31.57381669897586,
+  "artifacts_sha256": {
+    "models/round10.txt": "c3c79f389db467fc3b8a973c8f92c4bfbfe1b0d02b16a9f33d8c563125718044",
+    "models/round17.txt": "0c1e99b3a07992be09da7c210f1de5f677619f4546a3aa92347774b9c1ce64a1",
+    "predictions.parquet": "a231132b120feb0d36975b983f221e1f999f0c0b8d84e3ab8d3f862890effbd0"
+  }
+}
