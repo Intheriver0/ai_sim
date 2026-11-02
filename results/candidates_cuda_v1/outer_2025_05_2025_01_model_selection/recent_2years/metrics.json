@@ -1,0 +1,90 @@
+{
+  "site_equal_nmae": 0.02438715417587273,
+  "observed_site_hours": 60720,
+  "observed_sites": 253,
+  "cold_start_sites": 0,
+  "complete_253_hours": 240,
+  "settlement": {
+    "basis": "provided README formula; local validation only",
+    "groups": {
+      "G1": {
+        "capacity_kw": 20465.65499999998,
+        "revenue_won": 66258119.35980968,
+        "W_won": 2111155.5371796433,
+        "S_won": 64146963.82263004
+      },
+      "G2": {
+        "capacity_kw": 22189.71499999999,
+        "revenue_won": 75592486.47983117,
+        "W_won": 2309386.413002676,
+        "S_won": 73283100.0668285
+      }
+    },
+    "revenue_won": 141850605.83964086,
+    "W_won": 4420541.950182319,
+    "S_won": 137430063.88945854
+  },
+  "candidate": {
+    "name": "recent_2years",
+    "params": {},
+    "years": 2,
+    "reason": "Recent history only"
+  },
+  "params": {
+    "n_estimators": 600,
+    "learning_rate": 0.06,
+    "num_leaves": 127,
+    "min_child_samples": 200,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "objective": "regression",
+    "random_state": 42,
+    "device_type": "cuda",
+    "verbosity": -1
+  },
+  "features": [
+    "wa_cloud",
+    "wa_temp",
+    "wa_humidity",
+    "wa_rain",
+    "wa_wind_speed_ms",
+    "wa_ground_press",
+    "wb_cloud",
+    "wb_temp",
+    "wb_rel_hum",
+    "wb_uv_idx",
+    "wb_precip_prob",
+    "wb_total_liq",
+    "wb_vis",
+    "wb_wind_speed_ms",
+    "wb_dew_point",
+    "elev",
+    "azim",
+    "cosz",
+    "doy_sin",
+    "doy_cos",
+    "hour",
+    "cap",
+    "lat",
+    "lon"
+  ],
+  "training_condition": "ts >= TIMESTAMPTZ '2022-12-31T17:00:00+09:00'",
+  "training_cutoff": "2024-12-31 17:00:00+09:00",
+  "training_rows": [
+    {
+      "round": 10,
+      "daytime_rows": 1433316
+    },
+    {
+      "round": 17,
+      "daytime_rows": 1433316
+    }
+  ],
+  "seconds": 28.394789076875895,
+  "artifacts_sha256": {
+    "models/round10.txt": "a798fd5305ceb085db3e9704d619f78b54357bbceb41a97fb55f0038a3cef343",
+    "models/round17.txt": "058a08317ed61011db700eded608cb2515d94045e324465725ff1b3fcd7dbf38",
+    "predictions.parquet": "9f4345aea8e65307fe6615dd048d4f5c87ac3ee6659952235fa218c197e3f4dc"
+  }
+}

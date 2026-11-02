@@ -1,0 +1,276 @@
+{
+  "gpu": {
+    "device_type": "cuda",
+    "probe": "passed",
+    "lightgbm": "4.7.0"
+  },
+  "threads": 4,
+  "smoke": false,
+  "trees": 600,
+  "candidates": [
+    {
+      "name": "baseline",
+      "params": {},
+      "reason": "Fixed CUDA reference"
+    },
+    {
+      "name": "l1_loss",
+      "params": {
+        "objective": "regression_l1"
+      },
+      "reason": "Absolute-error training"
+    },
+    {
+      "name": "simple_tree",
+      "params": {
+        "num_leaves": 31,
+        "min_child_samples": 500
+      },
+      "reason": "Lower tree complexity"
+    },
+    {
+      "name": "recent_2years",
+      "params": {},
+      "years": 2,
+      "reason": "Recent history only"
+    },
+    {
+      "name": "round17_only",
+      "params": {},
+      "rounds": [
+        17
+      ],
+      "reason": "Latest forecast round only"
+    },
+    {
+      "name": "extra_trees",
+      "params": {
+        "extra_trees": true
+      },
+      "reason": "Random split thresholds"
+    },
+    {
+      "name": "no_direct_coordinates",
+      "params": {},
+      "drop": [
+        "lat",
+        "lon"
+      ],
+      "reason": "Remove direct coordinates, keep solar geometry"
+    },
+    {
+      "name": "tiny_tree",
+      "params": {
+        "num_leaves": 7
+      },
+      "reason": "Very low tree complexity"
+    }
+  ],
+  "base_params": {
+    "n_estimators": 600,
+    "learning_rate": 0.06,
+    "num_leaves": 127,
+    "min_child_samples": 200,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "objective": "regression",
+    "random_state": 42,
+    "device_type": "cuda",
+    "verbosity": -1
+  },
+  "features": [
+    "wa_cloud",
+    "wa_temp",
+    "wa_humidity",
+    "wa_rain",
+    "wa_wind_speed_ms",
+    "wa_ground_press",
+    "wb_cloud",
+    "wb_temp",
+    "wb_rel_hum",
+    "wb_uv_idx",
+    "wb_precip_prob",
+    "wb_total_liq",
+    "wb_vis",
+    "wb_wind_speed_ms",
+    "wb_dew_point",
+    "elev",
+    "azim",
+    "cosz",
+    "doy_sin",
+    "doy_cos",
+    "hour",
+    "cap",
+    "lat",
+    "lon"
+  ],
+  "windows": [
+    {
+      "id": "outer_2025_05_2024_05_model_selection",
+      "purpose": "model_selection",
+      "start": "2024-05-01 00:00:00+09:00",
+      "end": "2024-05-11 00:00:00+09:00",
+      "training_start": "2021-01-19 13:00:00+09:00",
+      "training_cutoff": "2024-04-30 17:00:00+09:00",
+      "fit_cutoff": "2024-04-23 17:00:00+09:00",
+      "early_stop_start": "2024-04-24 00:00:00+09:00",
+      "early_stop_end": "2024-04-30 00:00:00+09:00"
+    },
+    {
+      "id": "outer_2025_05_2024_06_model_selection",
+      "purpose": "model_selection",
+      "start": "2024-06-01 00:00:00+09:00",
+      "end": "2024-06-11 00:00:00+09:00",
+      "training_start": "2021-01-19 13:00:00+09:00",
+      "training_cutoff": "2024-05-31 17:00:00+09:00",
+      "fit_cutoff": "2024-05-24 17:00:00+09:00",
+      "early_stop_start": "2024-05-25 00:00:00+09:00",
+      "early_stop_end": "2024-05-31 00:00:00+09:00"
+    },
+    {
+      "id": "outer_2025_05_2024_07_model_selection",
+      "purpose": "model_selection",
+      "start": "2024-07-01 00:00:00+09:00",
+      "end": "2024-07-11 00:00:00+09:00",
+      "training_start": "2021-01-19 13:00:00+09:00",
+      "training_cutoff": "2024-06-30 17:00:00+09:00",
+      "fit_cutoff": "2024-06-23 17:00:00+09:00",
+      "early_stop_start": "2024-06-24 00:00:00+09:00",
+      "early_stop_end": "2024-06-30 00:00:00+09:00"
+    },
+    {
+      "id": "outer_2025_05_2024_08_model_selection",
+      "purpose": "model_selection",
+      "start": "2024-08-01 00:00:00+09:00",
+      "end": "2024-08-11 00:00:00+09:00",
+      "training_start": "2021-01-19 13:00:00+09:00",
+      "training_cutoff": "2024-07-31 17:00:00+09:00",
+      "fit_cutoff": "2024-07-24 17:00:00+09:00",
+      "early_stop_start": "2024-07-25 00:00:00+09:00",
+      "early_stop_end": "2024-07-31 00:00:00+09:00"
+    },
+    {
+      "id": "outer_2025_05_2024_09_model_selection",
+      "purpose": "model_selection",
+      "start": "2024-09-01 00:00:00+09:00",
+      "end": "2024-09-11 00:00:00+09:00",
+      "training_start": "2021-01-19 13:00:00+09:00",
+      "training_cutoff": "2024-08-31 17:00:00+09:00",
+      "fit_cutoff": "2024-08-24 17:00:00+09:00",
+      "early_stop_start": "2024-08-25 00:00:00+09:00",
+      "early_stop_end": "2024-08-31 00:00:00+09:00"
+    },
+    {
+      "id": "outer_2025_05_2024_10_model_selection",
+      "purpose": "model_selection",
+      "start": "2024-10-01 00:00:00+09:00",
+      "end": "2024-10-11 00:00:00+09:00",
+      "training_start": "2021-01-19 13:00:00+09:00",
+      "training_cutoff": "2024-09-30 17:00:00+09:00",
+      "fit_cutoff": "2024-09-23 17:00:00+09:00",
+      "early_stop_start": "2024-09-24 00:00:00+09:00",
+      "early_stop_end": "2024-09-30 00:00:00+09:00"
+    },
+    {
+      "id": "outer_2025_05_2024_11_model_selection",
+      "purpose": "model_selection",
+      "start": "2024-11-01 00:00:00+09:00",
+      "end": "2024-11-11 00:00:00+09:00",
+      "training_start": "2021-01-19 13:00:00+09:00",
+      "training_cutoff": "2024-10-31 17:00:00+09:00",
+      "fit_cutoff": "2024-10-24 17:00:00+09:00",
+      "early_stop_start": "2024-10-25 00:00:00+09:00",
+      "early_stop_end": "2024-10-31 00:00:00+09:00"
+    },
+    {
+      "id": "outer_2025_05_2024_12_model_selection",
+      "purpose": "model_selection",
+      "start": "2024-12-01 00:00:00+09:00",
+      "end": "2024-12-11 00:00:00+09:00",
+      "training_start": "2021-01-19 13:00:00+09:00",
+      "training_cutoff": "2024-11-30 17:00:00+09:00",
+      "fit_cutoff": "2024-11-23 17:00:00+09:00",
+      "early_stop_start": "2024-11-24 00:00:00+09:00",
+      "early_stop_end": "2024-11-30 00:00:00+09:00"
+    },
+    {
+      "id": "outer_2025_05_2025_01_model_selection",
+      "purpose": "model_selection",
+      "start": "2025-01-01 00:00:00+09:00",
+      "end": "2025-01-11 00:00:00+09:00",
+      "training_start": "2021-01-19 13:00:00+09:00",
+      "training_cutoff": "2024-12-31 17:00:00+09:00",
+      "fit_cutoff": "2024-12-24 17:00:00+09:00",
+      "early_stop_start": "2024-12-25 00:00:00+09:00",
+      "early_stop_end": "2024-12-31 00:00:00+09:00"
+    },
+    {
+      "id": "outer_2025_05_2025_02_model_selection",
+      "purpose": "model_selection",
+      "start": "2025-02-01 00:00:00+09:00",
+      "end": "2025-02-11 00:00:00+09:00",
+      "training_start": "2021-01-19 13:00:00+09:00",
+      "training_cutoff": "2025-01-31 17:00:00+09:00",
+      "fit_cutoff": "2025-01-24 17:00:00+09:00",
+      "early_stop_start": "2025-01-25 00:00:00+09:00",
+      "early_stop_end": "2025-01-31 00:00:00+09:00"
+    },
+    {
+      "id": "outer_2025_05_2025_03_model_selection",
+      "purpose": "model_selection",
+      "start": "2025-03-01 00:00:00+09:00",
+      "end": "2025-03-11 00:00:00+09:00",
+      "training_start": "2021-01-19 13:00:00+09:00",
+      "training_cutoff": "2025-02-28 17:00:00+09:00",
+      "fit_cutoff": "2025-02-21 17:00:00+09:00",
+      "early_stop_start": "2025-02-22 00:00:00+09:00",
+      "early_stop_end": "2025-02-28 00:00:00+09:00"
+    },
+    {
+      "id": "outer_2025_05_2025_04_model_selection",
+      "purpose": "model_selection",
+      "start": "2025-04-01 00:00:00+09:00",
+      "end": "2025-04-11 00:00:00+09:00",
+      "training_start": "2021-01-19 13:00:00+09:00",
+      "training_cutoff": "2025-03-31 17:00:00+09:00",
+      "fit_cutoff": "2025-03-24 17:00:00+09:00",
+      "early_stop_start": "2025-03-25 00:00:00+09:00",
+      "early_stop_end": "2025-03-31 00:00:00+09:00"
+    }
+  ],
+  "config_sha256": "456055dc3e708e368df438112e2173c8935e119aefee868cc540d6cfec08d2c7",
+  "source_sha256": {
+    "screen_candidates.py": "5b050a1a535a47135ae946c2bca00db9024ff199e328d41d884c6095a97182d5",
+    "gpu_training.py": "875959e011041735b162aa7193e81c23af3fe2493087bc79524a64900a0d261b",
+    "clean_observed.py": "f6e26a31c09da2cee0e79c793295f983738f90a338a0cca8071e159fcb3751dc",
+    "preprocess.py": "b2290f457caa059968a33ed0170f83a48b5575075b4252d3de320f1a2422c976",
+    "train_grouped.py": "439efd70ce29271880551ead02c49ac62df058bf83199a68ba8c9a080a2867a7",
+    "inspect_dataset.py": "bf6434a273cd136e6482a58fa532f2d544c060cdcd7b2198d90719a42158793c",
+    "time_splits.py": "ffe1269d7fd0a8f67a5aa731501c64ef8319b8b6208a824ec33cd3a4f4f05a81",
+    "site_groups.py": "efb90de48a7895146044853f89d4a0ca90fd6183b36c81b4da9735aa0e095333",
+    "seasonal_splits.py": "0494a7bef38140672494a169d489f6933e68ca4980f4ceddcc3c96a2cac30419",
+    "solar_time.py": "0038564a76c7c553133fb32f438f3fa9d0f6f24f8d0135439c43b8b485f9975f",
+    "pipeline_common.py": "c1bedce57f2a4af2f345efd77f22b5943626673fe708b995704dfec24bd90ba4",
+    "train_fixed.py": "b5593a68a28c90a2670bf574aa646070821aa44e6bfc3340ec6415e231360030",
+    "train_tuned.py": "0352f86235b21d7bd92e6413762b40bf2ac5c640751be7fe02c15b238799a132",
+    "scoring.py": "3c021f5fc7911f6d5a09c3fa4feee1e18ba4ba8f4206a7ac5210a8fe11e16f5a",
+    "summarize_data_usage.py": "a62abe4a014422eeb3a28d19c0f7ba751d431ca7721c11d906122a26f54db167",
+    "fixed_model.py": "d7f38acb329a38961be4cc2a001390a5b614a588aa897db18142ec608716cace"
+  },
+  "versions": {
+    "python": "3.12.3",
+    "lightgbm": "4.7.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  },
+  "input_sha256": {
+    "report.json": "c7d995e023ca3d467d70af5f59d8354f8bf3ff909d122c09f99443693054da10",
+    "sites.parquet": "5c1b39a44351a80fc7192ec87423ed8e8b5ac11c7d09daf1230f0965642171b4",
+    "reference_composition.parquet": "49d6037ad7a97bb83162313588bd38ca2e3e742f549f5ffea99b881d540018c2",
+    "train_targets.parquet": "cbfceab0d658d3b58cf7e5e86d41ba2943a293c99c40c6fc884d100d5d2927e9",
+    "train_prices.parquet": "82f1e476151258c11534a96ccb15ed17218696f892fa0efe1bd57fe992457a51",
+    "train_round10.parquet": "da24868d961325f8279d5e86c257e83d885c5846d9d0dd8ddc86ea64364da44b",
+    "train_round17.parquet": "65b60931b65eaf5dd104d2b5f61ffdddd1f978a9f0f2e77d484faf6216764231"
+  }
+}

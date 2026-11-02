@@ -1,0 +1,125 @@
+{
+  "fold": "outer_2024_06",
+  "selected": "tuned",
+  "alpha_fixed": 0.4,
+  "training_cutoff": "2024-05-31 17:00:00+09:00",
+  "metrics": {
+    "fixed": {
+      "site_equal_nmae": 0.04571456189709816,
+      "observed_site_hours": 153311,
+      "observed_sites": 224,
+      "cold_start_sites": 19,
+      "complete_253_hours": 0,
+      "settlement": null,
+      "identity": {
+        "window": {
+          "purpose": "outer_evaluation",
+          "start": "2024-06-01 00:00:00+09:00",
+          "end": "2024-07-01 00:00:00+09:00",
+          "training_start": "2021-01-19 13:00:00+09:00",
+          "training_cutoff": "2024-05-31 17:00:00+09:00",
+          "fit_cutoff": "2024-05-24 17:00:00+09:00",
+          "early_stop_start": "2024-05-25 00:00:00+09:00",
+          "early_stop_end": "2024-05-31 00:00:00+09:00"
+        },
+        "params": {
+          "n_estimators": 600,
+          "learning_rate": 0.06,
+          "num_leaves": 127,
+          "min_child_samples": 200,
+          "subsample": 0.8,
+          "subsample_freq": 1,
+          "colsample_bytree": 0.8,
+          "objective": "regression",
+          "random_state": 42,
+          "device_type": "cuda",
+          "verbosity": -1
+        },
+        "early_stop": false
+      },
+      "training": [
+        {
+          "round": 10,
+          "daytime_rows": 1106280,
+          "iterations": 600
+        },
+        {
+          "round": 17,
+          "daytime_rows": 1106280,
+          "iterations": 600
+        }
+      ],
+      "cache_key": "ab80f78a7a23fcc1c7020ea7ae1dbdafe2171eb5eb691098decc43f9f31b6a7c",
+      "seconds": 26.196144295856357,
+      "artifacts_sha256": {
+        "models/round10.txt": "2d08b7ffe2f3c65944775a0cdd82d48d8c321f84652d6d12a98d4b988fef9cc2",
+        "models/round17.txt": "1e3ffc08673ac49086c6a915add3edb7d37779a836fd58c866eb3b6defdd9377",
+        "predictions.parquet": "033143c1738771b2a5e6f9c727b023a4ad3af03ec2a7db92f7f2723cef32759a"
+      }
+    },
+    "selected": {
+      "site_equal_nmae": 0.04473794344484026,
+      "observed_site_hours": 153311,
+      "observed_sites": 224,
+      "cold_start_sites": 19,
+      "complete_253_hours": 0,
+      "settlement": null,
+      "identity": {
+        "window": {
+          "purpose": "outer_evaluation",
+          "start": "2024-06-01 00:00:00+09:00",
+          "end": "2024-07-01 00:00:00+09:00",
+          "training_start": "2021-01-19 13:00:00+09:00",
+          "training_cutoff": "2024-05-31 17:00:00+09:00",
+          "fit_cutoff": "2024-05-24 17:00:00+09:00",
+          "early_stop_start": "2024-05-25 00:00:00+09:00",
+          "early_stop_end": "2024-05-31 00:00:00+09:00"
+        },
+        "params": {
+          "n_estimators": 1200,
+          "learning_rate": 0.03306413810750165,
+          "num_leaves": 121,
+          "min_child_samples": 754,
+          "subsample": 0.8939686218767525,
+          "subsample_freq": 1,
+          "colsample_bytree": 0.6601446916894735,
+          "objective": "regression",
+          "random_state": 42,
+          "device_type": "cuda",
+          "verbosity": -1,
+          "metric": "l1",
+          "reg_alpha": 6.664331966757313e-06,
+          "reg_lambda": 1.311126386631067
+        },
+        "early_stop": true
+      },
+      "training": [
+        {
+          "round": 10,
+          "daytime_rows": 1106280,
+          "iterations": 120
+        },
+        {
+          "round": 17,
+          "daytime_rows": 1106280,
+          "iterations": 111
+        }
+      ],
+      "cache_key": "18c1169baf33da5486c930171fa180f831860b88373c4874e8f34e59177cfd89",
+      "seconds": 15.715566104045138,
+      "artifacts_sha256": {
+        "models/round10.txt": "e02de588f93a479efba75c0c32370e1d911e383d47041a82c41cf11f74a094d3",
+        "models/round17.txt": "0f68f3b88b391103f0af5ef27047ced4deb5ac7ecea987cc2c11ebfcffe90d80",
+        "predictions.parquet": "dbabbb06a201264df1fa20d750ef6340feff1d96e1ed43060d89dcbae03ab831"
+      }
+    },
+    "blend": {
+      "site_equal_nmae": 0.044477535567466156,
+      "observed_site_hours": 153311,
+      "observed_sites": 224,
+      "cold_start_sites": 19,
+      "complete_253_hours": 0,
+      "settlement": null
+    }
+  }
+}

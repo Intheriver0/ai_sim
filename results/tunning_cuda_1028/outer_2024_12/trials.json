@@ -1,0 +1,1882 @@
+[
+  {
+    "number": 0,
+    "state": "COMPLETE",
+    "value": 0.03725549839215094,
+    "params": {
+      "learning_rate": 0.03268396148966359,
+      "num_leaves": 122,
+      "min_child_samples": 447,
+      "subsample": 0.8394633936788146,
+      "colsample_bytree": 0.6624074561769746,
+      "reg_alpha": 2.5348407664333426e-07,
+      "reg_lambda": 3.3323645788192616e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 33.52213125489652,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.03268396148966359,
+        "num_leaves": 122,
+        "min_child_samples": 447,
+        "subsample": 0.8394633936788146,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6624074561769746,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 2.5348407664333426e-07,
+        "reg_lambda": 3.3323645788192616e-08
+      },
+      "window_scores": [
+        0.022113085041433618,
+        0.026308560849695496,
+        0.03203514205883795,
+        0.03476954898191083,
+        0.03877005893076173,
+        0.039411698647158544,
+        0.04155888671322867,
+        0.05557198372705312,
+        0.04271460344541293,
+        0.04208676116884292,
+        0.043224890475295666,
+        0.028500760666179764
+      ]
+    }
+  },
+  {
+    "number": 1,
+    "state": "COMPLETE",
+    "value": 0.03748286740104434,
+    "params": {
+      "learning_rate": 0.01905442667582584,
+      "num_leaves": 83,
+      "min_child_samples": 74,
+      "subsample": 0.6962358479861395,
+      "colsample_bytree": 0.7308556223244559,
+      "reg_alpha": 0.5398056408643329,
+      "reg_lambda": 0.009881250696359372
+    },
+    "user_attrs": {
+      "elapsed_seconds": 48.330869547091424,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.01905442667582584,
+        "num_leaves": 83,
+        "min_child_samples": 74,
+        "subsample": 0.6962358479861395,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.7308556223244559,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 0.5398056408643329,
+        "reg_lambda": 0.009881250696359372
+      },
+      "window_scores": [
+        0.02239063926088716,
+        0.026568302339397373,
+        0.03244393248211739,
+        0.03585500552256005,
+        0.0388573414014023,
+        0.03977614205883546,
+        0.041440498771829225,
+        0.05499252664079336,
+        0.04318116968752124,
+        0.042543445516237774,
+        0.0432961103011867,
+        0.02844929482976405
+      ]
+    }
+  },
+  {
+    "number": 2,
+    "state": "COMPLETE",
+    "value": 0.03804024646978803,
+    "params": {
+      "learning_rate": 0.08511945695226085,
+      "num_leaves": 26,
+      "min_child_samples": 464,
+      "subsample": 0.7442003345025143,
+      "colsample_bytree": 0.7437243351232288,
+      "reg_alpha": 0.0030419034509264697,
+      "reg_lambda": 3.499580273241349e-05
+    },
+    "user_attrs": {
+      "elapsed_seconds": 19.523131999885663,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.08511945695226085,
+        "num_leaves": 26,
+        "min_child_samples": 464,
+        "subsample": 0.7442003345025143,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.7437243351232288,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 0.0030419034509264697,
+        "reg_lambda": 3.499580273241349e-05
+      },
+      "window_scores": [
+        0.022787910701436962,
+        0.027383242423147627,
+        0.03212877844528379,
+        0.03802488681430896,
+        0.039067401910349214,
+        0.041057599065940434,
+        0.04123740018963349,
+        0.055626824906325395,
+        0.04403885363743146,
+        0.04279485045932671,
+        0.043208498360762716,
+        0.029126710723509454
+      ]
+    }
+  },
+  {
+    "number": 3,
+    "state": "COMPLETE",
+    "value": 0.03775055144990838,
+    "params": {
+      "learning_rate": 0.11728910002433471,
+      "num_leaves": 77,
+      "min_child_samples": 115,
+      "subsample": 0.6309158264316691,
+      "colsample_bytree": 0.7777877983887213,
+      "reg_alpha": 0.00017999967783476534,
+      "reg_lambda": 2.7333673857475798e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 17.41055916296318,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.11728910002433471,
+        "num_leaves": 77,
+        "min_child_samples": 115,
+        "subsample": 0.6309158264316691,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.7777877983887213,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 0.00017999967783476534,
+        "reg_lambda": 2.7333673857475798e-08
+      },
+      "window_scores": [
+        0.023803868014767936,
+        0.026614987069493827,
+        0.03269547952112316,
+        0.035321106161868975,
+        0.03878621802386336,
+        0.04019365017711526,
+        0.042660006754849114,
+        0.055407150486670206,
+        0.04265623394953441,
+        0.043123900870738266,
+        0.043311999797641595,
+        0.028432016571234474
+      ]
+    }
+  },
+  {
+    "number": 4,
+    "state": "COMPLETE",
+    "value": 0.03737201545058776,
+    "params": {
+      "learning_rate": 0.07655303381137153,
+      "num_leaves": 86,
+      "min_child_samples": 105,
+      "subsample": 0.9032303458599271,
+      "colsample_bytree": 0.7252307742526719,
+      "reg_alpha": 2.7235554231224373,
+      "reg_lambda": 2.4310228176915686e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 28.100290473084897,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.07655303381137153,
+        "num_leaves": 86,
+        "min_child_samples": 105,
+        "subsample": 0.9032303458599271,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.7252307742526719,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 2.7235554231224373,
+        "reg_lambda": 2.4310228176915686e-08
+      },
+      "window_scores": [
+        0.022166886735130724,
+        0.026607663271837653,
+        0.03199494202791178,
+        0.035131621832842255,
+        0.03868586242356925,
+        0.039934050942898314,
+        0.04133746113809514,
+        0.05534447944647907,
+        0.042949153741803026,
+        0.042521358592134524,
+        0.04330619860847699,
+        0.02848450664587435
+      ]
+    }
+  },
+  {
+    "number": 5,
+    "state": "COMPLETE",
+    "value": 0.03737214258732168,
+    "params": {
+      "learning_rate": 0.018992474923542474,
+      "num_leaves": 125,
+      "min_child_samples": 443,
+      "subsample": 0.7405871223570806,
+      "colsample_bytree": 0.8830420553036324,
+      "reg_alpha": 0.157195972537541,
+      "reg_lambda": 0.00645738514927844
+    },
+    "user_attrs": {
+      "elapsed_seconds": 69.83152965898626,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.018992474923542474,
+        "num_leaves": 125,
+        "min_child_samples": 443,
+        "subsample": 0.7405871223570806,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.8830420553036324,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 0.157195972537541,
+        "reg_lambda": 0.00645738514927844
+      },
+      "window_scores": [
+        0.02218241288857568,
+        0.026428479960259377,
+        0.03249769673279891,
+        0.03508078039030311,
+        0.03892833332573679,
+        0.039568329133526946,
+        0.04140209029642616,
+        0.055468435277782564,
+        0.042732646148749616,
+        0.042421632141541564,
+        0.04347211134676822,
+        0.028282763405391282
+      ]
+    }
+  },
+  {
+    "number": 6,
+    "state": "COMPLETE",
+    "value": 0.037442434978517715,
+    "params": {
+      "learning_rate": 0.015555592138821218,
+      "num_leaves": 115,
+      "min_child_samples": 117,
+      "subsample": 0.7195905509835832,
+      "colsample_bytree": 0.9168137042621718,
+      "reg_alpha": 8.322146895126494e-06,
+      "reg_lambda": 0.6058895752346855
+    },
+    "user_attrs": {
+      "elapsed_seconds": 56.69456862192601,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.015555592138821218,
+        "num_leaves": 115,
+        "min_child_samples": 117,
+        "subsample": 0.7195905509835832,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.9168137042621718,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 8.322146895126494e-06,
+        "reg_lambda": 0.6058895752346855
+      },
+      "window_scores": [
+        0.0222957460678763,
+        0.026565936426279045,
+        0.03231609205287359,
+        0.03498329266670717,
+        0.03863431268044247,
+        0.039488404367501985,
+        0.04213621211611154,
+        0.0554878313920534,
+        0.04300124589337741,
+        0.0423128198639731,
+        0.04371506371610815,
+        0.028372262498908382
+      ]
+    }
+  },
+  {
+    "number": 7,
+    "state": "COMPLETE",
+    "value": 0.037684364110430475,
+    "params": {
+      "learning_rate": 0.02804718283340133,
+      "num_leaves": 42,
+      "min_child_samples": 802,
+      "subsample": 0.9566413753111056,
+      "colsample_bytree": 0.8733107039899948,
+      "reg_alpha": 0.001264625502289436,
+      "reg_lambda": 0.0008369372972702147
+    },
+    "user_attrs": {
+      "elapsed_seconds": 24.870412540854886,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.02804718283340133,
+        "num_leaves": 42,
+        "min_child_samples": 802,
+        "subsample": 0.9566413753111056,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.8733107039899948,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 0.001264625502289436,
+        "reg_lambda": 0.0008369372972702147
+      },
+      "window_scores": [
+        0.022094481981177957,
+        0.027166743462262825,
+        0.03232595219329292,
+        0.03626752308533443,
+        0.038566735134243205,
+        0.04016649051132213,
+        0.04120663216360776,
+        0.05533286553130078,
+        0.044079653349437566,
+        0.042786610163213404,
+        0.04346393828723019,
+        0.02875474346274246
+      ]
+    }
+  },
+  {
+    "number": 8,
+    "state": "COMPLETE",
+    "value": 0.03763399010173989,
+    "params": {
+      "learning_rate": 0.04195280975843406,
+      "num_leaves": 40,
+      "min_child_samples": 107,
+      "subsample": 0.7585319638891108,
+      "colsample_bytree": 0.7509260390764496,
+      "reg_alpha": 9.314682827219622,
+      "reg_lambda": 4.718183233855983e-05
+    },
+    "user_attrs": {
+      "elapsed_seconds": 21.01217165379785,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.04195280975843406,
+        "num_leaves": 40,
+        "min_child_samples": 107,
+        "subsample": 0.7585319638891108,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.7509260390764496,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 9.314682827219622,
+        "reg_lambda": 4.718183233855983e-05
+      },
+      "window_scores": [
+        0.022494101381778115,
+        0.02702461278088019,
+        0.0318988199699496,
+        0.03621026868570984,
+        0.0387773925160769,
+        0.040255717900636395,
+        0.04097746245335163,
+        0.05555165054015318,
+        0.04338525792699373,
+        0.042799212375814154,
+        0.043312966494274324,
+        0.02892041819526071
+      ]
+    }
+  },
+  {
+    "number": 9,
+    "state": "COMPLETE",
+    "value": 0.038032539179212656,
+    "params": {
+      "learning_rate": 0.061141703448676914,
+      "num_leaves": 20,
+      "min_child_samples": 139,
+      "subsample": 0.8576078908079323,
+      "colsample_bytree": 0.7136851994961158,
+      "reg_alpha": 3.499776090546358,
+      "reg_lambda": 2.624409003209346e-07
+    },
+    "user_attrs": {
+      "elapsed_seconds": 17.93899248004891,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.061141703448676914,
+        "num_leaves": 20,
+        "min_child_samples": 139,
+        "subsample": 0.8576078908079323,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.7136851994961158,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 3.499776090546358,
+        "reg_lambda": 2.624409003209346e-07
+      },
+      "window_scores": [
+        0.022497608955004543,
+        0.027628833478197903,
+        0.03219154246159927,
+        0.038474917866490654,
+        0.038851868092745455,
+        0.04066826327163651,
+        0.04101730373237003,
+        0.055552709703183545,
+        0.044079710106065775,
+        0.043103257815483784,
+        0.04304172657242643,
+        0.029282728095347946
+      ]
+    }
+  },
+  {
+    "number": 10,
+    "state": "COMPLETE",
+    "value": 0.03733076617888496,
+    "params": {
+      "learning_rate": 0.06066233058414022,
+      "num_leaves": 125,
+      "min_child_samples": 168,
+      "subsample": 0.9522258704182083,
+      "colsample_bytree": 0.6709978899056172,
+      "reg_alpha": 1.0517858737587343e-07,
+      "reg_lambda": 4.1705062449391304e-07
+    },
+    "user_attrs": {
+      "elapsed_seconds": 21.42652730201371,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.06066233058414022,
+        "num_leaves": 125,
+        "min_child_samples": 168,
+        "subsample": 0.9522258704182083,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6709978899056172,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 1.0517858737587343e-07,
+        "reg_lambda": 4.1705062449391304e-07
+      },
+      "window_scores": [
+        0.02209742606619779,
+        0.026424471497176267,
+        0.032672775512170044,
+        0.034847120312412674,
+        0.03844681405149638,
+        0.03947652104265634,
+        0.04170122097807097,
+        0.05519353200321986,
+        0.04277617816157948,
+        0.04225929449091118,
+        0.04346224790960793,
+        0.028611592121120515
+      ]
+    }
+  },
+  {
+    "number": 11,
+    "state": "COMPLETE",
+    "value": 0.037310765921634736,
+    "params": {
+      "learning_rate": 0.044606787484650814,
+      "num_leaves": 126,
+      "min_child_samples": 203,
+      "subsample": 0.7813909774473031,
+      "colsample_bytree": 0.641202021736724,
+      "reg_alpha": 4.960896822029464e-08,
+      "reg_lambda": 6.320395842908977e-07
+    },
+    "user_attrs": {
+      "elapsed_seconds": 36.35439792484976,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.044606787484650814,
+        "num_leaves": 126,
+        "min_child_samples": 203,
+        "subsample": 0.7813909774473031,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.641202021736724,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 4.960896822029464e-08,
+        "reg_lambda": 6.320395842908977e-07
+      },
+      "window_scores": [
+        0.022157815072496593,
+        0.02641554600573389,
+        0.03294713868606992,
+        0.0348319716231286,
+        0.03869955005526968,
+        0.039758471152929124,
+        0.04145469764580203,
+        0.05496347925461123,
+        0.04283505908672278,
+        0.04241888418664509,
+        0.04317548550868667,
+        0.02807109278152122
+      ]
+    }
+  },
+  {
+    "number": 12,
+    "state": "COMPLETE",
+    "value": 0.037370877585957286,
+    "params": {
+      "learning_rate": 0.040022621074168464,
+      "num_leaves": 106,
+      "min_child_samples": 328,
+      "subsample": 0.8288994944607674,
+      "colsample_bytree": 0.7426388603096283,
+      "reg_alpha": 1.2501921500972332e-08,
+      "reg_lambda": 2.851535396070693e-06
+    },
+    "user_attrs": {
+      "elapsed_seconds": 230.6982399248518,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.040022621074168464,
+        "num_leaves": 106,
+        "min_child_samples": 328,
+        "subsample": 0.8288994944607674,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.7426388603096283,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 1.2501921500972332e-08,
+        "reg_lambda": 2.851535396070693e-06
+      },
+      "window_scores": [
+        0.02226762613310808,
+        0.02672929744599605,
+        0.03238777467880478,
+        0.03514070486300571,
+        0.03882261662470271,
+        0.039072363628967106,
+        0.04163698109145597,
+        0.05531028701830613,
+        0.043113633839142934,
+        0.042333662754703266,
+        0.043080571126273455,
+        0.02855501182702132
+      ]
+    }
+  },
+  {
+    "number": 13,
+    "state": "COMPLETE",
+    "value": 0.03739810406844302,
+    "params": {
+      "learning_rate": 0.0510981249222527,
+      "num_leaves": 97,
+      "min_child_samples": 261,
+      "subsample": 0.6688021070516188,
+      "colsample_bytree": 0.6544328808679545,
+      "reg_alpha": 7.327115063733112e-08,
+      "reg_lambda": 2.9469414181286564e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 193.66073937900364,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.0510981249222527,
+        "num_leaves": 97,
+        "min_child_samples": 261,
+        "subsample": 0.6688021070516188,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6544328808679545,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 7.327115063733112e-08,
+        "reg_lambda": 2.9469414181286564e-08
+      },
+      "window_scores": [
+        0.02201935796455952,
+        0.026766023089982924,
+        0.03248720597880748,
+        0.0346725236773199,
+        0.03849370722067255,
+        0.0395695623465928,
+        0.04204947432123252,
+        0.05526897545162106,
+        0.04319072579923731,
+        0.04266098187686447,
+        0.043204313953302986,
+        0.02839439714112267
+      ]
+    }
+  },
+  {
+    "number": 14,
+    "state": "COMPLETE",
+    "value": 0.03714441809053873,
+    "params": {
+      "learning_rate": 0.03275588525030741,
+      "num_leaves": 123,
+      "min_child_samples": 403,
+      "subsample": 0.8420415050738167,
+      "colsample_bytree": 0.7063355824014079,
+      "reg_alpha": 5.2147824240584e-06,
+      "reg_lambda": 6.06502097140343e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 300.6896457041148,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.03275588525030741,
+        "num_leaves": 123,
+        "min_child_samples": 403,
+        "subsample": 0.8420415050738167,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.7063355824014079,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 5.2147824240584e-06,
+        "reg_lambda": 6.06502097140343e-08
+      },
+      "window_scores": [
+        0.022253309682924848,
+        0.02623477868583314,
+        0.031795283254245216,
+        0.03497093273406913,
+        0.03851312654690337,
+        0.03941925935138297,
+        0.04158620404005964,
+        0.05523434678726484,
+        0.042531687365344385,
+        0.04189503854131356,
+        0.0430739788787041,
+        0.02822507121841947
+      ]
+    }
+  },
+  {
+    "number": 15,
+    "state": "COMPLETE",
+    "value": 0.03735113608897072,
+    "params": {
+      "learning_rate": 0.02300975896112665,
+      "num_leaves": 120,
+      "min_child_samples": 414,
+      "subsample": 0.8008367424326471,
+      "colsample_bytree": 0.6145106466111205,
+      "reg_alpha": 7.114850067835819e-06,
+      "reg_lambda": 1.1250872932950615e-07
+    },
+    "user_attrs": {
+      "elapsed_seconds": 369.08061798708513,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.02300975896112665,
+        "num_leaves": 120,
+        "min_child_samples": 414,
+        "subsample": 0.8008367424326471,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6145106466111205,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 7.114850067835819e-06,
+        "reg_lambda": 1.1250872932950615e-07
+      },
+      "window_scores": [
+        0.021807558619391113,
+        0.02641652059844655,
+        0.03211714669548758,
+        0.035587636997886904,
+        0.03867395260377185,
+        0.03989181789799913,
+        0.041856977734177465,
+        0.05542377828797176,
+        0.04292338108925578,
+        0.04209507722197399,
+        0.04299792651909705,
+        0.028421858802189528
+      ]
+    }
+  },
+  {
+    "number": 16,
+    "state": "COMPLETE",
+    "value": 0.03732225715262559,
+    "params": {
+      "learning_rate": 0.03653071163820373,
+      "num_leaves": 118,
+      "min_child_samples": 800,
+      "subsample": 0.8084860919700423,
+      "colsample_bytree": 0.6995347462974588,
+      "reg_alpha": 6.436783217249254e-05,
+      "reg_lambda": 9.864409244090233e-06
+    },
+    "user_attrs": {
+      "elapsed_seconds": 258.80954561010003,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.03653071163820373,
+        "num_leaves": 118,
+        "min_child_samples": 800,
+        "subsample": 0.8084860919700423,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6995347462974588,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 6.436783217249254e-05,
+        "reg_lambda": 9.864409244090233e-06
+      },
+      "window_scores": [
+        0.02195441436152884,
+        0.026592876079304887,
+        0.032288159364033286,
+        0.03521567963663904,
+        0.03858411574182013,
+        0.039850059555414125,
+        0.04191018108368938,
+        0.05529096638551393,
+        0.04245237379940368,
+        0.042168204282863754,
+        0.043209268940788574,
+        0.028350786600507386
+      ]
+    }
+  },
+  {
+    "number": 17,
+    "state": "COMPLETE",
+    "value": 0.0373145189590758,
+    "params": {
+      "learning_rate": 0.026926567380458982,
+      "num_leaves": 119,
+      "min_child_samples": 486,
+      "subsample": 0.8643860514436792,
+      "colsample_bytree": 0.8284024015213467,
+      "reg_alpha": 6.460917317535267e-06,
+      "reg_lambda": 5.925097891941119e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 347.2059207339771,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.026926567380458982,
+        "num_leaves": 119,
+        "min_child_samples": 486,
+        "subsample": 0.8643860514436792,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.8284024015213467,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 6.460917317535267e-06,
+        "reg_lambda": 5.925097891941119e-08
+      },
+      "window_scores": [
+        0.022126591691365962,
+        0.026254478131124925,
+        0.03297012588691676,
+        0.03499522184852476,
+        0.03878549725346702,
+        0.039331806971059036,
+        0.04204970176242723,
+        0.055327591573186036,
+        0.04282015301511265,
+        0.04177705391164715,
+        0.043201650386599455,
+        0.028134355077478662
+      ]
+    }
+  },
+  {
+    "number": 18,
+    "state": "COMPLETE",
+    "value": 0.03732406599778276,
+    "params": {
+      "learning_rate": 0.03456324495388872,
+      "num_leaves": 114,
+      "min_child_samples": 339,
+      "subsample": 0.9052258148319423,
+      "colsample_bytree": 0.6506741168321089,
+      "reg_alpha": 2.2102167924989492e-05,
+      "reg_lambda": 1.9768467340901834e-06
+    },
+    "user_attrs": {
+      "elapsed_seconds": 290.1973545909859,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.03456324495388872,
+        "num_leaves": 114,
+        "min_child_samples": 339,
+        "subsample": 0.9052258148319423,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6506741168321089,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 2.2102167924989492e-05,
+        "reg_lambda": 1.9768467340901834e-06
+      },
+      "window_scores": [
+        0.02226153637374847,
+        0.02651952711534437,
+        0.032479962830573084,
+        0.035487187226535356,
+        0.03856956903030921,
+        0.03949139624439774,
+        0.041043999485651315,
+        0.055375986036264986,
+        0.04302651552561954,
+        0.04238867196520006,
+        0.04292354426384777,
+        0.028320895875901232
+      ]
+    }
+  },
+  {
+    "number": 19,
+    "state": "COMPLETE",
+    "value": 0.03747579074872195,
+    "params": {
+      "learning_rate": 0.025468264561929226,
+      "num_leaves": 81,
+      "min_child_samples": 351,
+      "subsample": 0.8225903018083547,
+      "colsample_bytree": 0.6288469040720633,
+      "reg_alpha": 5.355254811810954e-07,
+      "reg_lambda": 1.2369481885307306e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 282.7420967279468,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.025468264561929226,
+        "num_leaves": 81,
+        "min_child_samples": 351,
+        "subsample": 0.8225903018083547,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6288469040720633,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 5.355254811810954e-07,
+        "reg_lambda": 1.2369481885307306e-08
+      },
+      "window_scores": [
+        0.022096205857600977,
+        0.026790129749542268,
+        0.031910936075061576,
+        0.03631466363738645,
+        0.0386784349790716,
+        0.03957158758749922,
+        0.04195185641992532,
+        0.05507240076383174,
+        0.042947761002235046,
+        0.042389400475095936,
+        0.04351791217098913,
+        0.02846820026642413
+      ]
+    }
+  },
+  {
+    "number": 20,
+    "state": "COMPLETE",
+    "value": 0.03721890098869763,
+    "params": {
+      "learning_rate": 0.058892552786517935,
+      "num_leaves": 124,
+      "min_child_samples": 999,
+      "subsample": 0.8277827783558592,
+      "colsample_bytree": 0.6557264483342635,
+      "reg_alpha": 2.9794100435662106e-07,
+      "reg_lambda": 5.463143921198808e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 195.3822473010514,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.058892552786517935,
+        "num_leaves": 124,
+        "min_child_samples": 999,
+        "subsample": 0.8277827783558592,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6557264483342635,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 2.9794100435662106e-07,
+        "reg_lambda": 5.463143921198808e-08
+      },
+      "window_scores": [
+        0.02175233452772807,
+        0.026867289292322804,
+        0.03237645603218534,
+        0.03484085410267617,
+        0.03840546437550657,
+        0.039277694804695354,
+        0.04152645638468381,
+        0.05515835261336117,
+        0.042468855191452805,
+        0.042541544821934035,
+        0.042824166515373165,
+        0.028587343202452136
+      ]
+    }
+  },
+  {
+    "number": 21,
+    "state": "COMPLETE",
+    "value": 0.03729075198051461,
+    "params": {
+      "learning_rate": 0.05772718337546587,
+      "num_leaves": 117,
+      "min_child_samples": 574,
+      "subsample": 0.8712380609206117,
+      "colsample_bytree": 0.6521420945776039,
+      "reg_alpha": 8.296079168522618e-08,
+      "reg_lambda": 1.6475154393381576e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 204.56980270915665,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.05772718337546587,
+        "num_leaves": 117,
+        "min_child_samples": 574,
+        "subsample": 0.8712380609206117,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6521420945776039,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 8.296079168522618e-08,
+        "reg_lambda": 1.6475154393381576e-08
+      },
+      "window_scores": [
+        0.022306896053665422,
+        0.026409895818194667,
+        0.03282342930305804,
+        0.03469373554263474,
+        0.038523307970761506,
+        0.039601974364357424,
+        0.04139337846890401,
+        0.055103412725927316,
+        0.042833729037046124,
+        0.042665238994302426,
+        0.04287285743816504,
+        0.028261168049158607
+      ]
+    }
+  },
+  {
+    "number": 22,
+    "state": "COMPLETE",
+    "value": 0.037244233723847414,
+    "params": {
+      "learning_rate": 0.024426926001558543,
+      "num_leaves": 110,
+      "min_child_samples": 813,
+      "subsample": 0.7806648636895644,
+      "colsample_bytree": 0.6231989034701119,
+      "reg_alpha": 3.8209069170688515e-08,
+      "reg_lambda": 5.957967739205324e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 337.30005757906474,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.024426926001558543,
+        "num_leaves": 110,
+        "min_child_samples": 813,
+        "subsample": 0.7806648636895644,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6231989034701119,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 3.8209069170688515e-08,
+        "reg_lambda": 5.957967739205324e-08
+      },
+      "window_scores": [
+        0.021767308686983594,
+        0.026707708813887628,
+        0.031806273154158744,
+        0.035045768887312694,
+        0.03846673430003763,
+        0.0399764211703415,
+        0.041204747441096756,
+        0.05571630057212135,
+        0.04277209758416933,
+        0.04225539825557724,
+        0.04310195496343344,
+        0.028110090857049082
+      ]
+    }
+  },
+  {
+    "number": 23,
+    "state": "COMPLETE",
+    "value": 0.0372866532697542,
+    "params": {
+      "learning_rate": 0.017602383955584812,
+      "num_leaves": 117,
+      "min_child_samples": 762,
+      "subsample": 0.7851021096472586,
+      "colsample_bytree": 0.6436169921052953,
+      "reg_alpha": 5.050928966583345e-07,
+      "reg_lambda": 1.794236242452469e-06
+    },
+    "user_attrs": {
+      "elapsed_seconds": 452.4512677490711,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.017602383955584812,
+        "num_leaves": 117,
+        "min_child_samples": 762,
+        "subsample": 0.7851021096472586,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6436169921052953,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 5.050928966583345e-07,
+        "reg_lambda": 1.794236242452469e-06
+      },
+      "window_scores": [
+        0.02198679469441551,
+        0.026556363815366524,
+        0.032101102240606236,
+        0.03514317740135613,
+        0.03852993014443398,
+        0.03945433778227907,
+        0.04187908780076206,
+        0.05565410004604984,
+        0.042625285383082835,
+        0.042195120870977695,
+        0.043005666486768124,
+        0.0283088725709523
+      ]
+    }
+  },
+  {
+    "number": 24,
+    "state": "COMPLETE",
+    "value": 0.03731644407613282,
+    "params": {
+      "learning_rate": 0.02836887771440863,
+      "num_leaves": 120,
+      "min_child_samples": 717,
+      "subsample": 0.7675613986853991,
+      "colsample_bytree": 0.6519350339799137,
+      "reg_alpha": 3.7903882825448646e-07,
+      "reg_lambda": 1.5683303857333036e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 302.16441616392694,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.02836887771440863,
+        "num_leaves": 120,
+        "min_child_samples": 717,
+        "subsample": 0.7675613986853991,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6519350339799137,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 3.7903882825448646e-07,
+        "reg_lambda": 1.5683303857333036e-08
+      },
+      "window_scores": [
+        0.02182166872617375,
+        0.026826139888659256,
+        0.03211741691145514,
+        0.03531933028411681,
+        0.03863503570525527,
+        0.03933018400456289,
+        0.0420585305468473,
+        0.05525744016127831,
+        0.042625844228533175,
+        0.042302672213577704,
+        0.043118298222293294,
+        0.028384768020841004
+      ]
+    }
+  },
+  {
+    "number": 25,
+    "state": "COMPLETE",
+    "value": 0.03729089825072646,
+    "params": {
+      "learning_rate": 0.024332281303103824,
+      "num_leaves": 101,
+      "min_child_samples": 611,
+      "subsample": 0.8429299502947329,
+      "colsample_bytree": 0.6781174892197984,
+      "reg_alpha": 0.00012425758579620073,
+      "reg_lambda": 2.7093224437415088e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 346.97212826483883,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.024332281303103824,
+        "num_leaves": 101,
+        "min_child_samples": 611,
+        "subsample": 0.8429299502947329,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6781174892197984,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 0.00012425758579620073,
+        "reg_lambda": 2.7093224437415088e-08
+      },
+      "window_scores": [
+        0.021922346570465344,
+        0.02651984643278287,
+        0.03247064885234145,
+        0.03485318123378121,
+        0.038559010910320955,
+        0.03921567684260965,
+        0.041266537517596,
+        0.0552633706059205,
+        0.042734938097177586,
+        0.042581092931588634,
+        0.043149123147951135,
+        0.028955005866182257
+      ]
+    }
+  },
+  {
+    "number": 26,
+    "state": "COMPLETE",
+    "value": 0.037563714232127114,
+    "params": {
+      "learning_rate": 0.10817883233112334,
+      "num_leaves": 112,
+      "min_child_samples": 696,
+      "subsample": 0.7681039975450569,
+      "colsample_bytree": 0.6311644317787523,
+      "reg_alpha": 1.0819318351688477e-05,
+      "reg_lambda": 5.5321710816950345e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 152.45682075619698,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.10817883233112334,
+        "num_leaves": 112,
+        "min_child_samples": 696,
+        "subsample": 0.7681039975450569,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6311644317787523,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 1.0819318351688477e-05,
+        "reg_lambda": 5.5321710816950345e-08
+      },
+      "window_scores": [
+        0.022293016922800418,
+        0.026537787668532237,
+        0.03219441897452564,
+        0.035365045436073064,
+        0.038800445564548224,
+        0.04011920091374281,
+        0.04236580018952061,
+        0.05569764336178373,
+        0.04261667494179471,
+        0.04302503125787437,
+        0.04373188058476772,
+        0.02801762496956179
+      ]
+    }
+  },
+  {
+    "number": 27,
+    "state": "COMPLETE",
+    "value": 0.037263108408198374,
+    "params": {
+      "learning_rate": 0.038583953472858215,
+      "num_leaves": 96,
+      "min_child_samples": 606,
+      "subsample": 0.8681718737787691,
+      "colsample_bytree": 0.6395240679768445,
+      "reg_alpha": 5.630832460604937e-07,
+      "reg_lambda": 3.8655911132991876e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 228.95727173611522,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.038583953472858215,
+        "num_leaves": 96,
+        "min_child_samples": 606,
+        "subsample": 0.8681718737787691,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6395240679768445,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 5.630832460604937e-07,
+        "reg_lambda": 3.8655911132991876e-08
+      },
+      "window_scores": [
+        0.021801014378570096,
+        0.026442332059215385,
+        0.031740090981010195,
+        0.03476920900393469,
+        0.038603223718627136,
+        0.039894181703370286,
+        0.04119208615318364,
+        0.0554503575961555,
+        0.04273512753539188,
+        0.042577081791322795,
+        0.04339723865856148,
+        0.02855535731903739
+      ]
+    }
+  },
+  {
+    "number": 28,
+    "state": "COMPLETE",
+    "value": 0.037225987503187445,
+    "params": {
+      "learning_rate": 0.06366192009552663,
+      "num_leaves": 124,
+      "min_child_samples": 533,
+      "subsample": 0.8747229861847249,
+      "colsample_bytree": 0.6061201071167045,
+      "reg_alpha": 5.089577094404168e-06,
+      "reg_lambda": 7.200991622255128e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 201.6653681169264,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.06366192009552663,
+        "num_leaves": 124,
+        "min_child_samples": 533,
+        "subsample": 0.8747229861847249,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6061201071167045,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 5.089577094404168e-06,
+        "reg_lambda": 7.200991622255128e-08
+      },
+      "window_scores": [
+        0.022028866692302574,
+        0.026405653820867837,
+        0.031755056697948515,
+        0.03529634433152535,
+        0.03861382489036503,
+        0.03926842746458769,
+        0.04134683429293479,
+        0.055304441805539985,
+        0.04283350384085135,
+        0.04242976944493373,
+        0.043279833276319436,
+        0.02814929348007308
+      ]
+    }
+  },
+  {
+    "number": 29,
+    "state": "COMPLETE",
+    "value": 0.03724206424215347,
+    "params": {
+      "learning_rate": 0.06884389591499418,
+      "num_leaves": 127,
+      "min_child_samples": 425,
+      "subsample": 0.8662523737881289,
+      "colsample_bytree": 0.6197426761346712,
+      "reg_alpha": 0.0007715278263650931,
+      "reg_lambda": 1.021356051365157e-06
+    },
+    "user_attrs": {
+      "elapsed_seconds": 202.3311400290113,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.06884389591499418,
+        "num_leaves": 127,
+        "min_child_samples": 425,
+        "subsample": 0.8662523737881289,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6197426761346712,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 0.0007715278263650931,
+        "reg_lambda": 1.021356051365157e-06
+      },
+      "window_scores": [
+        0.022449543708164404,
+        0.026363357280628868,
+        0.032036145033105166,
+        0.035125272470750035,
+        0.03877249425730344,
+        0.0394264758599034,
+        0.0412340656449432,
+        0.055009374039843906,
+        0.04257504559600705,
+        0.04234485255730323,
+        0.04328405204504538,
+        0.028284092412843527
+      ]
+    }
+  },
+  {
+    "number": 30,
+    "state": "COMPLETE",
+    "value": 0.03718693524787003,
+    "params": {
+      "learning_rate": 0.0715971267103712,
+      "num_leaves": 114,
+      "min_child_samples": 865,
+      "subsample": 0.9361257308609942,
+      "colsample_bytree": 0.6614903782156994,
+      "reg_alpha": 5.072572339995713e-07,
+      "reg_lambda": 8.92695679042696e-07
+    },
+    "user_attrs": {
+      "elapsed_seconds": 177.23469163500704,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.0715971267103712,
+        "num_leaves": 114,
+        "min_child_samples": 865,
+        "subsample": 0.9361257308609942,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6614903782156994,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 5.072572339995713e-07,
+        "reg_lambda": 8.92695679042696e-07
+      },
+      "window_scores": [
+        0.022075084801014642,
+        0.026631256137851174,
+        0.03168939618683356,
+        0.03497138564185737,
+        0.038552072363745166,
+        0.039549896060614424,
+        0.04111551992464722,
+        0.055293340927449856,
+        0.04258267047581285,
+        0.0422435271928008,
+        0.04339157370249314,
+        0.0281474995593202
+      ]
+    }
+  },
+  {
+    "number": 31,
+    "state": "COMPLETE",
+    "value": 0.037399346297493044,
+    "params": {
+      "learning_rate": 0.07455416220230246,
+      "num_leaves": 126,
+      "min_child_samples": 633,
+      "subsample": 0.8644209414686364,
+      "colsample_bytree": 0.6444245671891009,
+      "reg_alpha": 2.005399786633893e-06,
+      "reg_lambda": 5.770138808656027e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 204.0323565241415,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.07455416220230246,
+        "num_leaves": 126,
+        "min_child_samples": 633,
+        "subsample": 0.8644209414686364,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6444245671891009,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 2.005399786633893e-06,
+        "reg_lambda": 5.770138808656027e-08
+      },
+      "window_scores": [
+        0.02259567553521104,
+        0.026419269689559873,
+        0.03203538212993889,
+        0.035481344806862096,
+        0.038668403271588124,
+        0.03946632624374895,
+        0.04207377718879061,
+        0.0554164579069397,
+        0.0428728927032504,
+        0.042498230415540295,
+        0.04314266216152664,
+        0.02812173351695994
+      ]
+    }
+  },
+  {
+    "number": 32,
+    "state": "COMPLETE",
+    "value": 0.03725731824211672,
+    "params": {
+      "learning_rate": 0.07724273316416332,
+      "num_leaves": 112,
+      "min_child_samples": 847,
+      "subsample": 0.916615670364932,
+      "colsample_bytree": 0.6877311299355711,
+      "reg_alpha": 9.446459706090465e-07,
+      "reg_lambda": 5.454546026586866e-07
+    },
+    "user_attrs": {
+      "elapsed_seconds": 183.67291054711677,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.07724273316416332,
+        "num_leaves": 112,
+        "min_child_samples": 847,
+        "subsample": 0.916615670364932,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6877311299355711,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 9.446459706090465e-07,
+        "reg_lambda": 5.454546026586866e-07
+      },
+      "window_scores": [
+        0.02228917370640756,
+        0.026373717383946265,
+        0.032019333330045634,
+        0.034841828597260406,
+        0.03851483961818857,
+        0.039458677907882586,
+        0.04150446429839066,
+        0.05541509860307488,
+        0.04248735921482592,
+        0.04239130967711861,
+        0.043083308915100066,
+        0.02870870765315952
+      ]
+    }
+  },
+  {
+    "number": 33,
+    "state": "COMPLETE",
+    "value": 0.037407952221480016,
+    "params": {
+      "learning_rate": 0.06294186363791274,
+      "num_leaves": 114,
+      "min_child_samples": 413,
+      "subsample": 0.9623885918277705,
+      "colsample_bytree": 0.6069889364680655,
+      "reg_alpha": 2.243823009328619e-05,
+      "reg_lambda": 8.607382387997886e-07
+    },
+    "user_attrs": {
+      "elapsed_seconds": 192.88893642905168,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.06294186363791274,
+        "num_leaves": 114,
+        "min_child_samples": 413,
+        "subsample": 0.9623885918277705,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6069889364680655,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 2.243823009328619e-05,
+        "reg_lambda": 8.607382387997886e-07
+      },
+      "window_scores": [
+        0.022234422971063456,
+        0.026511079221314963,
+        0.032985637102075735,
+        0.03551391115841315,
+        0.03906096886131308,
+        0.039369851268639816,
+        0.04147124518402835,
+        0.05525297614659478,
+        0.04256229473510781,
+        0.04256030056700834,
+        0.0429513998600628,
+        0.028421339582137887
+      ]
+    }
+  },
+  {
+    "number": 34,
+    "state": "COMPLETE",
+    "value": 0.03732130055300135,
+    "params": {
+      "learning_rate": 0.08251812451301391,
+      "num_leaves": 126,
+      "min_child_samples": 689,
+      "subsample": 0.9685068064964439,
+      "colsample_bytree": 0.6874741271259038,
+      "reg_alpha": 1.2190667801380235e-06,
+      "reg_lambda": 1.2403284424225829e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 169.9861488759052,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.08251812451301391,
+        "num_leaves": 126,
+        "min_child_samples": 689,
+        "subsample": 0.9685068064964439,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6874741271259038,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 1.2190667801380235e-06,
+        "reg_lambda": 1.2403284424225829e-08
+      },
+      "window_scores": [
+        0.022045971298209944,
+        0.02643739400847655,
+        0.03223184155859942,
+        0.035336644347231466,
+        0.038277562924586506,
+        0.039347004327115104,
+        0.04208766518793041,
+        0.055367692573485484,
+        0.04264034505886549,
+        0.042465087884257874,
+        0.0434095544826125,
+        0.028208842984645356
+      ]
+    }
+  },
+  {
+    "number": 35,
+    "state": "COMPLETE",
+    "value": 0.03742532660025586,
+    "params": {
+      "learning_rate": 0.07185346026616236,
+      "num_leaves": 102,
+      "min_child_samples": 668,
+      "subsample": 0.9208695140315157,
+      "colsample_bytree": 0.606557246557134,
+      "reg_alpha": 9.95020310553953e-07,
+      "reg_lambda": 6.245921970008739e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 185.63280168385245,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.07185346026616236,
+        "num_leaves": 102,
+        "min_child_samples": 668,
+        "subsample": 0.9208695140315157,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.606557246557134,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 9.95020310553953e-07,
+        "reg_lambda": 6.245921970008739e-08
+      },
+      "window_scores": [
+        0.022660761696288445,
+        0.02655662886629159,
+        0.03251353942115573,
+        0.0351544976439977,
+        0.03877319057272673,
+        0.039684744396051685,
+        0.04126601406789771,
+        0.055709553016880756,
+        0.04290019906593709,
+        0.04228635502603616,
+        0.04327287780839672,
+        0.028325557621409966
+      ]
+    }
+  },
+  {
+    "number": 36,
+    "state": "COMPLETE",
+    "value": 0.03731045582795785,
+    "params": {
+      "learning_rate": 0.05710064069834692,
+      "num_leaves": 126,
+      "min_child_samples": 330,
+      "subsample": 0.8333568687201034,
+      "colsample_bytree": 0.6323994385220695,
+      "reg_alpha": 3.036521096897343e-05,
+      "reg_lambda": 2.171768577781285e-08
+    },
+    "user_attrs": {
+      "elapsed_seconds": 219.756415694952,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.05710064069834692,
+        "num_leaves": 126,
+        "min_child_samples": 330,
+        "subsample": 0.8333568687201034,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6323994385220695,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 3.036521096897343e-05,
+        "reg_lambda": 2.171768577781285e-08
+      },
+      "window_scores": [
+        0.022154498988032137,
+        0.026382969057418278,
+        0.032728620242550036,
+        0.03427282969877662,
+        0.038913795526858606,
+        0.03960016241768893,
+        0.041502379746711775,
+        0.05577193057327957,
+        0.042687216444317604,
+        0.042188760291675904,
+        0.04296752875213587,
+        0.028554778196048843
+      ]
+    }
+  },
+  {
+    "number": 37,
+    "state": "COMPLETE",
+    "value": 0.03733568333780333,
+    "params": {
+      "learning_rate": 0.06796316171841772,
+      "num_leaves": 114,
+      "min_child_samples": 713,
+      "subsample": 0.8372094722410194,
+      "colsample_bytree": 0.6648592257190601,
+      "reg_alpha": 1.4814785711840567e-06,
+      "reg_lambda": 8.074484384930502e-07
+    },
+    "user_attrs": {
+      "elapsed_seconds": 182.153471553931,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.06796316171841772,
+        "num_leaves": 114,
+        "min_child_samples": 713,
+        "subsample": 0.8372094722410194,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6648592257190601,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 1.4814785711840567e-06,
+        "reg_lambda": 8.074484384930502e-07
+      },
+      "window_scores": [
+        0.022309852650382305,
+        0.02652376526538254,
+        0.032395264118275334,
+        0.03518617728760084,
+        0.03892052900944817,
+        0.03981970631974259,
+        0.041264686013034596,
+        0.05518930382233696,
+        0.04259037042137329,
+        0.04253598356465732,
+        0.043151450912327645,
+        0.028141110669078376
+      ]
+    }
+  },
+  {
+    "number": 38,
+    "state": "COMPLETE",
+    "value": 0.03714820853078384,
+    "params": {
+      "learning_rate": 0.07566240843740532,
+      "num_leaves": 121,
+      "min_child_samples": 625,
+      "subsample": 0.8972301506617532,
+      "colsample_bytree": 0.6458538396058477,
+      "reg_alpha": 5.275752616351572e-07,
+      "reg_lambda": 1.5381225072486052e-06
+    },
+    "user_attrs": {
+      "elapsed_seconds": 184.38747018110007,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.07566240843740532,
+        "num_leaves": 121,
+        "min_child_samples": 625,
+        "subsample": 0.8972301506617532,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6458538396058477,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 5.275752616351572e-07,
+        "reg_lambda": 1.5381225072486052e-06
+      },
+      "window_scores": [
+        0.022200958607261522,
+        0.026342442211241206,
+        0.03202291540225065,
+        0.03410278490293618,
+        0.03813453317347775,
+        0.039478324532248005,
+        0.041106525127061984,
+        0.05520337938810373,
+        0.0425693508350491,
+        0.04251503514388348,
+        0.043454074530687316,
+        0.028648178515205142
+      ]
+    }
+  },
+  {
+    "number": 39,
+    "state": "COMPLETE",
+    "value": 0.037371663652165626,
+    "params": {
+      "learning_rate": 0.05877605854928776,
+      "num_leaves": 116,
+      "min_child_samples": 760,
+      "subsample": 0.9291020604765283,
+      "colsample_bytree": 0.6443557044592347,
+      "reg_alpha": 4.1613677986296583e-07,
+      "reg_lambda": 1.0075106332889907e-05
+    },
+    "user_attrs": {
+      "elapsed_seconds": 194.6073505540844,
+      "model_params": {
+        "n_estimators": 1200,
+        "learning_rate": 0.05877605854928776,
+        "num_leaves": 116,
+        "min_child_samples": 760,
+        "subsample": 0.9291020604765283,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.6443557044592347,
+        "objective": "regression",
+        "random_state": 42,
+        "device_type": "cuda",
+        "verbosity": -1,
+        "metric": "l1",
+        "reg_alpha": 4.1613677986296583e-07,
+        "reg_lambda": 1.0075106332889907e-05
+      },
+      "window_scores": [
+        0.021932667307961083,
+        0.026404541749701055,
+        0.03225277061723722,
+        0.0357978362560202,
+        0.03857278523720678,
+        0.03958109197255509,
+        0.041513466236017676,
+        0.05541679931510242,
+        0.042578503313448,
+        0.04285700486788988,
+        0.04318677124171039,
+        0.028365725711137723
+      ]
+    }
+  }
+]

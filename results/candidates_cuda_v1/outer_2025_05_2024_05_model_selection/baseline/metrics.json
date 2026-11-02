@@ -1,0 +1,70 @@
+{
+  "site_equal_nmae": 0.03874991008572566,
+  "observed_site_hours": 44970,
+  "observed_sites": 189,
+  "cold_start_sites": 6,
+  "complete_253_hours": 0,
+  "settlement": null,
+  "candidate": {
+    "name": "baseline",
+    "params": {},
+    "reason": "Fixed CUDA reference"
+  },
+  "params": {
+    "n_estimators": 600,
+    "learning_rate": 0.06,
+    "num_leaves": 127,
+    "min_child_samples": 200,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "objective": "regression",
+    "random_state": 42,
+    "device_type": "cuda",
+    "verbosity": -1
+  },
+  "features": [
+    "wa_cloud",
+    "wa_temp",
+    "wa_humidity",
+    "wa_rain",
+    "wa_wind_speed_ms",
+    "wa_ground_press",
+    "wb_cloud",
+    "wb_temp",
+    "wb_rel_hum",
+    "wb_uv_idx",
+    "wb_precip_prob",
+    "wb_total_liq",
+    "wb_vis",
+    "wb_wind_speed_ms",
+    "wb_dew_point",
+    "elev",
+    "azim",
+    "cosz",
+    "doy_sin",
+    "doy_cos",
+    "hour",
+    "cap",
+    "lat",
+    "lon"
+  ],
+  "training_condition": "TRUE",
+  "training_cutoff": "2024-04-30 17:00:00+09:00",
+  "training_rows": [
+    {
+      "round": 10,
+      "daytime_rows": 1023315
+    },
+    {
+      "round": 17,
+      "daytime_rows": 1023315
+    }
+  ],
+  "seconds": 25.973686865065247,
+  "artifacts_sha256": {
+    "models/round10.txt": "a917bea751d528598f1fb1f691a4f1818c37a0fb024dabd62f5d2f08a2bcc71f",
+    "models/round17.txt": "8048691a5dc9add6f7b4b588c4616b3d99b11d57e2e024a281897027ea6d591e",
+    "predictions.parquet": "69d05d94391bf49fa4eb950cfa515ed31165317dcdffecd293c0eda88051f580"
+  }
+}
