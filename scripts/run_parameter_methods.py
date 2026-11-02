@@ -114,7 +114,7 @@ def parser():
     p.add_argument('--region',default='ridge_k4',choices=['global','distance_k2','distance_k3','distance_k4','ridge_k2','ridge_k3','ridge_k4'])
     p.add_argument('--model',choices=['mlp','tabm','hyper_head','maml','mlp_sgd',
                                     'mlp_hypergradient','mlp_learned_optimizer'],default='mlp')
-    p.add_argument('--methods',nargs='+',choices=METHODS,default=['fixed','random','tpe','asha','pbt'])
+    p.add_argument('--methods',nargs='+',choices=METHODS,default=['fixed'])
     p.add_argument('--objective',choices=['W','nmae'],default='nmae')
     p.add_argument('--config',type=Path,default=ROOT/'configs/seasonal_splits_v2.json')
     p.add_argument('--output-dir',required=True,type=Path)

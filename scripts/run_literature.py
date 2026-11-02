@@ -124,7 +124,7 @@ def main():
     p.add_argument('--regions-dir', type=Path, default=ROOT/'data/ridge_regions_v1')
     p.add_argument('--config', type=Path, default=ROOT/'configs/seasonal_splits_v2.json')
     p.add_argument('--output-dir', type=Path, required=True)
-    p.add_argument('--models', nargs='+', choices=list(PRESETS), default=list(PRESETS))
+    p.add_argument('--models', nargs='+', choices=list(PRESETS), default=['lgbm_l2'])
     p.add_argument('--fold', action='append')
     p.add_argument('--threads', type=int, default=4)
     p.add_argument('--resume', action='store_true')
