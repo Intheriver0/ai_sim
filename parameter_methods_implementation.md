@@ -1,5 +1,7 @@
 # 파라미터 방법론 구현: 첫 실행 단계
 
+현재 변경: `--methods fixed` 단독 실행은 후보 선택용 내부 평가를 생략하고 외부 월별 학습·평가만 수행한다. 모델 자체 학습과 학습 예산은 유지한다. 다른 탐색 방법을 지정하면 fixed 기준선도 기존 내부 평가에 포함한다. [개별 실행 안내](individual_methods.md)를 따른다.
+
 기존 `run_pipeline.py`, `run_literature.py`, LightGBM/CatBoost 고정 실험을 수정하지 않고 별도 실행기 `scripts/run_parameter_methods.py`를 추가했다. 이번 실행기는 **신경망** 대상이다. 기존 트리 탐색을 이 실행기로 교체한 것은 아니다.
 
 ## 구현 범위와 검증 수준

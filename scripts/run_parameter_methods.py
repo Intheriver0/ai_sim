@@ -148,6 +148,7 @@ def run(args):
             raise ValueError('Unknown fold')
         windows = [w for w in windows if w['id'] in args.fold]
     methods = list(dict.fromkeys(['fixed']+args.methods))
+    fixed_only = methods == ['fixed']
     versions = {}
     for package in ('torch','tabm','optuna','smac','ConfigSpace','dehb','numpy','pandas','duckdb'):
         try:
@@ -158,7 +159,9 @@ def run(args):
         versions=versions,space=SPACE,config=digest(args.config),regions=digest(args.regions_dir/'manifest.json'),
         inputs={p.name:digest(p) for p in args.data_dir.glob('*.parquet')},
         sources={p.name:digest(p) for p in (ROOT/'scripts').glob('*.py')},
-        procedure='Past-only nested search; reference composition fixed; selected schedule refit before outer evaluation')
+        procedure=('Fixed settings; no inner evaluation; past-only outer refit; reference composition fixed'
+                   if fixed_only else
+                   'Past-only nested search; reference composition fixed; selected schedule refit before outer evaluation'))
     if args.model=='hyper_head':
         manifest['terrain'] = {n:digest(args.terrain_dir/n) for n in ('manifest.json','site_quality.json')}
     # Normalize tuple-valued search definitions exactly as stored JSON.
@@ -189,7 +192,7 @@ def run(args):
         else:
             con.execute('CREATE TEMP VIEW paired AS SELECT * FROM paired_base')
         read_view(con,'composition',args.data_dir/'reference_composition.parquet')
-        for window in windows:
+        for window in ([] if fixed_only else windows):
             history = inner_windows(window)
             if args.objective=='W':
                 hours = 0
@@ -220,8 +223,9 @@ def run(args):
         references = (['mlp','mlp_sgd'] if args.model=='mlp_hypergradient' else
                       ['mlp'] if args.model=='mlp_learned_optimizer' else [])
         for outer in windows:
-            history = inner_windows(outer)
-            objective = lambda candidate,budget:experiment.score(history,candidate,budget,args.objective)
+            if not fixed_only:
+                history = inner_windows(outer)
+                objective = lambda candidate,budget:experiment.score(history,candidate,budget,args.objective)
             for reference in references:
                 reference_name = 'reference_'+reference
                 control = Experiment(con,available[args.region],reference,args.output_dir/reference_name,args.threads,args.seed)
@@ -233,7 +237,19 @@ def run(args):
                 report.append(dict(fold=outer['id'],method=reference_name,metrics=metrics))
             for method in methods:
                 destination = args.output_dir/outer['id']/method
-                selected = run_search(method,objective,destination,args.trials,args.min_epochs,args.max_epochs,args.seed,args.population)
+                if fixed_only:
+                    if completed(destination):
+                        selected = json.loads((destination/'selected.json').read_text(encoding='utf-8'))
+                    else:
+                        destination.mkdir(parents=True,exist_ok=True)
+                        selected = dict(method='fixed',spec=spec(dict(hidden=64,lr=.001,weight_decay=.0003)),
+                            score=None,baseline_score=None,max_budget=args.max_epochs,
+                            search_evaluations=0,full_budget_evaluations=0,
+                            note='Fixed settings; inner evaluation skipped; no outer-score selection')
+                        save_json(destination/'selected.json',selected)
+                        finish(destination,{'status':'complete'},[destination/'selected.json'])
+                else:
+                    selected = run_search(method,objective,destination,args.trials,args.min_epochs,args.max_epochs,args.seed,args.population)
                 candidate = selected['spec']
                 # No parent checkpoints from inner windows can be loaded for this new outer training origin.
                 prediction = experiment.predict_window(outer,candidate,args.max_epochs)
@@ -258,7 +274,7 @@ def run(args):
                     change.update(W_reduction_won=None,W_reduction_percent=None,W_reduction_95pct_block_interval_won=None)
                 comparisons.append(change)
         save_json(args.output_dir/'comparison.json',dict(status='complete' if len(windows)==12 else 'partial',
-            folds=len(windows),comparisons=comparisons,
+            folds=len(windows),comparisons=comparisons,inner_evaluation=not fixed_only,
             note='Cached objective work may be shared: observed wall time is NOT a fair optimizer speed benchmark. No outer-score winner selection.'))
 
 

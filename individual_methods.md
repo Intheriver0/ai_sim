@@ -20,6 +20,31 @@ python scripts/run_parameter_methods.py --model mlp_learned_optimizer --methods 
 `--methods`를 생략해도 이제 fixed 하나만 실행한다. Hypergradient는 고정 AdamW·SGD,
 LSTM learned optimizer는 고정 AdamW 대조군을 함께 평가하는 기존 절차를 유지한다.
 
+**fixed 단독 실행은 내부 12개월 후보 평가를 생략한다.** 외부 12개월 각각에서
+그 월 이전 자료로 지역군별 모델을 새로 학습하고 평가한다. 기본 ridge_k4에서는
+주 모델 학습이 624회에서 48회로 줄어든다(사전 점검·추가 대조군 제외).
+모델의 자체 학습 과정, 기본 45 epoch, 외부 평가 범위는 바꾸지 않았다.
+선택 점수는 `null`, 내부 평가 횟수는 0으로 저장하며, 외부 NMAE/W는 기존대로 기록한다.
+다른 탐색 방법과 함께 실행하는 fixed 기준선은 내부 평가를 유지한다.
+
+두 컴퓨터에 같은 코드·데이터·지역군·라이브러리 버전을 준비하고 다른 모델을 실행한다.
+예를 들어 컴퓨터 1에서는:
+
+```bash
+python scripts/run_parameter_methods.py --model mlp --methods fixed --output-dir results/mlp_fixed_outer_v1
+```
+
+컴퓨터 2에서는:
+
+```bash
+python scripts/run_parameter_methods.py --model tabm --methods fixed --output-dir results/tabm_fixed_outer_v1
+```
+
+학습 예산·평가 범위 옵션을 추가할 필요는 없다. 완료 후 각 폴더 전체를 서로 다른 이름으로
+모아 `fold_metrics.json`의 같은 외부 월별 성능을 비교한다. `comparison.json`은
+해당 실행 내부의 기준선 대비 차이이므로 fixed 단독 실행의 자기 비교는 0이다.
+이전 코드로 생성한 실행 폴더는 새 실행에 재사용하지 않는다.
+
 ## 탐색 방법도 하나씩 실행
 
 모델과 탐색 방법을 각각 선택한다. 예를 들어 MLP에 TPE만 적용하려면:
