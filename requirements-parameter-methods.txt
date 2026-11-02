@@ -1,0 +1,7 @@
+# Install into the existing training environment after a hardware-compatible CUDA PyTorch.
+# CPU PyTorch is sufficient only for unit tests, not the production runner.
+optuna==5.0.0
+smac==2.4.1
+ConfigSpace==1.2.2
+tabm==0.0.3
+# DEHB 0.1.2 requires numpy<2 and is deliberately NOT included in this NumPy 2 stack.

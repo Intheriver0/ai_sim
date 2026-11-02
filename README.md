@@ -1,6 +1,12 @@
 # ai_sim
 
-**최근 작업 인계:** [2026-10-29 실행 상태·GPU 전환·추가 실험 큐](handover_2026-10-29.md). GB10 상태는 사용자 보고와 직접 확인한 내용을 구분해 기록했습니다.
+**최근 작업 인계:** [2026-11-01 구현 현황](handover_2026-11-01.md). 새 모델·탐색 방법의 연결 범위와 미완료 항목을 기록했습니다.
+
+**실행 경로:** 기존 그룹 재편·재학습·제출은 [통합 실행기](integrated_pipeline.md), 고정 모델 비교는 [문헌 실험 실행기](literature_experiments.md), 신경망 탐색·hypergradient·LSTM learned optimizer는 [파라미터 방법 실행기](parameter_methods_stage2.md)를 사용합니다. 세 경로는 별도이며 모든 방법이 제출 흐름에 통합된 상태는 아닙니다. LSTM 학습·평가는 아래 한 명령으로 실행합니다(CUDA 및 전처리·지역 군 자료 필요).
+
+```bash
+python scripts/run_parameter_methods.py --model mlp_learned_optimizer --methods fixed --output-dir results/parameter_learned_optimizer_v2
+```
 
 **현재 모든 학습은 CUDA GPU 필수입니다.** [GB10 CUDA 설치·검사·실행](gpu_training.md)을 먼저 따릅니다. CUDA 초기 학습 검사가 실패하면 CPU로 대체하지 않고 종료합니다. 이전 CPU 결과에서 재개하지 않고 새 GPU 실행 폴더를 사용합니다.
 
