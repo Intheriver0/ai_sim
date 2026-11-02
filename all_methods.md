@@ -3,6 +3,8 @@
 CUDA 학습 컴퓨터의 `ai_sim`에서 실행한다. 기존 학습 환경, 전처리 자료,
 `data/ridge_regions_v1`, `data/terrain_features_v2`, 완료된 CUDA1028 결과가 필요하다.
 필요 패키지는 기존 `requirements-training.txt`와 `requirements-parameter-methods.txt`를 따른다.
+추가로 [고정 모델 환경 안내](literature_experiments.md)의 CatBoost와 CUDA PyTorch가 필요하다.
+방법 목록과 실제 데이터 입력 대조 결과는 [최종 점검 기록](final_audit_2026-11-02.md)에 있다.
 
 ```bash
 python scripts/run_all.py

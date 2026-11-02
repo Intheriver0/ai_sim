@@ -8,14 +8,47 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
-from literature_models import matrix, fit_scaler, transform, predict
+from literature_models import PRESETS, matrix, fit_scaler, transform, predict
 from ridge_regions import broad_barrier, partition
 from run_literature import daily_penalty, reduction, train_region
 from pipeline_common import connect
-from paired_model import SOURCE_WEATHER
+from paired_model import SOURCE_WEATHER, WEATHER, PAIRED_FEATURES
 
 
 class LiteratureTests(unittest.TestCase):
+    def test_complete_weather_contract_across_fixed_models(self):
+        # Independent inventory from the supplied forecast schema, after unit renaming.
+        raw = set('''wa_cloud wa_temp wa_temp_max wa_temp_min wa_humidity
+            wa_ground_press wa_wind_speed_ms wa_wind_dir wa_rain wa_snow_mm
+            wb_temp wb_feel_temp wb_wet_bulb_temp wb_dew_point wb_wind_speed_ms
+            wb_wind_gust_spd_ms wb_wind_dir wb_rel_hum wb_vis wb_ceiling wb_uv_idx
+            wb_precip_prob wb_rain_prob wb_snow_prob wb_ice_prob wb_total_liq
+            wb_rain wb_snow_mm wb_ice wb_cloud'''.split())
+        excluded = set('''wa_temp_max wa_temp_min wa_rain wa_snow_mm
+            wb_wind_gust_spd_ms wb_total_liq wb_rain wb_snow_mm wb_ice'''.split())
+        self.assertEqual(set(WEATHER), raw-excluded)
+        frame = self.frame()
+        for index, column in enumerate(WEATHER):
+            for r in (10, 17):
+                frame[f'{column}_r{r}'] = index+r
+        for model in PRESETS:
+            with self.subTest(model=model):
+                x = matrix(frame, model)
+                self.assertEqual(len(x.columns), 82 if model == 'lgbm_revision' else 55)
+                for column in WEATHER:
+                    for r in (10, 17):
+                        if model == 'lgbm_revision' and column.endswith('wind_dir'):
+                            angle = np.deg2rad(frame[f'{column}_r{r}'])
+                            np.testing.assert_allclose(x[f'{column}_sin_r{r}'], np.sin(angle), atol=1e-7)
+                            np.testing.assert_allclose(x[f'{column}_cos_r{r}'], np.cos(angle), atol=1e-7)
+                        else:
+                            np.testing.assert_allclose(x[f'{column}_r{r}'], frame[f'{column}_r{r}'])
+                changed = frame.assign(**{f'{c}_r{r}': 99999. for c in excluded for r in (10,17)})
+                pd.testing.assert_frame_equal(x, matrix(changed, model))
+        x = matrix(frame, 'mlp10')
+        self.assertEqual(list(x), PAIRED_FEATURES)
+        self.assertEqual(transform(x.to_numpy(), fit_scaler(x.to_numpy())).shape, (2, 110))
+
     def frame(self):
         frame = pd.DataFrame({'site_id':['a','b'], 'ts':pd.to_datetime(['2024-06-01T12:00:00+09:00']*2),
                               'lat':37.,'lon':127.,'capacity_kw':100.})
