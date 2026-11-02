@@ -1,5 +1,7 @@
 # ai_sim
 
+**모든 구현 방법 한 번에 실행:** `python scripts/run_all.py`. 고정 모델 비교·신경망 탐색(LSTM 포함)·그룹 재편 비교를 순차 실행하고 `results/all_methods_v1/run.log`, `results.json`, `SUMMARY.md`에 모읍니다. 사전 점검·재개·제외 항목은 [통합 방법 실행 안내](all_methods.md)를 확인합니다.
+
 **최근 작업 인계:** [2026-11-01 구현 현황](handover_2026-11-01.md). 새 모델·탐색 방법의 연결 범위와 미완료 항목을 기록했습니다.
 
 **실행 경로:** 기존 그룹 재편·재학습·제출은 [통합 실행기](integrated_pipeline.md), 고정 모델 비교는 [문헌 실험 실행기](literature_experiments.md), 신경망 탐색·hypergradient·LSTM learned optimizer는 [파라미터 방법 실행기](parameter_methods_stage2.md)를 사용합니다. 세 경로는 별도이며 모든 방법이 제출 흐름에 통합된 상태는 아닙니다. LSTM 학습·평가는 아래 한 명령으로 실행합니다(CUDA 및 전처리·지역 군 자료 필요).
