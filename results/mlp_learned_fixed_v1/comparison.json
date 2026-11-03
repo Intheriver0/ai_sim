@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "folds": 12,
+  "comparisons": [
+    {
+      "W_reduction_won": 0.0,
+      "W_reduction_percent": 0.0,
+      "W_reduction_95pct_block_interval_won": [
+        0.0,
+        0.0
+      ],
+      "bootstrap": "2000 paired circular 7-day blocks, stratified by month; exploratory, not multiplicity adjusted",
+      "method": "fixed",
+      "reference": "fixed",
+      "nmae_reduction_pp": 0.0
+    },
+    {
+      "W_reduction_won": -243810504078043.7,
+      "W_reduction_percent": -287381015.0480437,
+      "W_reduction_95pct_block_interval_won": [
+        -311807497708965.94,
+        -181042806121690.3
+      ],
+      "bootstrap": "2000 paired circular 7-day blocks, stratified by month; exploratory, not multiplicity adjusted",
+      "method": "fixed",
+      "reference": "reference_mlp",
+      "nmae_reduction_pp": -1581435.696822349
+    }
+  ],
+  "inner_evaluation": false,
+  "note": "Cached objective work may be shared: observed wall time is NOT a fair optimizer speed benchmark. No outer-score winner selection."
+}
