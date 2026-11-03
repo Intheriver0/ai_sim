@@ -1,0 +1,27 @@
+{
+  "objective": "month_equal_site_nmae_proxy",
+  "fixed_score": 0.08558365592842648,
+  "selected_score": 0.08558365592842648,
+  "params": {
+    "n_estimators": 12,
+    "learning_rate": 0.06,
+    "num_leaves": 127,
+    "min_child_samples": 200,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "objective": "regression",
+    "random_state": 42,
+    "device_type": "cuda",
+    "verbosity": -1
+  },
+  "early_stop": false,
+  "selected": "fixed",
+  "completed_trials": 1,
+  "best_trial": 0,
+  "trial_seconds_used": 3.426400929922238,
+  "budget_note": "soft timeout checked between trials; baseline excluded",
+  "model_windows": [
+    "outer_2024_06_2023_06_model_selection"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "fold": "outer_2025_04",
+  "method": "fixed",
+  "selected": {
+    "method": "fixed",
+    "spec": {
+      "params": {
+        "hidden": 64,
+        "lr": 0.001,
+        "weight_decay": 0.0003
+      },
+      "schedule": []
+    },
+    "score": null,
+    "baseline_score": null,
+    "max_budget": 45,
+    "search_evaluations": 0,
+    "full_budget_evaluations": 0,
+    "note": "Fixed settings; inner evaluation skipped; no outer-score selection"
+  },
+  "metrics": {
+    "site_equal_nmae": 0.045442270969617754,
+    "observed_site_hours": 182160,
+    "observed_sites": 253,
+    "cold_start_sites": 0,
+    "complete_253_hours": 720,
+    "settlement": {
+      "basis": "provided README formula; local validation only",
+      "groups": {
+        "G1": {
+          "capacity_kw": 20465.65499999998,
+          "revenue_won": 390068910.78481,
+          "W_won": 10954612.436323814,
+          "S_won": 379114298.3484862
+        },
+        "G2": {
+          "capacity_kw": 22189.71499999999,
+          "revenue_won": 442347691.9380591,
+          "W_won": 14882325.833327204,
+          "S_won": 427465366.1047319
+        }
+      },
+      "revenue_won": 832416602.7228692,
+      "W_won": 25836938.269651018,
+      "S_won": 806579664.4532181
+    }
+  }
+}

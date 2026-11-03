@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "gpu": "NVIDIA GB10",
+  "versions": {
+    "torch": "2.15.0",
+    "tabm": "0.0.3",
+    "optuna": "5.0.0",
+    "smac": "2.4.1",
+    "ConfigSpace": "1.2.2",
+    "dehb": null,
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "duckdb": "2.0.0"
+  }
+}
