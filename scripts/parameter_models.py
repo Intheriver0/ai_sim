@@ -11,7 +11,7 @@ from literature_models import matrix, fit_scaler, transform
 
 DEFAULT = dict(hidden=64, lr=.001, weight_decay=.0003, batch_size=1024,
                seed=42, inner_lr=.01, inner_steps=1, task_steps=100,
-               hyper_lr=.01, meta_epochs=3, unroll_steps=5)
+               hyper_lr=.01, meta_epochs=3, unroll_steps=5, capacity_bounded=False)
 MODELS = ('mlp', 'tabm', 'hyper_head', 'maml', 'mlp_sgd',
           'mlp_hypergradient', 'mlp_learned_optimizer')
 
@@ -28,14 +28,26 @@ class HyperHead(nn.Module):
         return (self.encoder(x)*head[:,:-1]).sum(1,keepdim=True)/self.encoder[0].out_features**.5+head[:,-1:]
 
 
+class CapacityBounded(nn.Module):
+    """Learn hourly capacity factors in [0, 1], including each TabM member."""
+    def __init__(self, model):
+        super().__init__()
+        self.model = model
+
+    def forward(self, *args):
+        return torch.sigmoid(self.model(*args))
+
+
 def network(name, width, params, context_width=3):
     if name == 'hyper_head':
-        return HyperHead(width, params['hidden'], context_width)
-    if name == 'tabm':
+        model = HyperHead(width, params['hidden'], context_width)
+    elif name == 'tabm':
         from tabm import TabM
-        return TabM.make(n_num_features=width, d_out=1, k=32, n_blocks=3,
+        model = TabM.make(n_num_features=width, d_out=1, k=32, n_blocks=3,
                          d_block=params['hidden'], dropout=.1)
-    return nn.Sequential(nn.Linear(width, params['hidden']),nn.ReLU(),nn.Linear(params['hidden'],1))
+    else:
+        model = nn.Sequential(nn.Linear(width, params['hidden']),nn.ReLU(),nn.Linear(params['hidden'],1))
+    return CapacityBounded(model) if params.get('capacity_bounded', False) else model
 
 
 def member_loss(output, target):
@@ -77,7 +89,8 @@ class Learner:
         self.context_scaler = fit_scaler(context)
         self.x = torch.from_numpy(transform(raw,self.scaler))
         self.context = torch.from_numpy(transform(context,self.context_scaler))
-        self.y = torch.from_numpy((frame.target_kwh.to_numpy()[day]/x.cap.to_numpy()[day]).clip(0,1.2).astype('float32'))
+        target_limit = 1. if self.params['capacity_bounded'] else 1.2
+        self.y = torch.from_numpy((frame.target_kwh.to_numpy()[day]/x.cap.to_numpy()[day]).clip(0,target_limit).astype('float32'))
         self.sites = frame.site_id.to_numpy()[day]
         self.tasks = {s:np.flatnonzero(self.sites==s) for s in np.unique(self.sites)}
         if name=='mlp_hypergradient':
@@ -155,6 +168,8 @@ class Learner:
         if hashlib.sha256(path.read_bytes()).hexdigest()!=path.with_suffix('.sha256').read_text():
             raise ValueError('Checkpoint checksum differs')
         saved = torch.load(path,map_location='cpu',weights_only=False)  # Own hashed local checkpoints only.
+        if saved['initial_params'].get('capacity_bounded', False)!=self.params['capacity_bounded']:
+            raise ValueError('Checkpoint capacity constraint differs; retrain in a new output directory')
         if saved['identity']!=self.identity or saved['name']!=self.name or saved['columns']!=self.columns:
             raise ValueError('Checkpoint data/model identity differs')
         if not clone and saved['initial_params']!=self.params:
@@ -273,7 +288,10 @@ class Learner:
                     else:
                         out = self.net(inp)
                     values[batch] = out.reshape(len(batch),-1).mean(1).cpu().numpy()
-        values = np.where(x.elev>0,np.maximum(values,0),0)*x.cap
+        if self.params['capacity_bounded']:
+            values = np.where(x.elev>0,np.clip(values,0,1),0)*frame.capacity_kw.to_numpy(dtype=float)
+        else:
+            values = np.where(x.elev>0,np.maximum(values,0),0)*x.cap
         if not np.isfinite(values).all():
             raise ValueError('Non-finite forecast')
         return frame[['site_id','ts']].assign(forecast_kwh=values)

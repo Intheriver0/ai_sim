@@ -12,7 +12,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
 from pipeline_common import connect, export
 from run_neural_submission import (CANDIDATE, TRAINING_SOURCES, Predictions, parser,
-    validate_prediction_run, select_groups, compare_fold, submit, prepare, run)
+    validate_prediction_run, select_groups, compare_fold, submit, prepare, run, validate_predictions)
 from run_parameter_methods import key
 from run_pipeline import seasonal_windows, write_submission
 from seasonal_splits import load_plan
@@ -40,6 +40,7 @@ class NeuralSubmissionTests(unittest.TestCase):
         for model in ('tabm', 'hyper_head', 'mlp'):
             with self.subTest(model=model), tempfile.TemporaryDirectory() as tmp, connect() as con:
                 con.register('paired', pd.concat([train, data], ignore_index=True).drop(columns='target_kwh'))
+                con.register('sites', data[['site_id','capacity_kw']].drop_duplicates())
                 targets = train[['site_id', 'ts', 'target_kwh']].assign(training_eligible=True)
                 con.register('targets', targets)
                 args = parser().parse_args(['--output-dir', tmp, '--model', model, '--max-epochs', '1'])
@@ -56,6 +57,7 @@ class NeuralSubmissionTests(unittest.TestCase):
                     first.loc[first.ts <= data.ts.iloc[15]].reset_index(drop=True))
                 self.assertEqual(predictions.directory(window), predictions.directory(dict(window, id='other')))
                 self.assertTrue(np.isfinite(first.forecast_kwh).all())
+                self.assertTrue(first.forecast_kwh.between(0,100).all())
                 (predictions.directory(window)/'predictions.parquet').write_bytes(b'changed')
                 with self.assertRaisesRegex(ValueError, 'Changed completed artifact'):
                     predictions.get(window)
@@ -70,6 +72,7 @@ class NeuralSubmissionTests(unittest.TestCase):
                 training_cutoff=pd.Timestamp('2024-05-31T17:00:00+09:00'))
             prediction = pd.DataFrame(dict(site_id=['a'], ts=[window['start']+pd.Timedelta(hours=1)], forecast_kwh=[1.]))
             con.register('paired', prediction)
+            con.register('sites', pd.DataFrame(dict(site_id=['a'], capacity_kw=[100.])))
             source = root/'old/cache/outer_2024_06'/key(CANDIDATE)/'budget45'
             source.mkdir(parents=True)
             export(con, 'SELECT * FROM paired', source/'predictions.parquet')
@@ -175,7 +178,9 @@ class NeuralSubmissionTests(unittest.TestCase):
             assignment = con.execute("SELECT site_id,CASE current_group WHEN 'A' THEN 0 ELSE 1 END AS cluster FROM sites").df()
             prediction = con.execute('SELECT site_id,ts,1. AS forecast_kwh FROM sites CROSS JOIN test_prices').df()
             args = parser().parse_args(['--output-dir', tmp])
-            deploy = dict(id='deployment', purpose='deployment', training_cutoff=pd.Timestamp('2025-05-31T17:00:00+09:00'))
+            deploy = dict(id='deployment', purpose='deployment', training_cutoff=pd.Timestamp('2025-05-31T17:00:00+09:00'),
+                start=pd.Timestamp('2025-06-01T00:00:00+09:00'), end=pd.Timestamp('2026-06-01T00:00:00+09:00'))
+            con.register('paired', prediction)
             provider = Predictions(con, assignment, args)
             directory = provider.directory(deploy)
             directory.mkdir(parents=True)
@@ -211,6 +216,45 @@ class NeuralSubmissionTests(unittest.TestCase):
             bad.loc[0, 'forecast_kwh'] = np.inf
             with self.assertRaisesRegex(ValueError, 'Invalid site predictions'):
                 write_submission(con, bad, output)
+
+    def test_capacity_bound_is_trained_and_old_checkpoints_are_rejected(self):
+        import torch
+        from parameter_models import Learner, CapacityBounded, member_loss
+        torch.set_num_threads(1)
+        # Gradients pass through the bounded output even when the raw output exceeds capacity.
+        layer = torch.nn.Linear(1, 1)
+        with torch.no_grad():
+            layer.weight.fill_(2.)
+            layer.bias.zero_()
+        bounded = CapacityBounded(layer)
+        output = bounded(torch.ones(2,1))
+        member_loss(output, torch.zeros(2)).backward()
+        self.assertTrue(torch.all((output>0)&(output<1)))
+        self.assertGreater(layer.weight.grad.item(), 0.)
+        with tempfile.TemporaryDirectory() as tmp:
+            data = frame().assign(target_kwh=150.)
+            params = dict(hidden=16, capacity_bounded=True)
+            learner = Learner(data, 'mlp', params, Path(tmp)/'bounded', 'cpu')
+            self.assertEqual(float(learner.y.max()), 1.)
+            self.assertTrue(data.target_kwh.eq(150.).all())
+            learner.advance(1)
+            night = data.copy()
+            night.ts = night.ts.dt.normalize()+pd.Timedelta(hours=2)
+            self.assertTrue(learner.predict(night).forecast_kwh.eq(0).all())
+            old = Learner(data, 'mlp', dict(hidden=16), Path(tmp)/'old', 'cpu')
+            old.advance(1)
+            with self.assertRaisesRegex(ValueError, 'capacity constraint differs'):
+                learner.load(Path(tmp)/'old/state.pt', clone=True)
+
+    def test_capacity_validation_rejects_finite_excess(self):
+        with connect() as con:
+            prediction = pd.DataFrame(dict(site_id=['a'], ts=[pd.Timestamp('2025-06-01T12:00:00+09:00')],
+                                           forecast_kwh=[100.1]))
+            con.register('paired', prediction)
+            con.register('sites', pd.DataFrame(dict(site_id=['a'], capacity_kw=[100.])))
+            window = dict(start=prediction.ts[0]-pd.Timedelta(hours=1),end=prediction.ts[0])
+            with self.assertRaisesRegex(ValueError, 'exceeds hourly capacity'):
+                validate_predictions(con, prediction, window)
 
     def test_rejects_short_test_calendar_before_training(self):
         with connect() as con:

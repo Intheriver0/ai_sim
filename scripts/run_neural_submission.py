@@ -23,7 +23,7 @@ from train_fixed import evaluate
 from train_grouped import save_json
 
 ROOT = Path(__file__).resolve().parents[1]
-CANDIDATE = spec(dict(hidden=64, lr=.001, weight_decay=.0003))
+CANDIDATE = spec(dict(hidden=64, lr=.001, weight_decay=.0003, capacity_bounded=True))
 # Only training/inference dependencies are required for importing old predictions.
 TRAINING_SOURCES = ('run_parameter_methods.py', 'parameter_models.py', 'parameter_updates.py',
                     'literature_models.py', 'paired_model.py', 'fixed_model.py',
@@ -54,7 +54,7 @@ def manifest(args):
                 ('torch', 'tabm', 'numpy', 'pandas', 'duckdb', 'scikit-learn', 'lightgbm')}
     result = dict(options={k: str(v) if isinstance(v, Path) else v for k, v in vars(args).items()
                            if k not in ('stage', 'resume')},
-                  versions=versions, config=digest(args.config),
+                  versions=versions, candidate=CANDIDATE, config=digest(args.config),
                   regions=digest(args.regions_dir/'manifest.json'),
                   inputs={p.name: digest(p) for p in args.data_dir.glob('*.parquet')},
                   preprocessing=digest(args.data_dir/'report.json'),
@@ -104,6 +104,8 @@ def validate_predictions(con, prediction, window):
         'Prediction site/hour grid differs')
     reject(con, '''SELECT count(*) FROM checked_prediction WHERE forecast_kwh IS NULL
         OR NOT isfinite(forecast_kwh) OR forecast_kwh<0''', 'Invalid site prediction')
+    reject(con, '''SELECT count(*) FROM checked_prediction JOIN sites USING(site_id)
+        WHERE forecast_kwh>capacity_kw+1e-6''', 'Site prediction exceeds hourly capacity')
     con.fetchall()  # Release DuckDB's result before the next DataFrame registration.
 
 
@@ -225,6 +227,7 @@ def submit(con, deploy, predictions, args):
                 raise ValueError(f'Submission model changed: {name}')
         return previous
     prediction = predictions.get(deploy)
+    validate_predictions(con, prediction, deploy)
     set_composition(con, selected)
     directory.mkdir(parents=True, exist_ok=True)
     capacities = write_submission(con, prediction, directory)
@@ -234,6 +237,7 @@ def submit(con, deploy, predictions, args):
         raise ValueError('Missing final model checkpoints')
     paths = checkpoints + [p.with_suffix('.sha256') for p in checkpoints]
     result = dict(status='complete', model=args.model, allocation=selected['selected'], capacity_kw=capacities,
+                  prediction_constraint='sigmoid capacity factor in [0,1]; hourly kWh <= site capacity_kw',
                   training_cutoff=deploy['training_cutoff'], site_rows=len(prediction),
                   composition_rows=253, forecast_rows=17520,
                   model_sha256={p.relative_to(args.output_dir).as_posix(): digest(p) for p in paths},
@@ -283,7 +287,7 @@ def preflight(con, folds, deploy, args):
         raise RuntimeError('CUDA PyTorch required for production neural submission')
     sample = con.execute('''SELECT p.*,target_kwh FROM paired p JOIN targets USING(site_id,ts)
         WHERE training_eligible AND hour(ts)=12 ORDER BY ts,site_id LIMIT 512''').df()
-    probe = Learner(sample, args.model, dict(hidden=16, seed=args.seed), args.output_dir/'preflight_models')
+    probe = Learner(sample, args.model, dict(hidden=16, seed=args.seed, capacity_bounded=True), args.output_dir/'preflight_models')
     probe.advance(1)
     expected = probe.predict(sample).forecast_kwh.to_numpy()
     probe.load(args.output_dir/'preflight_models/state.pt')

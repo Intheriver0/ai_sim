@@ -4,6 +4,21 @@
 외부 12개월 진단, 최종 재학습, 제출 CSV 생성과 재읽기 검증을 수행한다.
 첫 실행은 TabM이다. 세 모델을 자동으로 섞거나 외부 점수를 보고 모델을 바꾸지 않는다.
 
+## v2: 설비용량 상한을 반영한 학습
+
+제출용 TabM·Hyper-head·MLP는 출력층에 sigmoid를 적용해 시간당 용량 비율을
+0~1로 학습한다. TabM은 각 멤버의 출력을 먼저 제한하고 멤버별 손실을 평균한다.
+학습 목표값만 0~1로 제한하며, 평가·정산의 원본 실측은 변경하지 않는다.
+추론에서도 같은 출력층을 사용하며 야간은 기존대로 0이다. 시간당 예측은
+`capacity_kw × 1시간` 이하이고, 제출 직전 발전소별 초과 여부도 검사한다.
+이 상한은 이번 실험의 모델 제약이며 대회가 요구한 무효 조건이라는 뜻은 아니다.
+
+기존 v1의 무제약 모델·예측 cache와 섞지 않는다. 아래의 새 `v2_capacity` 폴더에서
+처음부터 실행하며 **v1 폴더에 `--resume`하거나 v1을 `--prediction-run`으로 지정하지 않는다.**
+v2 실행이 중단된 경우에만 같은 v2 폴더에서 `--resume`한다.
+이 변경은 제출 실행기에 기본 적용된다. 기존 `run_parameter_methods.py` 비교 실험은
+기존 설정을 유지하므로, v2 결과와 구분한다. 성능 개선 여부는 재학습 후 비교한다.
+
 ## 첫 실행: TabM
 
 CUDA가 준비된 학습 컴퓨터의 `ai_sim` 폴더에서 실행한다.
@@ -11,30 +26,20 @@ CUDA가 준비된 학습 컴퓨터의 `ai_sim` 폴더에서 실행한다.
 `data/ridge_regions_v1/`가 필요하다. Hyper-head는 `data/terrain_features_v2/`도 필요하다.
 
 ```bash
-python -u scripts/run_neural_submission.py --model tabm --output-dir results/tabm_submission_v1
+python -u scripts/run_neural_submission.py --model tabm --output-dir results/tabm_submission_v2_capacity
 ```
 
 명령 하나로 사전 점검부터 제출 파일까지 진행한다. 기본값은 기존 실험과 같은
 ridge_k4, hidden=64, lr=0.001, weight_decay=0.0003, 45 epoch, seed=42, threads=4다.
 G1/G2 탐색은 각 시점에서 20,000회다. CPU로 자동 대체하지 않는다.
 
-기존 TabM 결과 폴더에 **본학습 예측 cache까지 남아 있다면**, 첫 실행부터 다음처럼 지정한다.
-JSON만 Git에서 받은 경우에는 위 기본 명령을 사용하면 된다.
-
-```bash
-python -u scripts/run_neural_submission.py --model tabm --prediction-run results/tabm_fixed_outer_v1 --output-dir results/tabm_submission_v1
-```
-
-기존 실행의 모델·학습 예산·입력·지역군·학습 코드·라이브러리·시간 분할을 대조한다.
-일치하고 완료 해시가 유효한 월별 예측만 새 실행 폴더에 복사한다.
-기존 12개월보다 앞선 과거 예측과 최종 제출 모델은 새로 학습한다.
-누락된 과거 cache는 재학습하지만 변조된 완료 cache는 오류로 중단한다.
-Hyper-head의 기존 manifest에 지형 해시가 없으면 재사용하지 않는다.
+`--prediction-run`의 기존 결과 재사용 기능은 코드·입력·설정 해시를 검사한다.
+이번 출력층 변경으로 v1 결과는 호환되지 않으므로 v2 실행에서는 이 옵션을 생략한다.
 
 기본 달력에서 월별 학습은 2022-06~2025-05의 36개 월이다.
 같은 월 모델은 배정 탐색·선택·외부 진단에서 공유하므로 전부 다시 학습하지 않는다.
-재사용 없이 실행하면 지역군 4개 × (36개월 + 최종 모델 1회) = **148회** 본학습이며,
-기존 12개월 예측을 모두 재사용하면 **100회**다. 각 본학습의 45 epoch는 줄이지 않는다.
+이번 실행은 지역군 4개 × (36개월 + 최종 모델 1회) = **148회** 본학습이다.
+각 본학습의 45 epoch는 줄이지 않는다.
 사전 점검용 작은 학습은 별도다. 필요한 GPU 시간과 디스크 공간을 확보한다.
 
 ## 중단 후 재개 / 단계별 실행
@@ -44,15 +49,15 @@ Hyper-head의 기존 manifest에 지형 해시가 없으면 재사용하지 않�
 학습한 모델로 테스트 1년 전체를 예측한다.
 
 ```bash
-python -u scripts/run_neural_submission.py --model tabm --output-dir results/tabm_submission_v1 --resume
+python -u scripts/run_neural_submission.py --model tabm --output-dir results/tabm_submission_v2_capacity --resume
 ```
 
 사전 점검, 비교, 제출을 따로 실행할 수도 있다.
 
 ```bash
-python -u scripts/run_neural_submission.py --model tabm --output-dir results/tabm_submission_v1 --stage preflight
-python -u scripts/run_neural_submission.py --model tabm --output-dir results/tabm_submission_v1 --stage compare --resume
-python -u scripts/run_neural_submission.py --model tabm --output-dir results/tabm_submission_v1 --stage submit --resume
+python -u scripts/run_neural_submission.py --model tabm --output-dir results/tabm_submission_v2_capacity --stage preflight
+python -u scripts/run_neural_submission.py --model tabm --output-dir results/tabm_submission_v2_capacity --stage compare --resume
+python -u scripts/run_neural_submission.py --model tabm --output-dir results/tabm_submission_v2_capacity --stage submit --resume
 ```
 
 비교 12개월이 완료되어야 제출 단계가 열린다. 코드·입력·환경·옵션이 바뀌면 새 결과
@@ -63,7 +68,7 @@ python -u scripts/run_neural_submission.py --model tabm --output-dir results/tab
 백그라운드 실행이 필요하면:
 
 ```bash
-nohup python -u scripts/run_neural_submission.py --model tabm --output-dir results/tabm_submission_v1 > tabm_submission_v1.log 2>&1 < /dev/null &
+nohup python -u scripts/run_neural_submission.py --model tabm --output-dir results/tabm_submission_v2_capacity > tabm_submission_v2_capacity.log 2>&1 < /dev/null &
 ```
 
 ## 다음 두 모델
@@ -71,8 +76,8 @@ nohup python -u scripts/run_neural_submission.py --model tabm --output-dir resul
 각각 별도 폴더에서 실행한다. GPU 메모리를 공유하므로 기본적으로 순서대로 실행한다.
 
 ```bash
-python -u scripts/run_neural_submission.py --model hyper_head --output-dir results/hyper_head_submission_v1
-python -u scripts/run_neural_submission.py --model mlp --output-dir results/mlp_submission_v1
+python -u scripts/run_neural_submission.py --model hyper_head --output-dir results/hyper_head_submission_v2_capacity
+python -u scripts/run_neural_submission.py --model mlp --output-dir results/mlp_submission_v2_capacity
 ```
 
 ## G1/G2 선택과 평가
@@ -107,10 +112,10 @@ G1/G2 선택 자체는 매 외부 월 이전 자료로 제한한다.
 TabM의 경우:
 
 ```text
-results/tabm_submission_v1/submission/composition.csv
-results/tabm_submission_v1/submission/forecast.csv
-results/tabm_submission_v1/submission/validation.json
-results/tabm_submission_v1/submission/done.json
+results/tabm_submission_v2_capacity/submission/composition.csv
+results/tabm_submission_v2_capacity/submission/forecast.csv
+results/tabm_submission_v2_capacity/submission/validation.json
+results/tabm_submission_v2_capacity/submission/done.json
 ```
 
 `done.json`의 `status`가 `complete`일 때 **같은 폴더의 CSV 두 개를 한 쌍으로 제출**한다.
@@ -128,7 +133,7 @@ results/tabm_submission_v1/submission/done.json
 CSV만 다시 확인하려면:
 
 ```bash
-python scripts/scoring.py --sites data/preprocessed_v1/sites.parquet --prices data/preprocessed_v1/test_prices.parquet --composition results/tabm_submission_v1/submission/composition.csv --forecast results/tabm_submission_v1/submission/forecast.csv
+python scripts/scoring.py --sites data/preprocessed_v1/sites.parquet --prices data/preprocessed_v1/test_prices.parquet --composition results/tabm_submission_v2_capacity/submission/composition.csv --forecast results/tabm_submission_v2_capacity/submission/forecast.csv
 ```
 
 로컬 검증은 제공 형식·제약 검사다. 제출 포털의 공식 Validator와 실제 점수는 별도이며,
