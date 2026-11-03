@@ -1,0 +1,29 @@
+{
+  "fold": "outer_2024_10",
+  "method": "fixed",
+  "selected": {
+    "method": "fixed",
+    "spec": {
+      "params": {
+        "hidden": 64,
+        "lr": 0.001,
+        "weight_decay": 0.0003
+      },
+      "schedule": []
+    },
+    "score": null,
+    "baseline_score": null,
+    "max_budget": 45,
+    "search_evaluations": 0,
+    "full_budget_evaluations": 0,
+    "note": "Fixed settings; inner evaluation skipped; no outer-score selection"
+  },
+  "metrics": {
+    "site_equal_nmae": 0.03898678270640586,
+    "observed_site_hours": 187488,
+    "observed_sites": 252,
+    "cold_start_sites": 0,
+    "complete_253_hours": 0,
+    "settlement": null
+  }
+}
