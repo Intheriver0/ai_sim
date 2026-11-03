@@ -1,5 +1,7 @@
 # ai_sim
 
+**TabM·Hyper-head·MLP 최종 제출:** [개별 G1/G2 최적화·12개월 진단·제출 CSV 생성](neural_submission.md). 첫 실행은 `python -u scripts/run_neural_submission.py --model tabm --output-dir results/tabm_submission_v1`.
+
 **방법론별 개별 실행:** 전체 일괄 실행기는 제거했습니다. 모델·탐색 방법별 명령, 사전 점검과 결과 위치는 [개별 실행 안내](individual_methods.md)를 확인합니다. 각 실행은 별도 결과 폴더를 사용하고 결과는 나중에 직접 비교합니다.
 
 **fixed 단독 학습:** 내부 후보 평가를 생략하고 기존 외부 12개월 평가만 수행합니다. 모델 선택과 학습 예산은 유지합니다. 다른 탐색 방법을 함께 지정하면 내부 후보 평가도 수행합니다.

@@ -274,6 +274,15 @@ def submit(con, outer, args):
     set_composition(con, selected)
     prediction, key = train_predict(con, outer, pd.DataFrame(selected['assignment']), selected['params'],
                                     args.output_dir, args.threads, selected['family'])
+    capacities = write_submission(con, prediction, directory)
+    return finish(directory, {'status': 'complete', 'cache_key': key, 'selected': selected,
+        'training_cutoff': outer['training_cutoff'], 'capacity_kw': capacities,
+        'note': 'Fixed composition and models for full test period; no test actuals or test price features.'},
+        [directory/n for n in ('composition.csv', 'forecast.csv', 'site_predictions.parquet')])
+
+
+def write_submission(con, prediction, directory):
+    """Export and independently reread a fixed composition and complete site forecasts."""
     con.register('submission_predictions', prediction)
     check_keys(con, 'submission_predictions', ['site_id', 'ts'])
     reject(con, '''SELECT count(*) FROM ((SELECT site_id,ts FROM sites CROSS JOIN test_prices
@@ -302,10 +311,7 @@ def submit(con, outer, args):
         read_view(validator, 'forecast', directory/'forecast.csv')
         validate_composition(validator)
         validate_forecast(validator)
-    return finish(directory, {'status': 'complete', 'cache_key': key, 'selected': selected,
-        'training_cutoff': outer['training_cutoff'], 'capacity_kw': capacities,
-        'note': 'Fixed composition and models for full test period; no test actuals or test price features.'},
-        [directory/n for n in ('composition.csv', 'forecast.csv', 'site_predictions.parquet')])
+    return capacities
 
 
 def attach_all(con, data_dir):

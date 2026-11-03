@@ -1,5 +1,9 @@
 # 방법론별 개별 실행
 
+TabM·Hyper-head·MLP의 G1/G2 배정부터 최종 제출 CSV까지는
+[신경망 제출 실행 안내](neural_submission.md)의 `run_neural_submission.py`를 사용한다.
+아래 `run_parameter_methods.py`는 기존 고정 배정에서 모델 성능을 비교하는 실행기다.
+
 전체 일괄 실행기 `run_all.py`는 제거했다. 아래 명령 중 원하는 방법 하나를 골라
 `ai_sim` 폴더에서 실행한다. 명령 블록 전체를 한꺼번에 실행하는 안내가 아니다.
 출력 폴더는 방법별로 분리하며, 통합 로그·통합 보고서를 자동 생성하지 않는다.
