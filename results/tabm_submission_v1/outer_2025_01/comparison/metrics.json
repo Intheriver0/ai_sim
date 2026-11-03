@@ -1,0 +1,58 @@
+{
+  "fold": "outer_2025_01",
+  "allocation": "optimized",
+  "reference": {
+    "site_equal_nmae": 0.027819227025408004,
+    "observed_site_hours": 188232,
+    "observed_sites": 253,
+    "cold_start_sites": 0,
+    "complete_253_hours": 744,
+    "settlement": {
+      "basis": "provided README formula; local validation only",
+      "groups": {
+        "G1": {
+          "capacity_kw": 20465.65499999998,
+          "revenue_won": 217311668.18071485,
+          "W_won": 6179768.27828492,
+          "S_won": 211131899.90242994
+        },
+        "G2": {
+          "capacity_kw": 22189.71499999999,
+          "revenue_won": 250209339.39166015,
+          "W_won": 6540032.68259492,
+          "S_won": 243669306.70906523
+        }
+      },
+      "revenue_won": 467521007.572375,
+      "W_won": 12719800.96087984,
+      "S_won": 454801206.61149514
+    }
+  },
+  "selected": {
+    "site_equal_nmae": 0.027819227025408004,
+    "observed_site_hours": 188232,
+    "observed_sites": 253,
+    "cold_start_sites": 0,
+    "complete_253_hours": 744,
+    "settlement": {
+      "basis": "provided README formula; local validation only",
+      "groups": {
+        "G1": {
+          "capacity_kw": 20115.629999999986,
+          "revenue_won": 213672603.7572376,
+          "W_won": 6117972.358847431,
+          "S_won": 207554631.39839017
+        },
+        "G2": {
+          "capacity_kw": 22539.73999999999,
+          "revenue_won": 253848403.81513745,
+          "W_won": 6597859.649796532,
+          "S_won": 247250544.1653409
+        }
+      },
+      "revenue_won": 467521007.57237506,
+      "W_won": 12715832.008643962,
+      "S_won": 454805175.5637311
+    }
+  }
+}

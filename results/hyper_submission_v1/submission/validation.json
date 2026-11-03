@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "model": "hyper_head",
+  "allocation": "optimized",
+  "capacity_kw": {
+    "G2": 22142.01499999999,
+    "G1": 20513.35499999998
+  },
+  "training_cutoff": "2025-05-31 17:00:00+09:00",
+  "site_rows": 2216280,
+  "composition_rows": 253,
+  "forecast_rows": 17520,
+  "model_sha256": {
+    "cache/deployment/2b7f4037cfa3df4a0e0292e97d2bf8bba189cec2f5c8e3a7d9250c715853d8ad/models/cluster2/state.pt": "732a2da103243d74e92a92e2b1fdea3bf385e6c02c379a9bb098a0cfcfdeebaf",
+    "cache/deployment/2b7f4037cfa3df4a0e0292e97d2bf8bba189cec2f5c8e3a7d9250c715853d8ad/models/cluster1/state.pt": "32aacc2f905fdb7e68600857d0251b75dd3cc505d4c08a9eb34a46cb3d6cbff4",
+    "cache/deployment/2b7f4037cfa3df4a0e0292e97d2bf8bba189cec2f5c8e3a7d9250c715853d8ad/models/cluster3/state.pt": "eb0e917a813883ff8b25b0ec0d8cde20abafd50d998e8932bd470aafe70e9494",
+    "cache/deployment/2b7f4037cfa3df4a0e0292e97d2bf8bba189cec2f5c8e3a7d9250c715853d8ad/models/cluster0/state.pt": "192c81167333bbd5a332aa3ef88454cb53ba96d9c24ceca7218a97e2f9edaa09",
+    "cache/deployment/2b7f4037cfa3df4a0e0292e97d2bf8bba189cec2f5c8e3a7d9250c715853d8ad/models/cluster2/state.sha256": "ad4e21d7e48fa4969ca88d02d037be498de89be67488e91b84cfdb207fa3df63",
+    "cache/deployment/2b7f4037cfa3df4a0e0292e97d2bf8bba189cec2f5c8e3a7d9250c715853d8ad/models/cluster1/state.sha256": "fdb2d05caf8003453de092f5fe0080317556b2cda7c594e1d63639cd9194eb67",
+    "cache/deployment/2b7f4037cfa3df4a0e0292e97d2bf8bba189cec2f5c8e3a7d9250c715853d8ad/models/cluster3/state.sha256": "51abc71bf6eeb404e2525e4bb7eb14e1aef0558b39665705211a8cfa39a7b951",
+    "cache/deployment/2b7f4037cfa3df4a0e0292e97d2bf8bba189cec2f5c8e3a7d9250c715853d8ad/models/cluster0/state.sha256": "a897769ae977400a88b8c3693385c509379e14e6557f36c1fe8cc0d9e77f873e"
+  },
+  "note": "Local format checks passed. Upload composition.csv and forecast.csv together. No test actuals are available; no final score is computed."
+}

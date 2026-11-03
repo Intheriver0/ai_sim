@@ -1,0 +1,20 @@
+{
+  "fold": "outer_2024_10",
+  "allocation": "optimized",
+  "reference": {
+    "site_equal_nmae": 0.03838653772297413,
+    "observed_site_hours": 187488,
+    "observed_sites": 252,
+    "cold_start_sites": 0,
+    "complete_253_hours": 0,
+    "settlement": null
+  },
+  "selected": {
+    "site_equal_nmae": 0.03838653772297413,
+    "observed_site_hours": 187488,
+    "observed_sites": 252,
+    "cold_start_sites": 0,
+    "complete_253_hours": 0,
+    "settlement": null
+  }
+}

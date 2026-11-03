@@ -1,0 +1,162 @@
+{
+  "status": "complete",
+  "gpu": "NVIDIA GB10",
+  "panels": [
+    {
+      "fold": "outer_2024_06",
+      "role": "optimization",
+      "sites": 47,
+      "hours": 8550
+    },
+    {
+      "fold": "outer_2024_06",
+      "role": "selection",
+      "sites": 106,
+      "hours": 8760
+    },
+    {
+      "fold": "outer_2024_07",
+      "role": "optimization",
+      "sites": 53,
+      "hours": 8472
+    },
+    {
+      "fold": "outer_2024_07",
+      "role": "selection",
+      "sites": 113,
+      "hours": 8701
+    },
+    {
+      "fold": "outer_2024_08",
+      "role": "optimization",
+      "sites": 57,
+      "hours": 8753
+    },
+    {
+      "fold": "outer_2024_08",
+      "role": "selection",
+      "sites": 116,
+      "hours": 8700
+    },
+    {
+      "fold": "outer_2024_09",
+      "role": "optimization",
+      "sites": 67,
+      "hours": 8384
+    },
+    {
+      "fold": "outer_2024_09",
+      "role": "selection",
+      "sites": 119,
+      "hours": 8600
+    },
+    {
+      "fold": "outer_2024_10",
+      "role": "optimization",
+      "sites": 73,
+      "hours": 8753
+    },
+    {
+      "fold": "outer_2024_10",
+      "role": "selection",
+      "sites": 127,
+      "hours": 8346
+    },
+    {
+      "fold": "outer_2024_11",
+      "role": "optimization",
+      "sites": 77,
+      "hours": 8706
+    },
+    {
+      "fold": "outer_2024_11",
+      "role": "selection",
+      "sites": 133,
+      "hours": 8627
+    },
+    {
+      "fold": "outer_2024_12",
+      "role": "optimization",
+      "sites": 79,
+      "hours": 8746
+    },
+    {
+      "fold": "outer_2024_12",
+      "role": "selection",
+      "sites": 139,
+      "hours": 8338
+    },
+    {
+      "fold": "outer_2025_01",
+      "role": "optimization",
+      "sites": 82,
+      "hours": 8691
+    },
+    {
+      "fold": "outer_2025_01",
+      "role": "selection",
+      "sites": 151,
+      "hours": 8553
+    },
+    {
+      "fold": "outer_2025_02",
+      "role": "optimization",
+      "sites": 93,
+      "hours": 8431
+    },
+    {
+      "fold": "outer_2025_02",
+      "role": "selection",
+      "sites": 173,
+      "hours": 8436
+    },
+    {
+      "fold": "outer_2025_03",
+      "role": "optimization",
+      "sites": 100,
+      "hours": 8551
+    },
+    {
+      "fold": "outer_2025_03",
+      "role": "selection",
+      "sites": 173,
+      "hours": 8736
+    },
+    {
+      "fold": "outer_2025_04",
+      "role": "optimization",
+      "sites": 101,
+      "hours": 8777
+    },
+    {
+      "fold": "outer_2025_04",
+      "role": "selection",
+      "sites": 174,
+      "hours": 8736
+    },
+    {
+      "fold": "outer_2025_05",
+      "role": "optimization",
+      "sites": 106,
+      "hours": 8777
+    },
+    {
+      "fold": "outer_2025_05",
+      "role": "selection",
+      "sites": 192,
+      "hours": 8335
+    },
+    {
+      "fold": "deployment",
+      "role": "optimization",
+      "sites": 106,
+      "hours": 8777
+    },
+    {
+      "fold": "deployment",
+      "role": "selection",
+      "sites": 216,
+      "hours": 8318
+    }
+  ]
+}
